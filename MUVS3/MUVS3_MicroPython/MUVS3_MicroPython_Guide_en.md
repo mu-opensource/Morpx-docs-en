@@ -1,55 +1,65 @@
-# 配置Mu Editor和Micro:bit
-Mu Editor是一款具有友好GUI界面的MicroPython集成开发工具，包含了代码编辑、烧录、REPL终端、串口绘图器等功能。通过Micro:bit主板控制小MU视觉传感器，需要使用包含了MUVisionSensor传感器的MicroPython固件，请按以下步骤进行设置：
+# Preparations before Coding
+If you want to use Micro:bit to control the MU Vision Sensor, you need to import the MicroPython firmware that contains the ‘MuVisionSensor’ module. Please follow the steps below:
 
-（1）下载Micro:bit固件：
+(1) Download the firmware：
 
 GitHub：<https://github.com/mu-opensource/MuVisionSensor3-MicroPython>
 
-morpx官网：<http://mai.morpx.com/page.php?a=sensor-support>
+Official Website：<http://mai.morpx.com/page.php?a=sensor-support>
 
-（2）更新Micro:bit固件：
+(2) Flash the firmware：
 
-将Micro:bit通过USB线连接电脑，出现Micro:bit的磁盘，将下载的固件microbit-micropython-MuVisionSensor-0.8.0.hex 文件拖入磁盘中，Micro:bit将自动更新固件并重启。
+Connect the micro:bit to computer via USB cable,and drag the downloaded frimware “microbit-micropython-MuVisionSensor-0.8.0.hex” to MICROBIT disk.
+Micro:bit will flash the new firmware and restart.
 
-（3）下载并安装Mu Editor：<https://codewith.mu/>
+(3) Download and install Mu Editor :
 
-（4）导入传感器
+Mu Editor is a simple Python code editor for beginner programmers with friendly GUI.
 
-打开Mu Editor，在顶部选择模式为 BBC micro:bit，连接micro:bit后左下角显示“连接到新的micro:bit 设备”即可进行编程。单击顶部REPL按钮进入串口实时模式，micro:bit将返回固件版本信息。输入：
+It can be downloaded in the main page:<https://codewith.mu/>
+
+(4) Import module
+
+Open Mu Editor, change the mode to BBC micro:bit,and click the”REPL”button to enter serial reply mode.The micro:bit will send firmware version at first.
+Type the code below and press enter to run
 
 ```python
 >>> from MuVisionSensor import *
 ```
 
-导入传感器后即可使用MuVisonSensor类中的所有公开API
+Now you can call all the public APIs in ‘MuVisionSensor’
 
-*MuVisionSensor传感器中关键字的自动补全仅在REPL模式下可用
+*Key words auto-completion fuction is only available in REPL mode
 
 ![](./images/MicroPython_imported.png)
 
-# Micro:bit硬件连接
+# Connect to Micro:bit
 
-MU Vision Sensor 3的外设和接口如图所示：
+MU Vision Sensor 3 periphrals and ports:
 
 ![](./images/MUVS3_pinout.png)
 
-（1）将传感器左侧输出模式拨码开关1拨至下方，2拨至上方；
+I2C Mode
 
-（2）将传感器输出接口SDA引脚（P1）和SCL引脚（P2）接至Micro:bit 对应的 SDA引脚（P20）与SCL引脚（P19），同时将P3接地，P4接电源（3.3-5V）；
+(1)Output Mode DIP Switch: set switch 1 downwards and switch 2 upwards
 
-（3）将传感器的地址选择拨码开关拨至对应位（默认地址0x60则 1、2都在下方，不推荐修改此设置）。
+(2)Connect the output Pin1(SDA) to the Pin20 of Micro:bit, and Pin2(SCL) to Pin19  of Micro:bit. Also connecting the ground pin and 3.3v power pin to micro:bit.
 
-*目前仅支持I2C模式
+(3)Change the I2C address of MU Vision Sensor by resetting Address DIP Switch. In default both switches are downward and the address is 0x60.(Changing this setting is not recommended)
 
-# API使用说明
+*Only I2C mode is supported now
 
-## 初始化传感器
+# Usage of APIs
 
-1.调用MuVisionSensor(adress)创建一个对象mu，并指定传感器地址，指定的地址要与地址选择拨码开关的设置保持一致
+## Initialize MU Vision Sensor
 
-2.调用begin()函数，启动传感器
+Two steps to initialize this sensor:
 
-## 开启算法
+Step1. Call the ‘MuVisionSensor(‘address’)’ to create an object , the value of ’address’  should be consistent with the setting of Address DIP Switch (default is 0x60); 
+
+Step2. Call the ‘begin()’  function to start this sensor;
+
+## Enable Algorithms
 
 **API:**
 
@@ -75,7 +85,7 @@ MuVisionSensor.VisionBegin(vision_type)
 
 `VISION_ALL`                开启所有算法
 
-**示例：**
+**example:**
 
 ```python
 from MuVisionSensor import *  #导入库
@@ -84,7 +94,7 @@ mu.VisionBegin(VISION_COLOR_DETECT)  #开启颜色检测算法
 mu.VisionBegin(VISION_SHAPE_CARD_DETECT | VISION_BALL_DETECT) #同时开启形状卡片检测和球体检测算法
 ```
 
-## 设置算法性能
+## Set Performance Level
 
 **API:**
 
@@ -110,7 +120,7 @@ MuVisionSensor.VisionSetLevel(vision_type, level)
 mu.VisionSetLevel(VISION_BALL_DETECT, LevelSpeed)
 ```
 
-### 获取算法性能
+### Get Performance Level
 
 **API:**
 
@@ -120,7 +130,7 @@ mu.VisionSetLevel(vision_type)
 
 返回值0~3代表四种算法性能
 
-## 设置摄像头帧率模式
+## Enable High FPS Mode
 
 高帧率模式下识别速度增加，同时功耗增加
 
@@ -136,7 +146,7 @@ MuVisionSensor.CameraSetFPS(mode)
 
 `FPSHigh` 高帧率模式
 
-### 获取摄像头帧率模式
+### Get FPS Mode
 
 **API:**
 
@@ -146,7 +156,7 @@ MuVisionSensor.CameraGetFPS()
 
 返回值为 0(FPSNormal)或1(FPSHigh)
 
-## 设置摄像头白平衡
+## Set White Balance Mode
 
 调节因为外界光源变化而引起的图像偏色
 
@@ -166,7 +176,7 @@ MuVisionSensor.CameraSetAwb(mode)
 
 `YellowLight`     		黄光模式
 
-### 获取摄像头白平衡模式
+### Get White Balance mode
 
 **API:**
 
@@ -176,7 +186,7 @@ MuVisionSensor.CameraGetAwb()
 
 返回值为 0~3，对应4种白平衡模式
 
-## 设置摄像头数码变焦
+## Set Digital Zoom Ratio
 
 **API:**
 
@@ -198,7 +208,7 @@ MuVisionSensor.CameraSetZoom(mode)
 
 `Zoom5` 变焦模式5
 
-### 获取摄像头变焦模式
+### Get Digital Zoom Ratio Setting
 
 **API:**
 
@@ -208,7 +218,7 @@ MuVisionSensor.CameraGetZoom()
 
 返回值为 0~5，对应6种白平衡模式
 
-## 板载LED灯光设置
+## LED Settings
 
 **API:**
 
@@ -246,7 +256,7 @@ undetected_color：未检测到结果时的颜色，可选值同上
 
 level：亮度值，可输入0~15的数字，数值越大越亮
 
-## 恢复模块默认设置
+## Restore Default Settings
 
 关闭所有算法，重置所有硬件设置
 
@@ -255,14 +265,14 @@ level：亮度值，可输入0~15的数字，数值越大越亮
 MuVisionSensor.SensorSetDefault()
 ```
 
-## 重启传感器
+## Restart
 
 **API:**
 ```
 MuVisionSensor.SensorSetRestart()
 ```
 
-## 获取算法识别结果
+## Get Results of Detection
 
 **API:**
 ```

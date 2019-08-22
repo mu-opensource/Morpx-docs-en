@@ -3,14 +3,14 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-MU 3 MakeCode 教程
+MU 3 MakeCode Programming Guide
 ===============================
 
-本文介绍MU Vision Sensor 3 和Micro:bit开发板在MakeCode环境中开发的教程。
+This passage introduces how to use MU Vision Sensor 3 with Micro:bit board and MakeCode IDE。
 
 .. toctree::
     :maxdepth: 1
     :glob: 
 	
-    MUVS3_Makecode_Guide_cn_0_8.md
+    MUVS3_Makecode_Guide_en.md
 	

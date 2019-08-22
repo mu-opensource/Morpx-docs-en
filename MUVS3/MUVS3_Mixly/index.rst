@@ -3,14 +3,14 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-MU 3 Mixly 教程
+MU 3 Mixly Programming Guide
 ===============================
 
-本文介绍MU Vision Sensor 3 配合Arduino开发板在米思奇（Mixly）开发环境下的开发教程。
+This passage introduces how to use MU Vision Sensor 3 with Arduino board and Mixly IDE。
 
 .. toctree::
     :maxdepth: 1
     :glob: 
 	
-    MUVS3_Mixly_Guide_cn_0_8.md
+    MUVS3_Mixly_Guide_en.md
 	

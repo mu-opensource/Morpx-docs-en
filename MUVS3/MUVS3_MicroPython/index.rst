@@ -3,14 +3,14 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-MU 3 MicroPython 教程
+MU 3 MicroPython Programming Guide
 ===============================
 
-本文介绍MU Vision Sensor 3与Micro:bit通过MicroPython进行编程开发的教程。
+This passage introduces how to use MU Vision Sensor 3 with Micro:bit board and MicroPython language。
 
 .. toctree::
     :maxdepth: 1
     :glob: 
 	
-    MUVS3_MicroPython_Guide_cn_0_8.md
+    MUVS3_MicroPython_Guide_en.md
 	
