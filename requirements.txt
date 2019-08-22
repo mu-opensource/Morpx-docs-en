@@ -1,0 +1,7 @@
+# This is a list of python packages needed for Morpx-docs. This file is used with pip.
+#
+setuptools
+# The setuptools package is required to install source distributions and on some systems is not installed by default.
+# Please keep it as the first item of this list.
+#
+sphinx>=2.1
