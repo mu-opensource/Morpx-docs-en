@@ -171,7 +171,7 @@ latex_documents = [
 #latex_logo = None
 
 # This value determines the topmost sectioning unit. It should be chosen from 'part', 'chapter' or 'section'. 
-latex_toplevel_sectioning = 'part'
+latex_toplevel_sectioning = None
 
 # If true, show page references after internal links.
 #latex_show_pagerefs = False
