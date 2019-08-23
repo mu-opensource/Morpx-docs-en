@@ -1,20 +1,14 @@
-# MU Vision Sensor 免责声明和版权公告
+# MU Vision Sensor Disclaimer & Copyright
 
-- 本手册中的信息仅适用于摩图科技公司所生产的小MU视觉传感器第3代产品（下称产品），本手册所描述内容仅适用于当前固件版本，新版本功能需要更新传感器固件，否则可能导致部分产品功能失效，版本更新不另行通告，请关注摩图科技官网。
+• The information in this manual applies to the MU Vision Sensor III is produced by Morpx Inc. Please check the Morpx Inc’s website http://www.morpx.com for the latest version of the firmware and library functions. Updates are subject to change without notice.
 
-- 应仔细阅读和理解本手册中的各项条款，否则可能导致产品无法正常工作，检测效果变差，甚至产品损坏。
+• Please read this manual carefully before using MU Vision Sensor and make sure
+you understand it. Incorrect operation may cause the device stopping working , getting worse detection results, or even damaging the device.
 
-- 在未经摩图科技确认及授权的情况下，不可私自维修或改装产品上的电子元件，造成损坏的将不予以保修。
+• Morpx Inc will not warrant the damage caused by unauthorized repair or modification of electronic components on the product.
 
-- 严禁任何组织或个人进行芯片内部代码拷贝、破解等侵权行为，芯片内部所有代码信息均归属于摩图科技所有，对于任何侵权行为，摩图科技将采取法律措施予以维权。
+• The technical solution, vision algorithms and communication protocol mentioned in this manual is developed by Morpx and protected by intellectual property rights. Organizations or individuals should not copy or plagiarize the technical achievements of Morpx Inc. In case of any infringement, Morpx will take legal actions to protect its rights.
 
-- 本手册中所提及的技术方案、视觉算法、通讯协议均为摩图科技自主研发，任何组织或个人不得拷贝、抄袭、剽窃摩图科技的技术成果，对于任何侵权行为，摩图科技将采取法律措施予以维权。
+• Morpx is the registered trademark of Morpx.Inc., and MU is the registered trademark of MU Vision Sensor. All trademarks (names and patterns) presented here in the text or figures belong to the holders of the marks.
 
-- MORPX是杭州摩图科技有限公司的注册商标，MU是小MU视觉传感器的注册商标。
-
-- 文本或图片中提到的所有商标名称、商标和注册商标均属其各自所有者的财产，特此声明。
-
-- 本手册仅供指定公司客户或个人用户内部资料使用，在产品正式上市或发布之前，使用方应对本产品及手册采取保密措施，在未经摩图科技授权的情况下，不得将产品及本手册传阅至第三方公司或个人。
-
-
-版权归 © 2019 摩图科技所有。保留所有权利。
+Copyrights © 2019 Morpx.Inc. All rights reserved

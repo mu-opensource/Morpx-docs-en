@@ -1,5 +1,7 @@
 # Preparations before Coding
-If you want to use Micro:bit to control the MU Vision Sensor, you need to import the MicroPython firmware that contains the ‘MuVisionSensor’ module. Please follow the steps below:
+
+If you want to use Micro:bit to control the MU Vision Sensor, you need to import the MicroPython firmware that contains the ‘MuVisionSensor’ module. 
+Please follow the steps below:
 
 (1) Download the firmware：
 
@@ -45,7 +47,8 @@ I2C Mode
 
 (2)Connect the output Pin1(SDA) to the Pin20 of Micro:bit, and Pin2(SCL) to Pin19  of Micro:bit. Also connecting the ground pin and 3.3v power pin to micro:bit.
 
-(3)Change the I2C address of MU Vision Sensor by resetting Address DIP Switch. In default both switches are downward and the address is 0x60.(Changing this setting is not recommended)
+(3)Change the I2C address of MU Vision Sensor by resetting Address DIP Switch. In default both switches are downward and the address is 0x60.
+(Changing this setting is not recommended)
 
 *Only I2C mode is supported now
 
@@ -55,66 +58,65 @@ I2C Mode
 
 Two steps to initialize this sensor:
 
-Step1. Call the ‘MuVisionSensor(‘address’)’ to create an object , the value of ’address’  should be consistent with the setting of Address DIP Switch (default is 0x60); 
+Step1. Call the ‘MuVisionSensor(‘address’)’ to create an object , the value of ’address’  should be consistent with the setting of Address DIP Switch 
+(default is 0x60); 
 
 Step2. Call the ‘begin()’  function to start this sensor;
 
 ## Enable Algorithms
 
-**API:**
+**API**
 
 ```python
 MuVisionSensor.VisionBegin(vision_type)
 ```
 
-目前支持的vision_type有：
+All available ‘vision_type’s as follows：
 
-`VISION_COLOR_DETECT`        颜色检测
+`VISION_COLOR_DETECT`
 
-`VISION_COLOR_RECOGNITION`   颜色识别
+`VISION_COLOR_RECOGNITION`
 
-`VISION_BALL_DETECT`         球体检测
+`VISION_BALL_DETECT`
 
-`VISION_BODY_DETECT`         人体检测
+`VISION_BODY_DETECT`
 
-`VISION_SHAPE_CARD_DETECT`   形状卡片检测
+`VISION_SHAPE_CARD_DETECT`
 
-`VISION_TRAFFIC_CARD_DETECT` 交通卡片检测
+`VISION_TRAFFIC_CARD_DETECT`
 
-`VISION_NUM_CARD_DETECT`     数字卡片检测
+`VISION_NUM_CARD_DETECT`
 
-`VISION_ALL`                开启所有算法
+`VISION_ALL`
 
-**example:**
+**Example**
 
 ```python
-from MuVisionSensor import *  #导入库
-.... #省略初始化过程
-mu.VisionBegin(VISION_COLOR_DETECT)  #开启颜色检测算法
-mu.VisionBegin(VISION_SHAPE_CARD_DETECT | VISION_BALL_DETECT) #同时开启形状卡片检测和球体检测算法
+from MuVisionSensor import *  #import the library
+.... #
+mu.VisionBegin(VISION_COLOR_DETECT)  #
+mu.VisionBegin(VISION_SHAPE_CARD_DETECT | VISION_BALL_DETECT) #enable card detect and ball detect algorithms
 ```
 
 ## Set Performance Level
 
-**API:**
+**API**
 
 ```
 MuVisionSensor.VisionSetLevel(vision_type, level)
 ```
 
-可选的vision_type同上
+‘level’ can be set to：
 
-可选的level有：
+`LevelDefault`
 
-`LevelDefault`  默认
+`LevelSpeed`
 
-`LevelSpeed`  速度优先
+`LevelBalance`
 
-`LevelBalance`  平衡
+`LevelAccuracy`
 
-`LevelAccuracy` 准确性优先
-
-**示例：**
+**Example**
 
 ```
 mu.VisionSetLevel(VISION_BALL_DETECT, LevelSpeed)
@@ -122,69 +124,67 @@ mu.VisionSetLevel(VISION_BALL_DETECT, LevelSpeed)
 
 ### Get Performance Level
 
-**API:**
+**API**
 
 ```
 mu.VisionSetLevel(vision_type)
 ```
 
-返回值0~3代表四种算法性能
+The return value is between 0~3, which represents the 4 levels
 
 ## Enable High FPS Mode
 
-高帧率模式下识别速度增加，同时功耗增加
-
-**API:**
+**API**
 
 ```
 MuVisionSensor.CameraSetFPS(mode)
 ```
 
-可选的mode有：
+mode’ can be set to：
 
-`FPSNormal` 正常模式
+`FPSNormal`
 
-`FPSHigh` 高帧率模式
+`FPSHigh`
 
 ### Get FPS Mode
 
-**API:**
+**API**
 
 ```
 MuVisionSensor.CameraGetFPS()
 ```
 
-返回值为 0(FPSNormal)或1(FPSHigh)
+return ‘0’(FPSNormal) or ‘1’(FPSHigh)
 
 ## Set White Balance Mode
 
-调节因为外界光源变化而引起的图像偏色
+Adjust the color cast caused by the changes of external light sources.
 
-**API:**
+**API**
 
 ```
 MuVisionSensor.CameraSetAwb(mode)
 ```
 
-可选的mode有：
+‘mode’ can be set to：
 
-`AutoWhiteBalance`		自动白平衡
+`AutoWhiteBalance`
 
-`LockWhiteBalance`		锁定白平衡
+`LockWhiteBalance`
 
-`WhiteLight`      		白光模式
+`WhiteLight`
 
-`YellowLight`     		黄光模式
+`YellowLight`
 
 ### Get White Balance mode
 
-**API:**
+**API**
 
 ```
 MuVisionSensor.CameraGetAwb()
 ```
 
-返回值为 0~3，对应4种白平衡模式
+The return value is between 0~3,which represents the 4 WB modes.
 
 ## Set Digital Zoom Ratio
 
@@ -194,109 +194,107 @@ MuVisionSensor.CameraGetAwb()
 MuVisionSensor.CameraSetZoom(mode)
 ```
 
-可选的mode有：
+‘mode’ can be set to：
 
-`ZoomDefault` 默认
+`ZoomDefault`
 
-`Zoom1` 变焦模式1
+`Zoom1`
 
-`Zoom2` 变焦模式2
+`Zoom2`
 
-`Zoom3` 变焦模式3
+`Zoom3`
 
-`Zoom4` 变焦模式4
+`Zoom4`
 
-`Zoom5` 变焦模式5
+`Zoom5`
 
 ### Get Digital Zoom Ratio Setting
 
-**API:**
+**API**
 
 ```
 MuVisionSensor.CameraGetZoom()
 ```
 
-返回值为 0~5，对应6种白平衡模式
+The return value is between 0~5，which represents the 6 zoom levels.
 
 ## LED Settings
 
-**API:**
+**API**
 
 ```
 MuVisionSensor.LedSetColor(led, detected_color, undetected_color, level)
 ```
 
-参数说明：
+Explanations of these parameters：
 
-led：要配置的LED灯，可选值为
+led：the LED you want to configure, the available values
 
-`Led1` 板载LED1
+`Led1` 
 
-`Led2` 板载LED2
+`Led2`
 
-detected_color：检测到结果时的颜色，可选值为
+detected_color：colors which are detected，the available values as follows
 
-`LedClose` LED关
+`LedClose`
 
-`LedRed` 红色
+`LedRed`
 
-`LedGreen` 绿色
+`LedGreen`
 
-`LedYellow`	黄色
+`LedYellow`
 
-`LedBlue` 蓝色
+`LedBlue`
 
-`LedPurple` 紫色
+`LedPurple`
 
-`LedCyan` 青色
+`LedCyan`
 
-`LedWhite` 白色
+`LedWhite`
 
-undetected_color：未检测到结果时的颜色，可选值同上
+undetected_color：colors  which are not detected，same available values as detected_color.
 
-level：亮度值，可输入0~15的数字，数值越大越亮
+level：set the brightness level; an integer between 0 and 15; the larger the brighter.
 
 ## Restore Default Settings
 
-关闭所有算法，重置所有硬件设置
-
-**API:**
+**API**
 ```
 MuVisionSensor.SensorSetDefault()
 ```
 
 ## Restart
 
-**API:**
+**API**
 ```
 MuVisionSensor.SensorSetRestart()
 ```
 
 ## Get Results of Detection
 
-**API:**
+**API**
 ```
 MuVisionSensor.GetValue(vision_type, object_inf)
 ```
 
-vision_type的可选值同上
+The available values of  ‘vision_type’ are as mentioned above.
 
-object_inf的可选值为：
+object_inf can be set to：
 
-`Status` 检测状态，0代表没检测到，1代表检测到
+`Status` 0 means undetected，1 means detected
 
-`XValue` 目标的横向坐标
+`XValue`
 
-`YValue` 目标的纵向坐标
+`YValue`
 
-`WidthValue` 目标的宽度
+`WidthValue`
 
-`HeightValue` 目标的高度
+`HeightValue`
 
-`Label` 目标的标签
+`Label`
 
-`RValue` 红色通道值（颜色识别模式）
+`RValue`
 
-`GValue` 绿色通道值（颜色识别模式）
+`GValue`
 
-`BValue` 蓝色通道值（颜色识别模式）
+`BValue`

@@ -42,7 +42,7 @@ MU Vision Sensor 3 periphrals and ports：
 
 ## Block Introduction
 
-**1.Initialization**
+**(1)Initialization**
 
 (1)Serial Mode：In serial mode, two pins are defined as TX & RX respectively, according to the hardware connection to the MU Vision Sensor，P12 and P13 as example。
 
@@ -52,13 +52,13 @@ MU Vision Sensor 3 periphrals and ports：
 
 ![](./images/Makecode_block_i2c_init.png)
 
-**2.Enable Vision Algorithms**
+**(2)Enable Vision Algorithms**
 
 Seven recognition algorithms are integrated in current firmware(Version A).For detailed information please refer to the datasheet of MU vision sensor.
 
 ![](./images/Makecode_block_enable_algorithm.png)
 
-**3.Set Performance Level**
+**(3)Set Performance Level**
 
 Algorithm performance differs in accuarcy and speed. Performance settings can be changed to fit in certain applications.
 
@@ -66,13 +66,13 @@ Default setting: Balance level.
 
 ![](./images/Makecode_block_algorithm_performance.png)
 
-**4.Enable/Disable the High FPS Mode**
+**(4)Enable/Disable the High FPS Mode**
 
 The camera is in high FPS mode by default,which has a higher speed than normal mode.High FPS mode can be turned off to save power.
 
 ![](./images/Makecode_block_highFPS.png)
 
-**5.Set White Balance Mode**
+**(5)Set White Balance Mode**
 
 Ambient light will influence the detect result of the vision sensor, especially color detection and recognition.
 In complex light environment or in color recongnition mode, it is recommended to lock white balance.
@@ -81,7 +81,7 @@ Reset the vision sensor, and put it in front of a white paper to measure brightn
 
 ![](./images/Makecode_block_setWB.png)
 
-**6.Set Digital Zoom Level**
+**(6)Set Digital Zoom Level**
 
 Larger digital zoom level means longer detectable distance, and view sight is narrower meanwhile. 
 
@@ -89,7 +89,7 @@ To get a better detect results, set a proper zoom level for the algorithm and te
 
 ![](./images/Makecode_block_setzoom.png)
 
-**7.On-board LED Settings**
+**(7)On-board LED Settings**
 
 Two on-board LED lights can be programmed to shine different colors when The sensor has detected an object or not.
 
@@ -97,7 +97,7 @@ Default setting: When undetected objects , two lights are red and when detected 
 
 ![](./images/Makecode_block_setLED.png)
 
-**8.Restore Default Settings**  
+**(8)Restore Default Settings**  
 
 ![](./images/Makecode_block_setdefault.png)
 

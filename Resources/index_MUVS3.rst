@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-MU Vision Sensor 资源
+MU Vision Sensor Resources
 ===============================
 
 .. toctree::

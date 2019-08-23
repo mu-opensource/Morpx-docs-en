@@ -37,7 +37,8 @@ MU Vision Sensor 3 periphrals and ports：
 
 (2) Connect the output RX pin of MU to TX pin of Arduino and TX pin of MU to RX pin of Arduino.
 
-(3) Change the UART address of MU sensor by resetting Address Switch. Both switches are downwards and the address is 0x60 on default. (Changing this setting is not recommended)
+(3) Change the UART address of MU sensor by resetting Address Switch. Both switches are downwards and the address is 0x60 on default.
+ (Changing this setting is not recommended)
 
 * Arduino UNO cannot send messages to PC when MuVisionSensor is running in hardware serial mode, due to a communication conflict.
 
@@ -47,15 +48,19 @@ MU Vision Sensor 3 periphrals and ports：
 
 **Initialization**
 
-(1)Hardware Serial Mode：视觉传感器使用串口模式，连接主控的硬件串口时主控初始化，该串口为主控和电脑端的串口通信，用于视觉会占用，电脑端打印字符会错乱或通信异常；
+(1)Hardware Serial Mode：Vision sensor uses serial mode to initialize the main control when connecting the main control hardware serial port. 
+The serial port is the serial communication between the main control and the computer. 
+When it is used for vision sensor, computer printing characters will be disordered or communication abnormalities.
 
 ![](./images/Mixly_block_serial_init.png)
 
-(2)Software Serial Mode：视觉传感器使用串口模式，连接主控的软件串口时主控初始化，主控可自定义RX和TX引脚，实际环境软串口速度太快可能不稳定，波特率不建议超过9600；
+(2)Software Serial Mode：Vision sensor uses serial mode, and the main controller is initialized when connecting the main control software serial port. 
+The main controller can customize RX and TX pins. 
+The speed of soft serial port in real environment may be too fast and unstable. The baud rate is not recommended to exceed 9600.
 
 ![](./images/Mixly_block_softserial_init.png)
 
-(3)Hardware I2C Mode：视觉传感器使用I2C模式，连接主控I2C引脚时主控初始化。
+(3)Hardware I2C Mode：The vision sensor uses I2C mode to initialize the main controller when connecting the main controller I2C pins.
 
 ![](./images/Mixly_block_i2c_init.png)
 
@@ -69,13 +74,13 @@ MU Vision Sensor 3 periphrals and ports：
 
 **Enable/Disable the High FPS Mode**
 
-识别速度增加，同时功耗、发热量增加。
+In high FPS mode, detect speed and power consumption will increase.
 
 ![](./images/Mixly_block_highFPS.png)
 
 **Set White Balance Mode**
 
-调节因为外界光源变化而引起的图像偏色。
+Adjust the image bias caused by the change of external light source.
 
 ![](./images/Mixly_block_setWB.png)
 
@@ -84,7 +89,7 @@ MU Vision Sensor 3 periphrals and ports：
 ![](./images/Mixly_block_setLED.png)
 
 **Restore Default Settings**
-关闭所有算法，重置所有硬件设置。
+Disable all algorithms and restore hardware default settings.
 
 ![](./images/Mixly_block_setdefault.png)
 
