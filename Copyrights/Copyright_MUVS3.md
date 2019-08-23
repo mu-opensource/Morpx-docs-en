@@ -1,9 +1,9 @@
 # MU Vision Sensor Disclaimer & Copyright
 
-- The information in this manual applies to the MU Vision Sensor III is produced by Morpx Inc. Please check the Morpx Inc’s website http://www.morpx.com for the latest version of the firmware and library functions. Updates are subject to change without notice.
+- The information in this manual applies to the MU Vision Sensor III is produced by Morpx Inc. Please check the Morpx Inc’s website <http://www.morpx.com> for the latest version of the firmware and library functions. Updates are subject to change without notice.
 
-- Please read this manual carefully before using MU Vision Sensor and make sure
-you understand it. Incorrect operation may cause the device stopping working , getting worse detection results, or even damaging the device.
+- Please read this manual carefully before using MU Vision Sensor and make sureyou understand it. 
+Incorrect operation may cause the device stopping working , getting worse detection results, or even damaging the device.
 
 - Morpx Inc will not warrant the damage caused by unauthorized repair or modification of electronic components on the product.
 
