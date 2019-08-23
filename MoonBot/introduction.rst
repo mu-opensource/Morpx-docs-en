@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-MoonBot Kit 简介
+MoonBot Kit Introduction
 ===============================
 
 MoonBot Kit 是摩图科技出品的一套教育套件。
