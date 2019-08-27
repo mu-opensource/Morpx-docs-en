@@ -3,22 +3,22 @@
 If you want to use Micro:bit to control the MU Vision Sensor, you need to import the MicroPython firmware that contains the ‘MuVisionSensor’ module. 
 Please follow the steps below:
 
-(1) Download the firmware：
+(1) Download the firmware:
 
-GitHub：<https://github.com/mu-opensource/MuVisionSensor3-MicroPython>
+GitHub: <https://github.com/mu-opensource/MuVisionSensor3-MicroPython>
 
-Official Website：<http://mai.morpx.com/page.php?a=sensor-support>
+Official Website: <http://mai.morpx.com/page.php?a=sensor-support>
 
-(2) Flash the firmware：
+(2) Flash the firmware: 
 
 Connect the micro:bit to computer via USB cable,and drag the downloaded frimware “microbit-micropython-MuVisionSensor-0.8.0.hex” to MICROBIT disk.
 Micro:bit will flash the new firmware and restart.
 
-(3) Download and install Mu Editor :
+(3) Download and install Mu Editor: 
 
 Mu Editor is a simple Python code editor for beginner programmers with friendly GUI.
 
-It can be downloaded in the main page:<https://codewith.mu/>
+It can be downloaded in the main page: <https://codewith.mu/>
 
 (4) Import module
 
@@ -31,7 +31,7 @@ Type the code below and press enter to run
 
 Now you can call all the public APIs in ‘MuVisionSensor’
 
-*Key words auto-completion fuction is only available in REPL mode
+*Key words auto-completion fuction is only available in REPL mode.*
 
 ![](./images/MicroPython_imported.png)
 
@@ -50,7 +50,7 @@ I2C Mode
 (3)Change the I2C address of MU Vision Sensor by resetting Address DIP Switch. In default both switches are downward and the address is 0x60.
 (Changing this setting is not recommended)
 
-*Only I2C mode is supported now
+*Only I2C mode is supported now.*
 
 # Usage of APIs
 
@@ -71,7 +71,7 @@ Step2. Call the ‘begin()’  function to start this sensor;
 MuVisionSensor.VisionBegin(vision_type)
 ```
 
-All available ‘vision_type’s as follows：
+All available ‘vision_type’s as follows:
 
 `VISION_COLOR_DETECT`
 
@@ -106,7 +106,7 @@ mu.VisionBegin(VISION_SHAPE_CARD_DETECT | VISION_BALL_DETECT) #enable card de
 MuVisionSensor.VisionSetLevel(vision_type, level)
 ```
 
-‘level’ can be set to：
+‘level’ can be set to:
 
 `LevelDefault`
 
@@ -140,7 +140,7 @@ The return value is between 0~3, which represents the 4 levels
 MuVisionSensor.CameraSetFPS(mode)
 ```
 
-mode’ can be set to：
+'mode' can be set to:
 
 `FPSNormal`
 
@@ -166,7 +166,7 @@ Adjust the color cast caused by the changes of external light sources.
 MuVisionSensor.CameraSetAwb(mode)
 ```
 
-‘mode’ can be set to：
+‘mode’ can be set to:
 
 `AutoWhiteBalance`
 
@@ -194,7 +194,7 @@ The return value is between 0~3,which represents the 4 WB modes.
 MuVisionSensor.CameraSetZoom(mode)
 ```
 
-‘mode’ can be set to：
+‘mode’ can be set to:
 
 `ZoomDefault`
 
@@ -216,7 +216,7 @@ MuVisionSensor.CameraSetZoom(mode)
 MuVisionSensor.CameraGetZoom()
 ```
 
-The return value is between 0~5，which represents the 6 zoom levels.
+The return value is between 0~5, which represents the 6 zoom levels.
 
 ## LED Settings
 
@@ -226,15 +226,15 @@ The return value is between 0~5，which represents the 6 zoom levels.
 MuVisionSensor.LedSetColor(led, detected_color, undetected_color, level)
 ```
 
-Explanations of these parameters：
+Explanations of these parameters:
 
-led：the LED you want to configure, the available values
+led: the LED you want to configure, the available values
 
 `Led1` 
 
 `Led2`
 
-detected_color：colors which are detected，the available values as follows
+detected_color: colors which are detected, the available values as follows
 
 `LedClose`
 
@@ -252,9 +252,9 @@ detected_color：colors which are detected，the available values as follows
 
 `LedWhite`
 
-undetected_color：colors  which are not detected，same available values as detected_color.
+undetected_color: colors  which are not detected, same available values as detected_color.
 
-level：set the brightness level; an integer between 0 and 15; the larger the brighter.
+level: set the brightness level; an integer between 0 and 15; the larger the brighter.
 
 ## Restore Default Settings
 
@@ -279,9 +279,9 @@ MuVisionSensor.GetValue(vision_type, object_inf)
 
 The available values of  ‘vision_type’ are as mentioned above.
 
-object_inf can be set to：
+object_inf can be set to: 
 
-`Status` 0 means undetected，1 means detected
+`Status` 0 means undetected, 1 means detected
 
 `XValue`
 

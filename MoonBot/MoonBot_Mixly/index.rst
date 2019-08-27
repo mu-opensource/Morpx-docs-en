@@ -3,12 +3,12 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-MoonBot Kit Mixly 教程
+MoonBot Kit Mixly Tutorial
 ===============================
 
-本文介绍 MoonBot Kit 使用米思奇（Mixly）进行开发的教程。
+This article introduces MoonBot Kit developing tutorial with Mixly platform.
 
-Mixly 基础教程请参考官方帮助文档 `Mixly 帮助文档 <http://mixly.readthedocs.io/>`_
+Visit Mixly official docs for basic tutorials: `Mixly wiki <http://mixly.readthedocs.io/>`_
 
 .. toctree::
     :maxdepth: 1

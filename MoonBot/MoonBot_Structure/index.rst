@@ -3,11 +3,12 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-MoonBot Kit 形态指南
+MoonBot Kit Structure Instruction
 ===============================
-MoonBot Kit 目前共有三种官方搭建形态,从简单到复杂分别是MoonRover智能车、MoonMech机械臂、MoonBot机器人。
-每种形态下有独特的功能，用户可根据喜好和拼装能力选择形态搭建。
-通过米思奇、Arduino、MU Bot APP等编程控制，也可以通过APP遥控，更可以进一步发挥创意，设计和控制自己独特的机器人。
+MoonBot Kit contains 3 official structures, including MoonRover, MoonMech and MoonBot.
+Every structure has unique functions, and all parts are packaged in the standard and educational version.
+
+Programme through Mixly, Arduino and MU Bot App, or directly remote control, or even express creative ideas and design your own robot.
 
 .. toctree::
     :maxdepth: 1

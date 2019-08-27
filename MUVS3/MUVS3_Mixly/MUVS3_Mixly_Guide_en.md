@@ -1,14 +1,14 @@
 # Import Mixly Library for MU Vision Sensor
 
-Open Mixly，click ‘Import’
+Open Mixly,click ‘Import’
 
 ![](./images/MUVS3_Mixly_hardware.png)
 
-Locate the ‘MuVisionSensorIII.xml’ file , select and open it.
+Locate the **MuVisionSensor3.xml** file , select and open it.
 
 ![](./images/MUVS3_Mixly_import.png)
 
-Locate the ‘MuVisionSensorIII.xml’ file , select and open it.
+Locate the ‘MuVisionSensor3.xml’ file , select and open it.
 
 ![](./images/MUVS3_Mixly_file.png)
 
@@ -18,7 +18,7 @@ Then the nether information window prompts” import custom Library successfully
 
 # Connect to Arduino
 
-MU Vision Sensor 3 periphrals and ports：
+MU Vision Sensor 3 periphrals and ports:
 
 ![](./images/MUVS3_pinout.png)
 
@@ -40,7 +40,7 @@ MU Vision Sensor 3 periphrals and ports：
 (3) Change the UART address of MU sensor by resetting Address Switch. Both switches are downwards and the address is 0x60 on default.
  (Changing this setting is not recommended)
 
-* Arduino UNO cannot send messages to PC when MuVisionSensor is running in hardware serial mode, due to a communication conflict.
+*Arduino UNO cannot send messages to PC when MuVisionSensor is running in hardware serial mode, due to a communication conflict.*
 
 # Instruction of the Programming Blocks
 
@@ -48,19 +48,19 @@ MU Vision Sensor 3 periphrals and ports：
 
 **Initialization**
 
-(1)Hardware Serial Mode：Vision sensor uses serial mode to initialize the main control when connecting the main control hardware serial port. 
+(1)Hardware Serial Mode: Vision sensor uses serial mode to initialize the main control when connecting the main control hardware serial port. 
 The serial port is the serial communication between the main control and the computer. 
 When it is used for vision sensor, computer printing characters will be disordered or communication abnormalities.
 
 ![](./images/Mixly_block_serial_init.png)
 
-(2)Software Serial Mode：Vision sensor uses serial mode, and the main controller is initialized when connecting the main control software serial port. 
+(2)Software Serial Mode: Vision sensor uses serial mode, and the main controller is initialized when connecting the main control software serial port. 
 The main controller can customize RX and TX pins. 
 The speed of soft serial port in real environment may be too fast and unstable. The baud rate is not recommended to exceed 9600.
 
 ![](./images/Mixly_block_softserial_init.png)
 
-(3)Hardware I2C Mode：The vision sensor uses I2C mode to initialize the main controller when connecting the main controller I2C pins.
+(3)Hardware I2C Mode: The vision sensor uses I2C mode to initialize the main controller when connecting the main controller I2C pins.
 
 ![](./images/Mixly_block_i2c_init.png)
 
@@ -127,11 +127,11 @@ Disable all algorithms and restore hardware default settings.
 
 # FAQs
 
-1.Q: What should I do if I can’t open programming blocks or blocks are black boxes ?
+1.Q: What should I do if I can’t open programming blocks or blocks are black boxes?
 
 A: Please download the latest Mixly program file and import the library again.
 
-2.Q: What should I do when I import the library and download the examples correctly, but the vision sensor doesn’t respond and the serial port output nothing？
+2.Q: What should I do when I import the library and download the examples correctly, but the vision sensor doesn’t respond and the serial port output nothing?
 
 A: Check whether the cable is correctly and tightly connected .
 

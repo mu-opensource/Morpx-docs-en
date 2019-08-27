@@ -6,7 +6,7 @@
 MU 3 MicroPython Programming Guide
 ===============================
 
-This passage introduces how to use MU Vision Sensor 3 with Micro:bit board and MicroPython language。
+This passage introduces how to use MU Vision Sensor 3 with Micro:bit board and MicroPython language.
 
 .. toctree::
     :maxdepth: 1

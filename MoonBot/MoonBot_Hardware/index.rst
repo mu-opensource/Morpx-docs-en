@@ -3,19 +3,20 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-MoonBot Kit 硬件指南
+MoonBot Kit Hardware Instruction
 ===============================
 
-MoonBot Kit目前共有9种硬件模块。可以通过米思奇或Arduino对模块单独操控，或者将模块拼搭成具体的形态后设计交互程序。
-以下模块介绍中会单独介绍每个模块的引脚定义和简单的米思奇程序，帮助用户快速上手。
+MoonBot Kit contains 9 kinds of hardware modules.
+Users can programme to control modules through Mixly or Arduino platform, or design interactive program after building certain structures.
+In instructions below, we provide pinout graphs and sample programs of every single module to help users get started with the kit.
 
-软件方面的详细教程参考
+Detailed software instructions at:
 
-`MoonBot Kit Mixly教程 <https://morpx-docs.readthedocs.io/en/latest/MoonBot/MoonBot_Mixly/index.html>`_
+`MoonBot Kit Mixly Instruction <https://morpx-docs.readthedocs.io/en/latest/MoonBot/MoonBot_Mixly/index.html>`_
 
-下载所有硬件示例程序
+Download all hardware programs here:
 
-`MoonBot 硬件示例 <https://github.com/mu-opensource/Morpx-docs/raw/master/MoonBot/MoonBot_Hardware/sources/MoonBot_Hardware_examples.zip>`_
+`MoonBot Kit hardware examples <https://github.com/mu-opensource/Morpx-docs/raw/master/MoonBot/MoonBot_Hardware/sources/MoonBot_Hardware_examples.zip>`_
 
 .. toctree::
     :maxdepth: 1

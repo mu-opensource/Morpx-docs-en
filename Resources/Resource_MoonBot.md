@@ -5,9 +5,9 @@ Updates are subject to change without notice. You can get the latest technical i
 
 Official Website: <http://mai.morpx.com/page.php?a=moonbot-kit>
 
-GitHub：<https://github.com/mu-opensource/>
+GitHub: <https://github.com/mu-opensource/>
 
-Phone Number:**0571-81958588**
+Phone Number: **0571-81958588**
 
 Email: **support@morpx.com**
 

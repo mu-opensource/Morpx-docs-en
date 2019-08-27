@@ -6,7 +6,7 @@
 MU 3 Mixly Programming Guide
 ===============================
 
-This passage introduces how to use MU Vision Sensor 3 with Arduino board and Mixly IDE。
+This passage introduces how to use MU Vision Sensor 3 with Arduino board and Mixly IDE.
 
 .. toctree::
     :maxdepth: 1

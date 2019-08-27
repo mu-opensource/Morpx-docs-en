@@ -3,10 +3,10 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-MoonBot Kit Arduino 教程
+MoonBot Kit Arduino Tutorial
 ===============================
 
-本文介绍MoonBot Kit 使用Arduino IDE 进行开发的教程。
+This artical introduces developing MoonBot Kit with Arduino IDE.
 
 .. toctree::
     :maxdepth: 1
