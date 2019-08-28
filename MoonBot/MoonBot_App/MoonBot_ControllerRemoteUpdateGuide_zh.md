@@ -1,50 +1,50 @@
-MoonBot Kit 遥控器固件升级向导
+MoonBot Kit Remote Controller Firmware Upgrade Wizard
 ===============================
 
-使用 MoonBot Kit 手机编程需要在主控内烧录特定的固件才可进行编程。
+Programming with MoonBot Kit APP requires burning the specified firmware in the master control.
 
-本文旨在指导用户如何升级 MoonBot Kit 主控模块烧录手机编程所需固件。
+This article guides users how to upgrade MoonBot Kit master module to burn firmware needed for APP programming.
 
-## 准备工作
+## Preparation
 
-硬件：
+Hardware：
 
-- MoonBot 开发者套件
+- MoonBot kit
 - PC (Windows、Linux 或 Mac OS)
 
-软件：
+Software：
 
-- [Arduino官方IDE](https://www.arduino.cc/en/Main/Software?setlang=cn)
-- MoonBot 遥控器 Arduino 源码或固件
+- [Arduino Official IDE](https://www.arduino.cc/en/Main/Software?setlang=cn)
+- MoonBot Remote control Arduino Source code or firmware
 
-## 通过烧录HEX文件进行升级
+## Upgrade by burning HEX files
 
-- 1.下载[MoonBot 主控遥控器固件](https://github.com/mu-opensource/MoonBot_RemoteController/releases/latest)(.hex 文件)
-- 2.烧录 .hex 固件
+- 1.Download [MoonBot Firmware of Master Control Remote Controller](https://github.com/mu-opensource/MoonBot_RemoteController/releases/latest)(.hex File)
+- 2.Burn .hex firmware
     - Windows
         ```
-        1）下载 Arduino Hex 烧录工具
-        2）选择 MoonBot 端口，硬件选择 `Genuino ATmega1280`
-        3）点击下载，等待下载完成
+        1）Download Arduino Hex Burning tool
+        2）Select MoonBot port，Hardware select `Genuino ATmega1280`
+        3）Click download and wait for download to complete.
         ```
 
-## 通过Arduino IDE编译Arduino源码进行升级
+##  Upgrade Arduino source code by compiling Arduino IDE
 
-- 1.搭建[MoonBot Kit Arduino 开发环境](../MoonBot_Arduino/MoonBot_arduino_development_construction_guide_cn.md)
-- 2.下载[MoonBot Kit 主控遥控器源码](https://github.com/mu-opensource/MoonBot_RemoteController/releases/latest)(Source.zip 文件)
-- 3.打开 Arduino IDE，点击`项目->加载库->添加.ZIP库`，选择第2步下载的.zip文件文件
+- 1.Building[MoonBot Kit Arduino development environment](../MoonBot_Arduino/MoonBot_arduino_development_construction_guide_cn.md)
+- 2.Download[MoonBot Kit Master remote control source code](https://github.com/mu-opensource/MoonBot_RemoteController/releases/latest)(Source.zip 文件)
+- 3.Open Arduino IDE，Click Project->Loading Library->Add.ZIP library`，Select the.Zip file downloaded in Step 2
 
     ![](../MoonBot_Arduino/images/arduino_add_zip_library.png)
 
-- 4.点击确定，完成 MoonBot Kit 主控遥控器源码的加载
-- 5.点击 Arduino `文件->示例->MoonBotRemote->RemoteWithDemo`，打开源码
+- 4. Select the. zip file downloaded in step 2 and click OK to load the source code of MoonBot Kit master remote control
+- 5.Click Arduino `File->Example>MoonBotRemote->RemoteWithDemo`，Open Source code
 
     ![](./images/arduino_add_example_remote_with_demo.png)
 
-- 6.连接 MoonBot Kit 主控至电脑，点击 Arduino `工具->端口`，选择对应的 MoonBot 端口
-- 7.点击下载按钮，等待下载完成
+- 6.Connet MoonBot Kit Master Control to Computer，Click Arduino `Tool->Port`，Selectthe corresponding MoonBot port.
+- 7.Click the Download button and wait for the download to complete
 
-## 测试
+## Test
 
-- 1.开机重启后按下主控上按钮A，靠近A键LED亮青色灯光并发出提示音
-- 2.开机重启后按下主控上按钮B，靠近B键LED亮绿色灯光并发出提示音
+- 1.After restart, press the main control button A, close to the A key LED bright blue light and give a prompt sound.
+- 2.After restart, press the main control button B, close to the B key LED bright green light and give a prompt sound.

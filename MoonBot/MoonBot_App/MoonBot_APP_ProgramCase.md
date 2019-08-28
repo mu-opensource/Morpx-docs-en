@@ -1,55 +1,61 @@
-# APP示例程序
+# APP Program Example
 
-## 触摸招手
+## Touch Wave
 
-MoonBot机器人手部装有舵机，头部装有触摸传感器，可通过编程实现触摸招手
+MoonBot has steering engine in its hand and touch sensor in its head. Touch beckoning can be realized by programming.
 
-简介：循环检测触摸传感器状态，当头部左侧被触摸时，机器人招左手。当头部右侧被触摸时，机器人招右手。
+Explain:Cyclic detection of touch sensor status, when the left side of the head is touched, the robot beckons the left hand.
+
+When the right side of the head is touched, the robot waves its right hand.
 
 ![](./images/MoonBot_APP_Touch.png)
 
-## 简单算法
+## Simple Algorithm 
 
-MoonBot机器人使用视觉传感器与眼睛灯模块
+MoonBot uses VisionSensor and LED Module.
 
-简介：循环检测球算法，当检测到球时眼睛转圈表情，未检测到时闭眼。
+Explain:Cyclic detection of the ball algorithm, when the ball is detected, the eyes turn around the expression, when not detected closed eyes.
 
 ![](./images/MoonBot_APP_Ball.png)
 
-## 功能模块示例
+## Examples of functional modules
 
-MoonBot机器人使用按键扬声器LED灯舵机灯配合数学模块。
+MoonBot robot uses button speaker, LED lamp, actuator lamp and mathematic module.
 
-简介：循环检测按键A/B的状态，当按键被按下时，MoonBot机器人做出声音灯光手臂动作。
+Explain:Cyclic detection of buttonA/B status. The MoonBot robot makes sound and light arm movements when the button is pressed.
 
 ![](./images/MoonBot_APP_AnJian.png)
 
-## 找人示例
+## Search sb.
 
-MoonBot机器人使用视觉传感器与运动模块
+MoonBot Using VisionSensor and Motion Modules
 
-简介：开启人体算法，未检测到人体时视觉传感器LED闪烁红灯，检测到时亮蓝灯。
+Explain: Turn on Body Detection Algorithms,When the body is not detected, the VisionSensor LED flashes red light,
+ 
+When the body is detected, the VisionSensor LED flashes blue light.
 
-当检测到人体位于中心时机器人停止运动，否则向左/右转动。
+When the body is detected in the center, the robot stops moving, otherwise it turns left/right.
 
 ![](./images/MoonBot_APP_Body.png)
 
-## 避障智能车
+## Barrier Avoidance Intelligent Vehicle
 
-在智能车左右两边装上红外传感器
+Install infrared sensors on left and right sides of intelligent vehicle car
 
-简介：校准底盘，当智能车右侧红外传感器检测到障碍时左转，当左侧红外传感器检测到障碍时右转，均未检测到时直行
+Explain: Calibration chassis,Turn left when the right infrared sensor of the smart car detects obstacles, 
+
+turn right when the left infrared sensor detects obstacles, and go straight when none of them is detected.
 
 ![](./images/MoonBot_APP_Car0.png)
 
-## 交通智能车
+## Traffic Intelligent Vehicle
 
-智能车配合交通卡片算法
+Intelligent Vehicle Cooperative Traffic Card Algorithms
 
-简介：校准底盘，开启交通卡片算法，设置摄像头缩放等级，根据灯光设置白平衡参数。
+Explain: Calibration chassis,turn on the traffic card algorithm, set the camera zoom level
+ 
+and set the white balance parameters according to the lights.
 
-未检测到交通卡片时，视觉传感器闪烁红灯，检测到卡片时亮蓝灯。
-
-将卡片放在智能车前，识别不同交通卡片，智能车会做出不同的运动。
+When traffic card is not detected, the VisionSensor LED flashes red light and blue light when the traffic card is detected.
 
 ![](./images/MoonBot_APP_Car1.png) ![](./images/MoonBot_APP_Car2.png)

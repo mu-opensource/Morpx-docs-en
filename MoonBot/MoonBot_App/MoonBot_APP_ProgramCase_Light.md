@@ -1,61 +1,59 @@
-# APP编程块_灯光
+# APP Programming Block_Light
 
-## 灯光
+## Light
 
 ![](./images/MoonBot_APP_Light.jpg)
 
-### 眼睛灯光设置块
+### Eye light setting block
 
 ![](./images/MoonBot_APP_Light0.jpg)
 
-眼睛参数：所有、左眼、右眼
+Eye parameters: all, left and right eyes
 
-颜色参数：关闭、蓝色、绿色、青色、红色、紫色、黄色、白色、随机
+Color parameters: close, blue, green, cyan, red, purple, yellow, white, random
 
-亮度参数：1~10，数值越大越亮
+Luminance parameters: 1-10, the greater the value, the brighter
 
-### 表情块
+### Expression block
 
 ![](./images/MoonBot_APP_Light1.jpg)
 
-参数：开心、悲伤、生气、眨眼、转圈、闪烁、彩虹、闭眼
+Parameters: happy, sad, angry, blink, turning, flashing, rainbow, closed eyes
 
-返回:显示表情
+Return: Show expression
 
-### 眼睛预设各LED灯RGB
+### Eye preset RGB value of each LED lamp
 
 ![](./images/MoonBot_APP_Light2.jpg)
 
-LED灯：1~12及所有灯
+LED light：1-12 and all lights
 
-红色：0~255
+Red：0~255
 
-绿色：0~255
+Green：0~255
 
-蓝色：0~255
+Blue：0~255
 
-### 显示眼睛预设值
+### Show eye preset
 
 ![](./images/MoonBot_APP_Light3.jpg)
 
-### 主控LED灯设置块
+### Main control LED lamp setting block
 
 ![](./images/MoonBot_APP_Light4.jpg)
 
-主控LED参数：所有、1、2
+Main LED parameters: all, 1, 2
 
-颜色参数：关闭、蓝色、绿色、青色、红色、紫色、黄色、白色、随机
+Color parameters: close, blue, green, cyan, red, purple, yellow, white, random
 
-亮度参数：1~10，数值越大越亮
+Luminance parameters: 1-10, the greater the value, the brighter
 
-### 小MU LED灯设置块
+### MU LED light setting block
 
 ![](./images/MoonBot_APP_Light5.jpg)
 
-小MU LED灯参数：所有、1、2
+MU LED lamp parameters: all, 1, 2
 
-颜色参数：关闭、蓝色、绿色、青色、红色、紫色、黄色、白色、随机
+Color parameters: close, blue, green, cyan, red, purple, yellow, white, random
 
-亮度参数：1~10，数值越大越亮
-
-
+Luminance parameters: 1-10, the greater the value, the brighter

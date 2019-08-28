@@ -1,50 +1,47 @@
-# APP编程块_音乐
+# APP Programming Block_music
 
-## 音乐
+## Music
 
 ![](./images/MoonBot_APP_Music.jpg)
 
-### 扬声器播放声音
+### Speaker Plays Sound block
 
 ![](./images/MoonBot_APP_Music0.jpg)
 
-播放指定的声音
+Play the specified sound：Animal Voice, Greetings, Piano, City, Drum, Custom Voice
 
-可选声音：动物声、问候语、钢琴、城市、鼓、自定义声音
-
-### 音量选择块
+### Volume Selection Block
 
 ![](./images/MoonBot_APP_Music1.jpg)
 
-参数:0~10,数值越大音量越大
+Parameters: 0-10, the larger the value, the larger the volume.
 
-### 播放模式
+### Play mode block
 
 ![](./images/MoonBot_APP_Music2.jpg)
 
-参数：单曲播放、单曲循环
+Parameters: single play, single loop
 
-### 停止播放
+### Stop play block
 
 ![](./images/MoonBot_APP_Music3.jpg)
 
-停止播放声音
+Stop playing sound
 
-### 蜂鸣器播放块
+### Buzzer play block
 
 ![](./images/MoonBot_APP_Music4.jpg)
 
-蜂鸣器以设置好的节拍播放音阶
+Buzzer to play scales in a set beat
 
-音阶：空拍、do1-si7、Do1-Si7
+Scales: aerial, do1-si7, Do1-Si7
 
-节拍：1/8~4拍
+Rhythm: 1/8-4 beats
 
-### 蜂鸣器播放块
+### Buzzer play sound block
 
 ![](./images/MoonBot_APP_Music5.jpg)
 
-播放指定的声音
+Play the specified sound
 
-参数：按键音1-4、警报1-2、音效1-4、救护声、警笛声
-
+Parameters: key tone 1-4, alarm 1-2, sound effect 1-4, ambulance sound, siren sound

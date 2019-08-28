@@ -3,10 +3,10 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-MoonBot Kit MU Bot App Tutorial
+MoonBot Kit MU Bot App 教程
 ===============================
 
-This artical introduces developing MoonBot Kit with MU Bot App.
+本文介绍MoonBot Kit连接手机端MU Bot App的教程。
 
 .. toctree::
     :maxdepth: 1

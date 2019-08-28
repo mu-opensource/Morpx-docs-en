@@ -1,113 +1,113 @@
-# APP编程块_运动
+# APP Programming Block_motion
 
-## 运动
+## motion
 
 ![](./images/MoonBot_APP_Moving.jpg)
 
-### 设置舵机角度
+### Setting steering angle block
 
 ![](./images/MoonBot_APP_Moving0.jpg)
 
-舵机口：舵机1~舵机4
+Steering port：steering1~steering4
 
-角度：0~180°
+Angle：0~180°
 
-### 读取舵机角度
+### Read steering angle block
 
 ![](./images/MoonBot_APP_Moving1.jpg)
 
-读取指定舵机角度
+Read the specified steering angle
 
-参数：舵机1~4
+Parameters: steering gear 1-4
 
-### 前进
+### Forward
 
 ![](./images/MoonBot_APP_Moving2.jpg)
 
-以指定档位速度前进设置好的距离
+Distance set to advance at specified gear speed
 
-执行距离：0~999cm
+Execution distance：0~999cm
 
-速度参数：很快、快、中、慢、很慢
+Speed parameters: very fast, fast, medium, slow, very slow
 
-### 后退
+### Back off
 
 ![](./images/MoonBot_APP_Moving3.jpg)
 
-以指定档位速度后退设置好的距离
+Back-set distance at specified gear speed
 
-执行距离：0~999cm
+Execution distance：0~999cm
 
-速度参数：很快、快、中、慢、很慢
+Speed parameters: very fast, fast, medium, slow, very slow
 
-### 左转
+### Turn Left
 
 ![](./images/MoonBot_APP_Moving4.jpg)
 
-以指定档位速度左转设置好的角度
+Turn left at the specified gear speed and set the angle
 
-执行距离：0~999°
+Execution angle：0~999°
 
-速度参数：很快、快、中、慢、很慢
+Speed parameters: very fast, fast, medium, slow, very slow
 
-### 右转
+### Turn right
 
 ![](./images/MoonBot_APP_Moving5.jpg)
 
-以指定档位速度右转设置好的角度
+Turn right at the specified gear speed and set the angle
 
-执行距离：0~999°
+Execution angle：0~999°
 
-速度参数：很快、快、中、慢、很慢
+Speed parameters: very fast, fast, medium, slow, very slow
 
-### 停止运动
+### Stop Motion block
 
 ![](./images/MoonBot_APP_Moving6.jpg)
 
-### 电机写入转速
+### Writing speed of Motor block
 
 ![](./images/MoonBot_APP_Moving7.jpg)
 
-向电机写入一定的转速（-100~+100转/分）
+Write a certain speed to the motor（-100~+100R／min）
 
-参数：电机1、电机2
+Parameters: Motor 1, Motor 2
 
-### 读取电机速度
+### Read motor speed block
 
 ![](./images/MoonBot_APP_Moving8.jpg)
 
-参数：电机1、电机2
+Parameters: Motor 1, Motor 2
 
-### 校准直行偏移
+### Calibration of alignment migration block
 
 ![](./images/MoonBot_APP_Moving9.jpg)
 
-通过校准直行偏移使之不会往某一方向偏移
+Calibrate the alignment migration so that it does not migrate in a certain direction.
 
-参数：0~200，>100向右校准，<100向左校准
+Parameters: 0-200, > 100 to the right and < 100 to the left
 
-### 校准直行距离
+### Calibration of alignment distance block
 
 ![](./images/MoonBot_APP_Moving10.jpg)
 
-校准外部干扰引起的直行距离不准确的情况
+Calibrating the inaccuracy of the direct distance caused by external interference
 
-参数：>100增大距离，<100减少距离
+Parameters: > 100 Increase Distance, < 100 Reduce Distance
 
-### 校准转弯角度
+### Calibration of turning angle block
 
 ![](./images/MoonBot_APP_Moving11.jpg)
 
-校准外部干扰引起的转弯角度不到位的情况
+Incomplete turning angle caused by calibration external interference
 
-参数：>100增大转弯角度，<100减少转弯角度
+Parameters: > 100 Increase turning angle, < 100 Reduce turning angle
 
-### 校准舵机角度
+### Calibration of steering angle block
 
 ![](./images/MoonBot_APP_Moving12.jpg)
 
-通过舵机校准模块校准生产安装上的角度误差
+Calibration of angle error in production and installation by rudder calibration module
 
-参数：舵机1~4
+Parameters: steering gear 1-4
 
-增加/减少（-90~+90°）
+Increase/decrease（-90~+90°）

@@ -1,55 +1,57 @@
-# APP控制器
+# APP Remote Contorl
 
-首次进入APP控制器功能，选择对应搭建好的形态。
+First entry into APP controller, chooses the corresponding configuration.
 
-![](./images/MoonBot_App_C0.jpg)
-
-## 控制器使用简介
+## Introduction to Controller Use
 
 ![](./images/MoonBot_App_C.jpg)
 
-1.WiFi连接
+1.WiFi Conncet
 
-点选与视觉模块LED灯光颜色一致的颜色块组合开始连接。连接失败时，可按视觉模块复位键重新点选连接。
+Click on the combination of color blocks that match the color of the LED light of the VisionSensor to start the connection.
+
+If the connection fails, press the visual module reset key to re-select the connection.
 
 ![](./images/MoonBot_App_C1.jpg)
 
 ![](./images/MoonBot_App_C2.jpg)
 
-2.形态选择
+2.Morphological selection
 
-点击后在三种搭建形态中选择对应搭建好的形态。
+Choose the corresponding form among the three construction forms.
 
-![](./images/MoonBot_App_C3.jpg)
+3.Setting function Button
 
-3.设置功能键
+Click on the Setup Function Key, the circle box below the Function Key is dotted. 
 
-点击设置功能键，下方功能键圆形框呈虚线，点击虚线圆框可增加删除替换各个功能至圆形框内，点击设置功能键完成设置。
+Click on the dotted circle box to add, delete and replace each function into the circle box. Click on the Setup Function Key to complete the setup.
 
-![](./images/MoonBot_App_C4.jpg)
-
-![](./images/MoonBot_App_C5.jpg)
+![](./images/GIF_APP_Control0.gif)
  
-4.轮盘控制
+4.Wheel control
 
-连接好wifi后可通过轮盘控制机器人运动
+When WiFi is connected, the motion of the robot can be controlled by the wheel disk.
 
-5.功能键
+5.Functional Button
 
-点击已设置的功能键使机器人做出相应的动作，不同形态机器人功能各不一样。
+Click on the set function key to make the robot act accordingly. Some functions can be turned on/off.
 
-车形态内置功能：视觉角度上、视觉角度下、跟踪球、避障开关、卡片识别
+MoonBotCar：Visual Angle Up/Down、Tracking Ball、Obstacle Avoidance、Card Identification
 
 ![](./images/MoonBot_App_C6.jpg)
 
-机械臂形态内置功能：主臂角度上/下、视觉角度上/下、机械爪开/闭、找球抓球、找篮板投篮
+MoonBotMech：Arm up/Down、Visual Angle Up/Down、Open/Close Claw、Catch Ball、Shoot
 
 ![](./images/MoonBot_App_C7.jpg)
 
-人形态内置功能：左臂角度上/下、右臂角度上/下、头角度上/下、舞蹈1/2、卖萌
+MoonBot：Left Arm Up/Down、Right Arm Up/Down、Head Angel Up/Down、Dancer1/2、Be cute
 
 ![](./images/MoonBot_App_C8.jpg)
 
-6.灯光及声音键
+6.LED Button and Sound Button
 
-点击按键使用会有灯光/声音。
+There will be lights/sounds when you click on the button.
+
+## Example
+
+![](./images/GIF_APP_Control1.gif)

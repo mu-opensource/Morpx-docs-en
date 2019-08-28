@@ -1,70 +1,69 @@
-# APP编程块_输入
+# APP Programming Block_Input
 
-## 输入
+## Input
 
 ![](./images/MoonBot_APP_Input.jpg)
 
-### 读取按键被按下状态
+### Read button pressed status
 
 ![](./images/MoonBot_APP_Input0.jpg)
 
-参数：A、B、A+B
+Parameter：A、B、A+B
 
-返回：按键被按下/未被按下
+Return: button pressed / not pressed
 
-### 初始化触摸传感器端口
+### Initialization of Touch Sensor Port
 
 ![](./images/MoonBot_APP_Input1.jpg)
 
-参数：端口3、端口5、端口7、端口8
+Parameter：Port3、Port5、Port7、Port8
 
-### 初始化红外传感器端口，读取两路红外传感器
+### Initialize the infrared sensor port and read infrared sensors
 
 ![](./images/MoonBot_APP_Input2.jpg)
 
-端口参数：端口3、端口5、端口7、端口8
+Port Parameter:Port3、Port5、Port7、Port8
 
-红外传感器IR1:IR2参数：0:0、0:1、1:0、1:1
+infrared sensor IR1:IR2 Parameter：0:0、0:1、1:0、1:1
 
-0表示未检测到，1表示检测到
+0 means undetected , 1 means detected
 
-### 读取指南针朝向(0~360°)
+### Read the compass toward(0~360°)
 
 ![](./images/MoonBot_APP_Input3.jpg)
 
-返回：指南针朝向角度
+Return: The compass faces the angle
 
-### 读取加速度值（1024/g）
+### Read acceleration value（1024/g）
 
 ![](./images/MoonBot_APP_Input4.jpg)
 
-参数：x方向、y方向、z方向、强度值
+Parameter：X direction, y direction, Z direction, strength value
 
-返回：加速度值
+Return: Acceleration value
 
-### 读取旋转角度（°）
+### Reading rotation angle（°）
 
 ![](./images/MoonBot_APP_Input5.jpg)
 
-参数：俯仰（x）、横滚（y），读取主控倾斜角
+Parameters: pitch (x), roll (y), read the main control tilt angle
 
-返回：角度值（-180°~+180°）
+Return: Angle value（-180°~+180°）
 
-### 读取温度计值
+### Read thermometer values
 
 ![](./images/MoonBot_APP_Input6.jpg)
 
-返回：温度值
+Return: Temperature value
 
-### 读取IMU动作
+### Read IMU actions
 
 ![](./images/MoonBot_APP_Input7.jpg)
 
-参数：震动、自由落体、X轴向上、X轴向下、Y轴向上、Y轴向下、Z轴向上、Z轴向下、3g、6g、8g
+Parameters: vibration, free falling, X-axis up, X-axis down, Y-axis up, Y-axis down, Z-axis up, Z-axis down, 3g, 6g, 8g
 
-### 校准指南针
+### Calibration compass
 
 ![](./images/MoonBot_APP_Input8.jpg)
 
-指南针校准模块，校准时主控需以”∞“字形翻转
-
+Compass calibration module, the main control in calibration needs to be flipped in the shape of ”∞“

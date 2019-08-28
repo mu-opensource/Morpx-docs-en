@@ -1,186 +1,181 @@
-# APP编程块_人工智能
+# APP Programming Block_Artificial intelligence
 
-## 人工智能
+## Artificial intelligence
 
-![](./images/MoonBot_APP_AI.jpg)
+![](./images/EMoonBot_APP_AI.jpg)
 
-### 算法开启关闭
+### Algorithm enable/Disable
 
-![](./images/MoonBot_APP_AI0.jpg)
+![](./images/EMoonBot_APP_AI0.jpg)
 
-算法：球体、人体、形状卡片、交通卡片、数字卡片、色块检测、颜色识别
+Algorithm: ball,body, shape card, traffic card, number card, color block detection, color recognition
 
-参数：开启/关闭
+Parameter: enable/Disable
 
-**使用说明**
+**Instructions**
 
-球体算法：识别橙色乒乓球(Label：1)和绿色网球（Label：2）
+Ball Algorithm: Identify orange ping-pong (Label:1) and green tennis (Label:2)
 
-人体算法：检测人体的上半身特征
+Body Algorithm: Detection of upper body characteristics
 
-形状、交通、数字卡片：识别特定的卡片
+Shape/Trafiic/Number Card: Identify specific cards
 
-色块检测：设定一种颜色，检测其色块区域
+Color block detection: Setting a color and detecting its block area
 
-颜色识别：制定一块区域，检测其区域内的颜色 
+Color recognition: Specify an area to detect its color 
 
-**使用时可开启一种或同时开启多种算法**
+**One or more algorithms can be open at the same time**
 
-![](./images/MoonBot_APP_AI0_0.png) ![](./images/MoonBot_APP_AI0_1.png)
+![](./images/EMoonBot_APP_AI0_0.png) ![](./images/EMoonBot_APP_AI0_1.png)
 
-### 设置色块检测颜色
+### Setting Block Detection Colors
 
-![](./images/MoonBot_APP_AI1.jpg)
+![](./images/EMoonBot_APP_AI1.jpg)
 
-颜色：黑色、白色、红色、黄色、绿色、青色、蓝色、紫色
+Color: Black, white, red, yellow, green, cyan, blue, purple
 
-**使用说明**
+**Instructions**
 
-色块检测算法默认检测红色，可通过此功能块改变检测的颜色
+The color block detection algorithm detects red by default. It can change the color of detection by using this function block.
 
-![](./images/MoonBot_APP_AI1_0.png)
+![](./images/EMoonBot_APP_AI1_0.png)
 
-### 读取算法检测参数
+### Reading algorithm to detect parameters
 
-![](./images/MoonBot_APP_AI2.jpg)
+![](./images/EMoonBot_APP_AI2.jpg)
 
-算法：球体、人体、形状卡片、交通卡片、数字卡片、色块检测
+Algorithm: ball,body, shape card, traffic card, number card, color block detection, color recognition
 
-设置参数：检测到、X坐标、Y坐标、宽度、高度、分类编号
+Setting parameters: is detected, X , Y , width, height, label
 
-检测到：检测到时为真True,未检测到时为假False
+is detected：True when detected and False when not detected
 
-X坐标、Y坐标、宽度、高度:量化到（0~100）
+X coordinate, Y , width, height:Quantify to (0-100)
 
-分类编号：Label值
+Classification number：Label
 
-![](./images/MoonBot_APP_AI2_0.png)
+![](./images/EMoonBot_APP_AI2_0.png)
 
-### 看见算法
+### Seeing algorithm block
 
-![](./images/MoonBot_APP_AI3.jpg)
+![](./images/EMoonBot_APP_AI3.jpg)
 
-算法：球体、人体、形状卡片、交通卡片、数字卡片、色块检测、颜色识别
+Algorithm: ball,body, shape card, traffic card, number card, color block detection, color recognition
 
-![](./images/MoonBot_APP_AI3_0.png)
+![](./images/EMoonBot_APP_AI3_0.png)
 
-### 算法方位位置
+###  Algorithm azimuth position block
 
-![](./images/MoonBot_APP_AI4.jpg)
+![](./images/EMoonBot_APP_AI4.jpg)
 
-算法：球体、人体、形状卡片、交通卡片、数字卡片、色块检测
+Algorithm: ball,body, shape card, traffic card, number card, color block detection
 
-参数：中心、上方、下方、左侧、右侧
+Setting parameters:center, up, down, left, right
 
-![](./images/MoonBot_APP_AI4_0.png)
+![](./images/EMoonBot_APP_AI4_0.png)
 
-### 算法尺寸大小
+###  Algorithm size block
 
-![](./images/MoonBot_APP_AI5.jpg)
+![](./images/EMoonBot_APP_AI5.jpg)
 
-算法：球体、人体、形状卡片、交通卡片、数字卡片、色块检测
+Algorithm: ball,body, shape card, traffic card, number card, color block detection
 
-参数：大、中、小
+Setting parameters: big, normal, small
 
-### 算法区域位置
+### Algorithmic area location block
 
-![](./images/MoonBot_APP_AI6.jpg)
+![](./images/EMoonBot_APP_AI6.jpg)
 
-算法：球体、人体、形状卡片、交通卡片、数字卡片、色块检测
+Algorithm: ball,body, shape card, traffic card, number card, color block detection
 
 x：1/2/3/4/5
 
 y：1/2/3/4/5
 
-### 形状卡片
+### Shape card block
 
-![](./images/MoonBot_APP_AI7.jpg)
+![](./images/EMoonBot_APP_AI7.jpg)
 
-参数：对号、叉号、圆形、方形、三角形
+Parameters: check, closs, circle, square, triangle
 
-### 交通卡片
+### Trafiic card block
 
-![](./images/MoonBot_APP_AI8.jpg)
+![](./images/EMoonBot_APP_AI8.jpg)
 
-参数：前进、左转、右转、掉头、停止
+Parameters: forward, left, right, turn around, park.
 
-### 数字卡片
+### Number card block
 
-![](./images/MoonBot_APP_AI9.jpg)
+![](./images/EMoonBot_APP_AI9.jpg)
 
-参数：0~9
+Parameters：0~9
 
-### 球体识别
+### Ball Recognition block
 
-![](./images/MoonBot_APP_AI11.jpg)
+![](./images/EMoonBot_APP_AI11.jpg)
 
-参数：乒乓球（橙色）、网球（绿色）
+Parameters: ping-pong (orange), tennis (green)
 
-### 颜色识别
+### Color recognition block
 
-![](./images/MoonBot_APP_AI10.jpg)
+![](./images/EMoonBot_APP_AI10.jpg)
 
-参数：黑色、白色、红色、黄色、绿色、青色、蓝色、紫色
+Parameters: black, white, red, yellow, green, cyan, blue, purple
 
-### 检测到手势
+### Detection of gestures block
 
-![](./images/MoonBot_APP_AI12.jpg)
+![](./images/EMoonBot_APP_AI12.jpg)
 
-参数：上划、下划、左划、右划、任意
+Parameters: Up, Down, Left, Right, Any
 
-### 有物体靠近小MU
+### Something Approaching to MU block
 
-![](./images/MoonBot_APP_AI13.jpg)
+![](./images/EMoonBot_APP_AI13.jpg)
 
-参数：任意、远、中、近
+Parameters: aany, far, middle, near.
 
-### 环境光亮度
+### Ambient luminance block
 
-![](./images/MoonBot_APP_AI17.jpg)
+![](./images/EMoonBot_APP_AI17.jpg)
 
-参数：很暗、暗、良好、亮、很亮
+Parameters: darkest, dark, good, bright, brightest
 
-### 摄像头缩放
+### Set camera zoom block
 
-![](./images/MoonBot_APP_AI14.jpg)
+![](./images/EMoonBot_APP_AI14.jpg)
 
-参数：1/2/3/4/5
+Parameters：1/2/3/4/5
 
-**使用说明**
+**Instructions**
 
-Zoom 值小，则视野广，距离近。Zoom 值大，则视野窄，距离远。
+If the Zoom value is small, the field of vision is wide and the distance is close. 
 
-### 白平衡模式
+If the Zoom value is large, the field of vision is narrow and the distance is long.
 
-![](./images/MoonBot_APP_AI15.jpg)
+### White balance mode block
 
-参数：自动、锁定、白光、黄光
+![](./images/EMoonBot_APP_AI15.jpg)
 
-**使用说明**
+Parameters: auto, lock, white light , yellow light .
 
-自动模式：适用于光照良好且对颜色要求不高的环境中使用；
+**Instructions**
 
-锁定模式：适用于颜色要求较高的环境，让小 MU 面对白纸进行白平衡校准，然后锁定白平衡参数，锁定后颜色不会随环境的改变而变化； 
+Automatic mode: suitable for use in environments with good lighting and low color requirements
 
-白光模式：适合于白色灯光或者阴天环境中使用，该模式也属于自动白平衡模式； 
+Lock-in mode: suitable for the environment with high color requirement, let MU calibrate the white balance on the white paper, 
 
-黄光模式：适合于黄色灯光或者阳光环境中使用，该模式也属于自动白平衡模式。
+then lock the white balance parameters, the color will not change with the change of the environment after lock-in.
 
-### 小MU检测时灯光设置
+White light mode: suitable for white light or overcast environment, this mode also belongs to automatic white balance mode;
 
-![](./images/MoonBot_APP_AI16.jpg)
+Yellow light mode: suitable for use in yellow light or sunshine environment, this mode also belongs to automatic white balance mode.
 
-检测到时LED灯颜色：关闭、蓝色、绿色、青色、红色、紫色、黄色、白色、随机
+### Lighting settings for MU detection
 
-未检测到时LED灯颜色：同上
+![](./images/EMoonBot_APP_AI16.jpg)
 
-灯光亮度：1~10，数值越大越亮
+LED lamp color detected: close, blue, green, cyan, red, purple, yellow, white, random
 
+LED lamp color undetected: ibid.
 
-
-
-
-
-
-
-
+Lighting brightness: 1-10, the greater the value, the brighter
