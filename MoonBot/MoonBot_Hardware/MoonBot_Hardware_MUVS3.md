@@ -4,9 +4,10 @@
 
 ![](./images/render_MUVS3_2.png)
 
-视觉模块是一个带有特定视觉算法的识别模块。
+Vision module is a intelligent vision sensor containing AI algorithms.
 
-模块与主控之间通过串口连接，通过主控编程控制视觉模块数据传输，也可通过wifi连接手机端app实现远程编程功能。
+Vision module can be connected to controller by serial interface, and controlled by pregrammed instructions.
+It can also be controlled by mobile phone app through wifi.
 
 ## Specification
 
@@ -48,7 +49,7 @@ Connector: PH2.0 4P
 
 该程序较为简单，主要为了展示MU的连接和程序初始化。更多编程块和示例程序可参考
 
-[MU 3 Mixly 教程](https://morpx-docs.readthedocs.io/en/latest/MUVS3/MUVS3_Mixly/index.html)
+[MU 3 Mixly Programming Guide](https://morpx-docs.readthedocs.io/en/latest/MUVS3/MUVS3_Mixly/index.html)
 
 
 
@@ -57,4 +58,4 @@ Connector: PH2.0 4P
 视觉模块自带wifi，可以连接MU Bot App，进行遥控或手机端编程等，
 详情参考
 
-[MoonBot Kit MU Bot App 教程](https://morpx-docs.readthedocs.io/en/latest/MoonBot/MoonBot_App/index.html)
+[MoonBot Kit MU Bot App Tutorial](https://morpx-docs.readthedocs.io/en/latest/MoonBot/MoonBot_App/index.html)
