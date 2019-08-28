@@ -8,7 +8,7 @@ Speaker module is a mp3 player controlled by serial intruction. Put sound files 
 
 ## Specification
 
-Size: 48*48*11.6mm
+Size: 48 x 48 x 11.6 mm
 
 Charging Power: 1W
 

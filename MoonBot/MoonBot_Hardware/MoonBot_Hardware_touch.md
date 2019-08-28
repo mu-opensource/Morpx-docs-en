@@ -8,7 +8,7 @@ Touch module is a single touch button.
 
 ## Specification
 
-Size: 34*32*9.6mm
+Size: 34 x 32 x 9.6 mm
 
 Touch Type: Non-self-locking single touch
 

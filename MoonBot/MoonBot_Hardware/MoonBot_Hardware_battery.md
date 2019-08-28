@@ -1,51 +1,48 @@
-# 电池模块
+# Battery Module
 
-## 简介
+## Brief Introduction
 
 ![](./images/render_battery.png)
 
-电池模块用于主控供电，可驱动各类执行器和传感器，最大输出功率可达14W。
+Battery module is used to power controller module, driving actuators and sensors.
 
-模块含有锂电池电压转换、电量管理、过载保护、充电等单元，可直接通过USB type-c接口充电（不可传输数据）。
+It contains battery voltage converter, electricity management, overload protect and rechagre unit. It can be charged directly by USB port(Not for communication).
 
-## 参数
+## Specification
 
-尺寸：67.6 x 56 x 33.7 mm
+Size: 67.6 x 56 x 33.7 mm
 
-电池类型：聚合物锂电池
+Battery Type: Polymer lithium battery
 
-电量：7.4V 1800mAh
+Output Power: 5V 2.8A max
 
-输出功率：最大5V 2.8A
+Charging Power: 5V 1A max
 
-输出接口：PH2.0 5P
+Charging Period: 3.5h
 
-充电功率：最大5V 1A
+Charging Port: USB type-C
 
-充电时间：约3.5小时
-
-充电接口：USB type-C
-
-**接口图：**
+**Pinout**
 
 ![](./images/pinout_battery.png)
 
-## 使用说明
+## Usage
 
-- 电池短按开启，长按3秒关闭，无连接时30秒后自动关闭。
+- Short press power button to turn on battery and long press 3 seconds to turn off. Automaticly turn off when unconnected.
 
-- 顶部橙灯为充电指示，白灯为电源指示，红灯为USB接入指示，4颗蓝灯为剩余电量指示。
+- Orange light on the top is charge indicator,while white light is power indicator and red light indicates USB connected.4 blue lights indicates remaining capacity.
 
-- 电池通过PH2.0 5P线连接主控来给主控供电，可以同时驱动舵机、电机等大功率执行器，注意最高输出为5V 2.8A。
+- Battery module power the controller module through PH2.0 5P wire. It can drive high-power actuators like servos and motors.The max output power is 5V 2.8A.
 
-- 电池通过USB-C接口充电，最大充电电流1A，充满需3.5小时。电脑端充电电流最大约0.6A，建议配正规的USB充电器。该USB接口不具备通信功能。
+- Battery module can be charged through USB-C port(Not for communication), with 1A max charge current.
+Whole charge time is about 3.5 hours.It is recommended to use standard charger, while computer USB port can usually provide only 0.6A.
 
-## 注意事项
+## Attention
 
-- 电池模块只可用于和主控模块连接，不得改装，防止短路。
+- Battery module can only be connected to controller module.Do not modify and disassemble it.
 
-- 电池含有电路保护模块，但日常使用电流不过大，不过放等有利于延长电池寿命。
+- Battery module contains circuit protect unit to prevent overloading.Manually control the output power can maintain a longer battery lifetime.
 
-- 锂电池为易燃易爆产品，防止挤压、跌落、接触水、高温或金属异物等行为。
+- LiPo battery is a Flammable and explosive product, so protect it from pressure, falling, water, heat and metal parts.
 
-- 长时间不用请将电池单独存放，电量控制在50%左右，并防止误按按键开启电池。
+- Control the remaining power to 50% for long time storage. Prevent touching the button to open it.

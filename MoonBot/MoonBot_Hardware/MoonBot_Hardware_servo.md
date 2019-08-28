@@ -8,7 +8,7 @@ Servo is an angle-control actuator based on PWM signal.It contains DC motor, red
 
 ## Specification
 
-Size: 54*20*47.2mm
+Size: 54 x 20 x 47.2 mm
 
 Servo Type: 55g metal-gear servo
 
