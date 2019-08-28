@@ -1,6 +1,6 @@
-# 视觉模块
+# Vision Module
 
-## 简介
+## Brief Introduction
 
 ![](./images/render_MUVS3_2.png)
 
@@ -8,29 +8,29 @@
 
 模块与主控之间通过串口连接，通过主控编程控制视觉模块数据传输，也可通过wifi连接手机端app实现远程编程功能。
 
-## 参数
+## Specification
 
-尺寸：37 x 37 x 15 mm
+Size: 37 x 37 x 15 mm
 
-主控芯片：ESP32
+Processor: ESP32
 
-摄像头：OV7725
+Camera: OV7725
 
-视角：85°
+Sight: 85°
 
-板载资源：按键、LED指示灯
+On-board Resources: keys, LED
 
-连接方式：UART、wifi
+Communications: UART、wifi
 
-接口：PH2.0 4P
+Connector: PH2.0 4P
 
-**接口图:**
+**Pinout**
 
 ![](./images/pinout_MUVS3_2.png)
 
-## 使用示例
+## Usage
 
-### 串口开发
+### Serial Communication Example
 
 视觉模块可和主控连接，通过主控编程使用指令控制决定视觉模块的识别功能，并通过串口向主控传输数据。
 
@@ -52,7 +52,7 @@
 
 
 
-### wifi连接app
+### Connect to App through Wifi
 
 视觉模块自带wifi，可以连接MU Bot App，进行遥控或手机端编程等，
 详情参考

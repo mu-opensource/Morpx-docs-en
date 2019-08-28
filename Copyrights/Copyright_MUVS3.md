@@ -11,4 +11,4 @@ Incorrect operation may cause the device stopping working , getting worse detect
 
 - Morpx is the registered trademark of Morpx.Inc., and MU is the registered trademark of MU Vision Sensor. All trademarks (names and patterns) presented here in the text or figures belong to the holders of the marks.
 
-Copyrights © 2019 Morpx.Inc. All rights reserved
+Copyrights © 2019 Morpx.Inc. All rights reserved.

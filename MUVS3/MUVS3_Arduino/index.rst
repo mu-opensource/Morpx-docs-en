@@ -6,7 +6,7 @@
 MU 3 Arduino Programming Guide
 ===============================
 
-This passage introduces how to use MU Vision Sensor 3 with Arduino board and Arduino IDE。
+This passage introduces how to use MU Vision Sensor 3 with Arduino board and Arduino IDE.
 
 .. toctree::
     :maxdepth: 1

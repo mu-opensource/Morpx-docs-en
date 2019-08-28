@@ -1,36 +1,36 @@
-# 眼睛模块
+# Eyes Module
 
-## 简介
+## Brief Introduction
 
 ![](./images/render_eyes.png)
 
-眼睛模块由12颗串行RGB LED组成。
+Eyes module contains 12 serial RGB LED lights.
 
-## 参数
+## Specification
 
-尺寸：64 x 32 x 12 mm
+Size: 64 x 32 x 12 mm
 
-LED灯类型：串行LED
+LED Type: serial LED
 
-LED灯数量：12
+LED number: 12
 
-颜色：1600万色
+Color: 16 million colors
 
-**接口图：**
+**Pinout**
 
 ![](./images/pinout_eyes.png)
 
-## 使用示例
+## Usage
 
-### 点阵控制
+### Multiple Control
 
-程序介绍：将眼睛模块连接至主控口，自定义眼睛亮度。
-12颗LED灯显示程序中对应的颜色，显示5秒后眼睛做出开心的表情，显示5秒后灯光关闭。
+Code introduction: Connect the eyes module to P1 of main controller and define brightness of eyes.
+Let 12 LEDs show appointed color for 5 seconds, show happy for 5 seconds, and turn off.
 
 ![](./images/Mixly_example_eyes.png)
 
-### 单灯控制
+### Single Control
 
-程序介绍：LED灯从第1颗到第12颗逐颗亮起设置的RGB颜色灯，等待1秒后灯光关闭
+Code introduction: Set LEDs one by one and control the RGB value of every light for 1 second.
 
 ![](./images/Mixly_example_eyes_single.png)

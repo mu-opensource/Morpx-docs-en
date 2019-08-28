@@ -1,32 +1,33 @@
-# 红外模块
+# Infrared Module
 
-## 简介
+## Brief Introduction
 
 ![](./images/render_infrared.png)
 
-红外模块含有两个红外开关，可检测一定距离内的障碍。
+Infrared module has 2 infrared switch inside, used to detect certain obstacle.
 
-模块有远近两种模式，用于巡线或避障等不同安装方式。
+It has short and long modes, which can be used in following line or aoviding obstacle.
 
-## 参数
+## Specification
 
-尺寸：34 x 32 x 12 mm
+Size: 34 x 32 x 12 mm
 
-红外形式：2路反射式红外开关
+Infrared Type: 2 reflective switchs
 
-检测距离：
+Detect Distance: 
 
-近距离模式约10mm
+short mode 10mm
 
-远距离模式约110mm
+long mode 110mm
 
-**接口图：**
+**Pinout**
 
 ![](./images/pinout_infrared.png)
 
-## 使用示例
+## Usage
 
-程序介绍：将红外模块连接至主控口，循环检测红外传感器两路状态。
-当红外传感器两路同时被检测到有障碍时，主控LED两个灯亮红色，检测到一路障碍时，主控LED亮程序中对应的红灯。
+Code introduction: Connect the infrared module to P3 of controller module and detect 2 switchs state.
+
+When both switchs detect the obstacle, 2 LEDS of controller turn red. When only one switch detect, turn on 1 LED instead.
 
 ![](./images/Mixly_example_infrared.png)

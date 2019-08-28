@@ -1,33 +1,36 @@
-# 电机模块
+# Motor Module
 
-## 简介
+## Brief Introduction
 
 ![](./images/render_motor.png)
+
 
 电机模块内含减速电机和测速编码器。外部有一个主动轮和一个被动轮，主动轮连接减速电机，被动轮则由螺丝和轴承连接。
 轮子外接拼装式的履带，用两个电机模块即可搭出一个履带车底盘。
 
-## 参数
+## Specification
 
-尺寸：109 x 40 x 39.1 mm
+Size: 109 x 40 x 39.1 mm
 
-减速比：120:1
+Reducer: 120:1
 
-空载转速：100rpm
+Unloaded Speed: 100rpm
 
-额定转速：70rpm
+Unloaded Current: 150rpm
 
-额定电流：300mA
+Rated Speed: 70rpm
 
-测速器：光电编码器
+Rated Current: 300mA
 
-接口：PH2.0 2P + PH2.0 4P
+Encoder: photoelectric encoder
 
-**接口图：**
+Connector: PH2.0 2P + PH2.0 4P
+
+**Piout**
 
 ![](./images/pinout_motor.png)
 
-## 使用示例
+## Usage
 
 ### 底盘控制
 

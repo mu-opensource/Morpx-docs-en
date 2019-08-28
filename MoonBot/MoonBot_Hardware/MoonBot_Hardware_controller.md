@@ -1,29 +1,30 @@
-# 主控模块
+# Controller Module
 
-## 简介
+## Brief Introduction
 
 ![](./images/render_controller.png)
 
-主控模块是机器人的交互核心。主控芯片为Atmega1280，兼容Arduino。板载舵机、电机和通用输入输出的接口，可以连接外部设备。
-同时板载按键、LED等外设，便于快速编程控制。
+Controller Module is the programming core of the robot. The main chip is ATmega1280, which is Arduino compatible.
+On-board servo, motor and GPIO ports can be used to connect to other devices. 
+And there are on-board keys, LED lights, buzzer and IMU that can be used to fast programme.
 
-## 参数
+## Specification
 
-尺寸：53 x 53 x 17.6 mm
+size: 53 x 53 x 17.6 mm
 
-主控芯片：ATmega1280
+Processor: ATmega1280
 
-接口：4路舵机、2路电机、9路通用输入输出
+Ports: 4 servos, 2 motors, 9 GPIOs
 
-板载资源：按键、LED指示灯、蜂鸣器、电子罗盘、加速度计
+On-board Resources: keys, LED, buzzer, IMU
 
-**外设和接口图：**
+**Pinout**
 
 ![](./images/pinout_controller.png)
 
-## 使用示例
+## Usage
 
-### 主控LED和按键示例
+### LED and Button Example
 
 按键和LED灯是最基础的输入和输出设备，可以用于其他设备的功能调试。首先介绍这两项，之后的调试会更方便。
 以下示例通过主控模块板载的2个可编程按键控制板载的2个RGB彩灯。
@@ -32,7 +33,7 @@
 
 ![](./images/Mixly_example_controller_LEDbutton.png)
 
-### 主控蜂鸣器示例
+### Buzzer Example
 
 该程序介绍主控蜂鸣器的编程方法，用两种方式让蜂鸣器发出警报声。
 
@@ -41,7 +42,7 @@
 
 ![](./images/Mixly_example_controller_buzzer.png)
 
-### 主控IMU示例
+### IMU Example
 
 IMU(Inertial Measurement Unit)是指惯性测量单元，含有陀螺仪、加速度计、指南针等一种或多种传感器，主要用于测量当前姿态，常用于无人机、机器人等设备。
 主控模块的IMU含有加速度计和指南针，并带有温度补偿，可以通过这些传感器反馈知道机器人当前是否有翻倒、跌落、震动等状态。以下示例简单介绍主控的IMU使用方法。

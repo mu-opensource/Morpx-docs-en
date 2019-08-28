@@ -7,6 +7,7 @@ MoonBot Kit Extended Structures
 ===============================
 
 Except for official structures, makers can use MoonBot Kit hardware modules and other common materials to build creative robots.
+
 .. toctree::
     :maxdepth: 1
     :glob: 

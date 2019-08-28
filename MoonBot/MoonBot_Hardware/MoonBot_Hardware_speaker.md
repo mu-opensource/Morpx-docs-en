@@ -1,30 +1,29 @@
-# 扬声器模块
+# Speaker Module
 
-## 简介
+## Brief Introduction
 
 ![](./images/render_speaker.png)
 
-扬声器模块是一个通过串口指令控制的mp3模块，可连接电脑放入声音文件，通过主控控制播放。
+Speaker module is a mp3 player controlled by serial intruction. Put sound files to in and control it with controller module.
 
-## 参数
+## Specification
 
-尺寸：48 x 48 x 11.6 mm
+Size: 48*48*11.6mm
 
-输出功率：1W
+Charging Power: 1W
 
-支持文件：mp3
+Supported File: mp3
 
-存储空间：16MB
+Memory Space: 16MB
 
-**接口图：**
+**Pinout**
 
 ![](./images/pinout_speaker.png)
 
-## 使用示例
+## Usage
 
-扬声器模块可与主控连接，通过主控控制播放。
+Code Introduction：Let the speaker play music, and use the controller button to pause or play.
 
-程序介绍：让扬声器随机播放音乐，通过按键使其暂停/播放。
-将扬声器连接至主控口，设置播放模式为随机播放，自定义扬声器音量大小，循环检测按键A的状态，当A被按下时，扬声器播放/暂停。
+Connect the speaker to P2 of controller, set play mode to random play and define speaker volume. Detect the state of button A. If it is pressed, play or pause.
 
 ![](./images/Mixly_example_speaker.png)

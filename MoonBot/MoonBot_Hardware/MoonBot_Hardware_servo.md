@@ -1,30 +1,28 @@
-# 舵机模块
+# Servo Module
 
-## 简介
+## Brief Introduction
 
 ![](./images/render_servo.png)
 
-舵机是通过PWM信号控制转动角度的执行器，内含直流电机、减速器、角度反馈和电流控制电路。
+Servo is an angle-control actuator based on PWM signal.It contains DC motor, reducer,feedback circuit and current control circuit.
 
-## 参数
+## Specification
 
-尺寸：54 x 20 x 47.2 mm
+Size: 54*20*47.2mm
 
-舵机：55g金属齿轮舵机
+Servo Type: 55g metal-gear servo
 
-扭矩：9.4kg.cm
+Torque: 9.4kg.cm
 
-可动角度：180度
+Rated Current: 250mA
 
-工作电流：250ma
+Blocked Circuit: 1A
 
-堵转电流：1A
+Connector: PH2.0 3P
 
-接口：PH2.0 3P
+## Usage
 
-## 使用示例
-
-### 舵机校正
+### Servo Calibration
 
 舵机转动范围为0~180度，顺时针方向为角度增大，初始角度设定为90度，舵机盘上带有一个向前的标记。
 
@@ -36,7 +34,7 @@
 
 ![](./images/Mixly_example_servo_calibrate.png)
 
-### 舵机转动
+### Servo Rotation
 
 舵机转动有两种方式，设定转至角度和时间，或者预设角度和速度后同步移动。前一种方式通常用于单舵机转动，后一种方式用于多个舵机同时转动。
 通过以下示例展示两种转动方式。

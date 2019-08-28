@@ -1,25 +1,26 @@
-# 触摸模块
+# Touch Module
 
-## 简介
+## Brief Introduction
 
 ![](./images/render_touch.png)
 
-触摸模块是一个单点触发式的触摸开关。
+Touch module is a single touch button.
 
-## 参数
+## Specification
 
-尺寸：34 x 32 x 9.6 mm
+Size: 34*32*9.6mm
 
-触摸形式：非自锁模式单点触摸
+Touch Type: Non-self-locking single touch
 
-触摸面规格：直径14mm
+Touch Area Size: diameter 14mm
 
-**接口图：**
+
+**Pinout**
 
 ![](./images/pinout_touch.png)
 
-## 使用示例
+## Usage
 
-程序介绍：将触摸模块连接至主控口P1，循环检测触摸传感器状态，被触摸时主控LED亮红灯，否则主控LED不亮灯。
+Code introduction: Connect the touch module to P1 of controller.Detect the mudule state. Controller LED turn red when touch module is touched, otherwise turn off. 
 
 ![](./images/Mixly_example_touch.png)
