@@ -4,9 +4,9 @@
 
 ![](./images/render_motor.png)
 
+Motor module contains a gear motor and an encoder inside.The active wheel is connected to gear motor, while the passive wheel is connected with screw and bearings. 
 
-电机模块内含减速电机和测速编码器。外部有一个主动轮和一个被动轮，主动轮连接减速电机，被动轮则由螺丝和轴承连接。
-轮子外接拼装式的履带，用两个电机模块即可搭出一个履带车底盘。
+The wheels are attached to track, and two whole motor modules are enough to build a Chassis.
 
 ## Specification
 
@@ -32,7 +32,7 @@ Connector: PH2.0 2P + PH2.0 4P
 
 ## Usage
 
-### 底盘控制
+### Chassis Control
 
 在车形、人形、机械臂等形态下，均可直接控制电机底盘前进、后退、转弯等。通过以下程序测试底盘的运行功能。
 
@@ -43,7 +43,7 @@ Connector: PH2.0 2P + PH2.0 4P
 
 ![](./images/Mixly_example_motor_tankbase.png)
 
-### 电机独立控制
+### Single Motor Control
 
 除了集成的底盘控制方式外，也可直接控制电机1和2。
 
