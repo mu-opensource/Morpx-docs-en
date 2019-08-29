@@ -26,7 +26,7 @@ Encoder: photoelectric encoder
 
 Connector: PH2.0 2P + PH2.0 4P
 
-**Piout**
+### Pinout
 
 ![](./images/pinout_motor.png)
 

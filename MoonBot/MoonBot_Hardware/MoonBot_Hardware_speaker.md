@@ -16,7 +16,7 @@ Supported File: mp3
 
 Memory Space: 16MB
 
-**Pinout**
+### Pinout
 
 ![](./images/pinout_speaker.png)
 
