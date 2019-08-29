@@ -26,29 +26,34 @@ On-board Resources: keys, LED, buzzer, IMU
 
 ### LED and Button Example
 
-按键和LED灯是最基础的输入和输出设备，可以用于其他设备的功能调试。首先介绍这两项，之后的调试会更方便。
-以下示例通过主控模块板载的2个可编程按键控制板载的2个RGB彩灯。
+Button and LED light are basic IO device, and can be used to test other devices.So firstly we introduce these to help test others.
+The following example shows how to control 2 on-board RGB LED lights with 2 programmable buttons.
 
-程序介绍：循环检测按键A和按键B的状态，当A被按下时LED1亮红色，当按键B被按下时LED2亮绿色，同时按下则都亮蓝色，无按键按下时关闭LED。
+Code introduction: Loop detect the status of button A and B. LED1 turns red when button A is pressed, while LED2 turns green when button B is pressed.
+When both of the buttons are pressed, both LEDs turns blue.By default, both LEDs are off.
 
 ![](./images/Mixly_example_controller_LEDbutton.png)
 
 ### Buzzer Example
 
-该程序介绍主控蜂鸣器的编程方法，用两种方式让蜂鸣器发出警报声。
+This code shows the way to programme buzzer on controller.Use two methods to make the buzzer beep.
 
-程序介绍：设置蜂鸣器的节拍为BPM 120，即每1拍为0.5秒。蜂鸣器可以直接播放已定义的音调，或者直接播放频率，播放频率时需要加上延时，否则会被跳过。
-循环播放5次高低警报音后停止播放，结尾添加停止程序块防止循环播放。
+Code introduction: Set the buzzer BPM(beats per minute) to 120, which means 1 beat is 0.5 second. 
+Buzzer can directly play a tone like high G, or play a certain frequency like 194 Hz.
+A delay should be added when play the frequency, or it will be skiped immediately.
+Loop play 5 times and end playing.End the whole code by adding an end block or it will play repeatly.
 
 ![](./images/Mixly_example_controller_buzzer.png)
 
 ### IMU Example
 
-IMU(Inertial Measurement Unit)是指惯性测量单元，含有陀螺仪、加速度计、指南针等一种或多种传感器，主要用于测量当前姿态，常用于无人机、机器人等设备。
-主控模块的IMU含有加速度计和指南针，并带有温度补偿，可以通过这些传感器反馈知道机器人当前是否有翻倒、跌落、震动等状态。以下示例简单介绍主控的IMU使用方法。
+IMU(Inertial Measurement Unit) contains one or more of gyroscope, accelerator and compass. It is usually used to measure the posture of copters and robots.
+This IMU on contorller contains accelerator, compass and temperature compensation. Use the feedback to know while the robot is falling, droped or shaking.
 
-程序介绍：初始化时校正指南针并调整主控灯光颜色，循环程序通过判断指南针和加速度计的角度定义4个方位，通过灯光颜色来指示方位。
+Code introduction: Initialize the compass and adjust the LEDs of controller at first. 
+Loop judge the 4 directions defined by compass and accelerator and show them on LEDs.
 
-实验现象：主控复位后在空中画∞来校正指南针，当LED灯闪烁时完成校正，此时将主控平放，指南针180度为正南方向，向左/右旋转则左/右边灯亮，俯/仰则亮绿/红色。
+Phenomenon: Reset the controller and draw ∞ in the air to calibrate the compass. The calibration finishs when LEDs shine.
+Put the controller horizontally and 180° means the right South. yaw it to the left/right and the left/right LED turns on. Pitch up/down and LED turns green/red.
 
 ![](./images/Mixly_example_controller_IMU.png)
