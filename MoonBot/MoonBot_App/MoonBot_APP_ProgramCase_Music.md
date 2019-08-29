@@ -2,35 +2,35 @@
 
 ## Music
 
-![](./images/MoonBot_APP_Music.jpg)
+![](./images/EMoonBot_APP_Music.jpg)
 
 ### Speaker Plays Sound block
 
-![](./images/MoonBot_APP_Music0.jpg)
+![](./images/EMoonBot_APP_Music0.jpg)
 
 Play the specified sound：Animal Voice, Greetings, Piano, City, Drum, Custom Voice
 
 ### Volume Selection Block
 
-![](./images/MoonBot_APP_Music1.jpg)
+![](./images/EMoonBot_APP_Music1.jpg)
 
 Parameters: 0-10, the larger the value, the larger the volume.
 
 ### Play mode block
 
-![](./images/MoonBot_APP_Music2.jpg)
+![](./images/EMoonBot_APP_Music2.jpg)
 
 Parameters: single play, single loop
 
 ### Stop play block
 
-![](./images/MoonBot_APP_Music3.jpg)
+![](./images/EMoonBot_APP_Music3.jpg)
 
 Stop playing sound
 
 ### Buzzer play block
 
-![](./images/MoonBot_APP_Music4.jpg)
+![](./images/EMoonBot_APP_Music4.jpg)
 
 Buzzer to play scales in a set beat
 
@@ -40,7 +40,7 @@ Rhythm: 1/8-4 beats
 
 ### Buzzer play sound block
 
-![](./images/MoonBot_APP_Music5.jpg)
+![](./images/EMoonBot_APP_Music5.jpg)
 
 Play the specified sound
 
