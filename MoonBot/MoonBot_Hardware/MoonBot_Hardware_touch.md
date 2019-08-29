@@ -15,7 +15,7 @@ Touch Type: Non-self-locking single touch
 Touch Area Size: diameter 14mm
 
 
-**Pinout**
+### Pinout
 
 ![](./images/pinout_touch.png)
 

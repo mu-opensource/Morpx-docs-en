@@ -22,7 +22,7 @@ Charging Period: 3.5h
 
 Charging Port: USB type-C
 
-**Pinout**
+### Pinout
 
 ![](./images/pinout_battery.png)
 

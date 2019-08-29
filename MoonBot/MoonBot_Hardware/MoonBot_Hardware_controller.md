@@ -18,7 +18,7 @@ Ports: 4 servos, 2 motors, 9 GPIOs
 
 On-board Resources: keys, LED, buzzer, IMU
 
-**Pinout**
+### Pinout
 
 ![](./images/pinout_controller.png)
 

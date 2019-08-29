@@ -20,7 +20,7 @@ short mode 10mm
 
 long mode 110mm
 
-**Pinout**
+### Pinout
 
 ![](./images/pinout_infrared.png)
 

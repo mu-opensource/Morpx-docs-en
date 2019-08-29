@@ -16,7 +16,7 @@ LED number: 12
 
 Color: 16 million colors
 
-**Pinout**
+### Pinout
 
 ![](./images/pinout_eyes.png)
 

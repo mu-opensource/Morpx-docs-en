@@ -30,7 +30,7 @@ Welcome to MU Documents
 	
 .. toctree::
     :maxdepth: 1
-    :caption: Disclaimer & Copyright
+    :caption: Copyright & License
 	
     Copyrights/index_product
     Copyrights/index_software
