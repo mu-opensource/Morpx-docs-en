@@ -55,7 +55,6 @@ Connector: PH2.0 4P
 
 ### Connect to App through Wifi
 
-视觉模块自带wifi，可以连接MU Bot App，进行遥控或手机端编程等，
-详情参考
+Vision mudule contains wifi unit, so it can be connected directly to MU Bot App.Programme or remote control it, please check
 
 [MoonBot Kit MU Bot App Tutorial](https://morpx-docs.readthedocs.io/en/latest/MoonBot/MoonBot_App/index.html)

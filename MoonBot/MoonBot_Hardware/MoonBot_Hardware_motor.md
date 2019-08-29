@@ -34,22 +34,25 @@ Connector: PH2.0 2P + PH2.0 4P
 
 ### Chassis Control
 
-在车形、人形、机械臂等形态下，均可直接控制电机底盘前进、后退、转弯等。通过以下程序测试底盘的运行功能。
+Under structures as MoonRover, MoonBot and MoonMech, chassis can be controlled to go forward , go back and turn around.
+Run the following program to test it.
 
-硬件连接：将电机和测速器接到主控对应接口，电机M1对应测速器P4，电机M2对应测速器P6。
-电机为大电流设备，主控必须连接电池模块供电来驱动电机。主控可同时连接电池和USB调试，此时使用电池供电。
+Hardware connection: Connect the motors and encoders to the controller. Motor port M1 corresponds to encoder port P4, and M2 corresponds to P6.
+Motor module is a high-power device and controller should be connected to battery to drive motor.
+The controller can be connected to battery and USB at the same time and uses battery as power source.
 
-程序介绍：初始化设定底盘的方向、校正直行偏移、距离和转弯半径。底盘可设定前进、后退、左转、右转，输入距离/角度和电机转速。最后停止程序防止循环运行。
+Code introduction: In setup part, the direction of chassis is set, bias of direction, distance and turning radius is corrected.
+In loop part, Chassis goes forward, back, turns left and right.Conrtol the distance and angle by setting motor speed. End the program at last.
 
 ![](./images/Mixly_example_motor_tankbase.png)
 
 ### Single Motor Control
 
-除了集成的底盘控制方式外，也可直接控制电机1和2。
+Except for controlling the whole chassis, motor 1 or 2 can be directly controlled.
 
-硬件连接：同上
+Hardware connection: Same as above.
 
-程序介绍：初始化打开串口，用来接收测速器数据。直接写入值通过PWM控制电机的电压，让底盘前进2秒。
-然后写入带编码器测速的电机速度值，让底盘原地旋转2秒，通过串口返回测速值。通过写入转速0关闭电机，停止运行。
+Code introduction: In initialize code, serial port is opened to send encoder data. Write value and control motor voltage through PWM for 2 seconds.
+Then write motor speed with encoder feedback for 2 seconds. And the controller send encoder data through serial port.Write 0 to stop the motor.
 
 ![](./images/Mixly_example_motor_single.png)
