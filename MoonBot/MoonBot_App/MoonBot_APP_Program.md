@@ -1,10 +1,8 @@
 # APP Programing
 
-![](./images/MoonBot_App_P0.jpg)
+![](./images/EMoonBot_App_P0.jpg)
 
 ## Introduction to Programming Use
-
-![](./images/MoonBot_App_P.jpg)
 
 1.WiFi Conncet
 
@@ -12,9 +10,9 @@ Click on the combination of color blocks that match the color of the LED light o
 
 If the connection fails, press the visual module reset key to re-select the connection.
 
-![](./images/MoonBot_App_C1.jpg)
+![](./images/EMoonBot_App_C1.jpg)
 
-![](./images/MoonBot_App_C2.jpg)
+![](./images/EMoonBot_App_C2.jpg)
 
 2.Exit Button
 
