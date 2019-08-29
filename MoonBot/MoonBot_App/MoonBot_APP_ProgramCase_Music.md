@@ -22,7 +22,7 @@ Parameters: 0-10, the larger the value, the larger the volume.
 
 Parameters: single play, single loop
 
-### Stop play block
+### Speaker stop block
 
 ![](./images/EMoonBot_APP_Music3.jpg)
 

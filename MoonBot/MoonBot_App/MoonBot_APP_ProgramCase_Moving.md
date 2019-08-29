@@ -94,7 +94,7 @@ Calibrating the inaccuracy of the direct distance caused by external interferenc
 
 Parameters: > 100 Increase Distance, < 100 Reduce Distance
 
-### Calibration of turning angle block
+### Calibration of rotate angle block
 
 ![](./images/EMoonBot_APP_Moving11.jpg)
 
