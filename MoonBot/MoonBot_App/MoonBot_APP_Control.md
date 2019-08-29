@@ -26,7 +26,7 @@ Click on the Setup Function Key, the circle box below the Function Key is dotted
 
 Click on the dotted circle box to add, delete and replace each function into the circle box. Click on the Setup Function Key to complete the setup.
 
-![](./images/GIF_APP_Control0.gif)
+
  
 4.Wheel control
 
@@ -54,4 +54,4 @@ There will be lights/sounds when you click on the button.
 
 ## Example
 
-![](./images/GIF_APP_Control1.gif)
+

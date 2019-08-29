@@ -44,4 +44,3 @@ Execute transmission
 
 ## Example 
 
-![](./images/GIF_APP_Program.gif)
