@@ -34,12 +34,12 @@ Software：
 - 2.Download[MoonBot Kit Master remote control source code](https://github.com/mu-opensource/MoonBot_RemoteController/releases/latest)(Source.zip 文件)
 - 3.Open Arduino IDE，Click Project->Loading Library->Add.ZIP library`，Select the.Zip file downloaded in Step 2
 
-    ![](../MoonBot_Arduino/images/arduino_add_zip_library.png)
+    ![](../MoonBot_Arduino/images/Earduino_add_zip_library.png)
 
 - 4. Select the. zip file downloaded in step 2 and click OK to load the source code of MoonBot Kit master remote control
 - 5.Click Arduino `File->Example>MoonBotRemote->RemoteWithDemo`，Open Source code
 
-    ![](./images/arduino_add_example_remote_with_demo.png)
+    ![](./images/Earduino_add_example_remote_with_demo.png)
 
 - 6.Connet MoonBot Kit Master Control to Computer，Click Arduino `Tool->Port`，Selectthe corresponding MoonBot port.
 - 7.Click the Download button and wait for the download to complete
