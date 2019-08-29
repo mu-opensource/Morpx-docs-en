@@ -12,9 +12,9 @@ Click on the combination of color blocks that match the color of the LED light o
 
 If the connection fails, press the visual module reset key to re-select the connection.
 
-![](./images/MoonBot_App_C1.jpg)
+![](./images/EMoonBot_App_C1.jpg)
 
-![](./images/MoonBot_App_C2.jpg)
+![](./images/EMoonBot_App_C2.jpg)
 
 2.Morphological selection
 
@@ -38,15 +38,15 @@ Click on the set function key to make the robot act accordingly. Some functions 
 
 MoonBotCar：Visual Angle Up/Down、Tracking Ball、Obstacle Avoidance、Card Identification
 
-![](./images/MoonBot_App_C6.jpg)
+![](./images/EMoonBot_App_C6.jpg)
 
 MoonBotMech：Arm up/Down、Visual Angle Up/Down、Open/Close Claw、Catch Ball、Shoot
 
-![](./images/MoonBot_App_C7.jpg)
+![](./images/EMoonBot_App_C7.jpg)
 
 MoonBot：Left Arm Up/Down、Right Arm Up/Down、Head Angel Up/Down、Dancer1/2、Be cute
 
-![](./images/MoonBot_App_C8.jpg)
+![](./images/EMoonBot_App_C8.jpg)
 
 6.LED Button and Sound Button
 
