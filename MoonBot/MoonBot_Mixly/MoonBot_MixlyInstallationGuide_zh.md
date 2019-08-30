@@ -3,7 +3,7 @@ MoonBot Mixly Guidelines for Programming Construction
 
 ## Full Installation Package Download
 
-Windows/Linux/Mac Full Edition MoonBot Mixly Package Download Link：[https://pan.baidu.com/s/1h8Cuj8UYm99Mh3O1ppmMfg](https://pan.baidu.com/s/1h8Cuj8UYm99Mh3O1ppmMfg)，提取码：`ksme`
+Windows/Linux/Mac Full Edition MoonBot Mixly Package Download Link：[https://pan.baidu.com/s/1h8Cuj8UYm99Mh3O1ppmMfg](https://pan.baidu.com/s/1h8Cuj8UYm99Mh3O1ppmMfg)，Extraction Code：`ksme`
 
 ## Independent Library Installation
 
@@ -25,7 +25,7 @@ Windows/Linux/Mac Full Edition MoonBot Mixly Package Download Link：[https://pa
 
     ![](./images/arduino_lib_management_zh.png)
 
-- 3.Search library `AsyncDelay', install the relevant library if not installed and update if the library is updated
+- 3.Search library `AsyncDelay', install the relevant library if not installed and update if the library is not the latest edition
 
     ![](./images/arduino_lib_download_zh.png)
 
