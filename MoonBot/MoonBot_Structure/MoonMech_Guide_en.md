@@ -2,9 +2,10 @@
 
 ## Introduction
 
-MoonMech是一台可移动的机械臂。底盘和人型类似，由塑料外壳包裹钣金骨架搭建而成。整体移动依靠底部履带底盘，机械臂的角度和调节则依靠两个舵机。前置机械爪配合视觉反馈可以夹持各种物体。
+MoonMech is a movable mechanical arm. Its body is made by plastic shell and sheet metal frame. 
+The track chasis is drived by motor module, and mech arm is drived by servos. The claw on top of the arm can catch various objects with vision feedback.
 
-MoonMech可以用于学习物料搬运、投篮等工程和竞技类应用。
+MoonMech can be used to learn competitive applications like transpotation and playing basketball.
 
 ![](./images/render_MoonMech.png)
 
@@ -28,11 +29,14 @@ Download pdf guide of MoonMech
 
 ### Catch Ball
 
-本示例介绍机械臂通过视觉识别抓取乒乓球。
+This example shows how to catch ping-pong ball recognized by vision module.
 
-程序介绍：初始化设定MU和舵机的连接口，视觉启用球检测算法，舵机运动到初始位置。循环程序中视觉检测到球，则判断球的横向坐标，底盘左右移动；判断球的纵向坐标，
-爪子上下移动。以球的宽度估计距离，当球宽度大于或等于27时则机械爪抓取，就可以抓到球。
+Code introduction: In initial part, vision module and servos are set to their ports.
+ Vision algorithm is set to ball detect, and servos are set to initial position.
+ In loop part, vision module will detect ball and judge the x offet and move the chassis.Then judge the y offset and move servos.
+Use the ball width to estimate the distance. When the width is above 27, the claw will close and catch the ball.
 
-实验现象：打开机械臂后机械爪朝前张开，视觉闪红灯开始检测。将乒乓球放在机械爪前方，视觉识别到时闪蓝灯，调整球到爪子抓取范围时机械爪会自动抓取。
+Phenomenon: Turn on MoonMech and it will open claw and look forward, with vision module LEDs shining red.
+Put a ping-pong ball in front of the claw, and the LEDs turn blue. Adjust the position of ball until the claw catch it.
 
 ![](./images/Mixly_MoonMech_grab_ball.png)
