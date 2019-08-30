@@ -2,9 +2,11 @@
 
 ## Introduction
 
-MoonRover由钣金车身和硬件模块组成。智能车整体运动由履带底盘驱动，顶部安装主控连接各外设，前面和底部可安装避障、视觉等传感器，后部安装电池。
+MoonRover is made of sheet metal body and hardware modules.It is drived by track chasis.
+The controller module is fixed on top of it, and connected to other devices with wires.
+Infrared module and vision module can be fixed on front or bottom of the body, and battery is fixed backwards.
 
-MoonRover可以用于学习避障、巡线、无人驾驶等车类应用。
+MoonRover can be used to learn applications like avoiding obstacles, following line, auto driving and so on.
 
 ![](./images/render_MoonRover.png)
 
@@ -32,25 +34,28 @@ Download MoonBot Mixly examples
 
 ### Avoid Obstacles
 
-智能车前面安装了两个红外避障模块后可以成为一台避障小车。
+MoonRover becomes a obstacle avoiding car when 2 infrared modules are fixed in front.
 
-硬件连接：搭建好小车的基础形态，如顶部图所示。车右边的红外模块连至端口P3，左边的红外模块连至P7，红外模块需全部切换至远距离模式。
+Hardware connection: Build the MoonRover with the manual.
+Infrared sensor on the left is connected to P3 of the controller, and the other is connected to P7.
+Both sensors should be set to long distance mode.
 
-程序介绍：初始化设定两个红外传感器的连接口，设定底盘的校正。
-循环程序为三种运行状态，当右边的传感器检测到障碍后则底盘左转，当左边的传感器检测到障碍后则底盘右转，未检测障碍则直行。
+Code introduction: In initial part, Two infrared sensors are set to the ports, and chassis is calibrated.
+In loop part, there are three status.When the left/right sensor detect obstacles, the chassis turn right/left.Go forward by default.
 
 ![](./images/Mixly_MoonRover_avoidObstacle.png)
 
 ### Auto Drive
 
-智能车前面安装了视觉和调节视觉角度的舵机后就成为一台可以用视觉导航的自动驾驶小车。
+MoonRover becomes a auto driving car when using vision module to navigate.
 
-硬件连接：按照MoonRover入门指南完成小车的搭建，注意视觉模块连接在P9口。
+Hardware connection: Build the MoonRover with the manual.The vision module is connected to P9 of the controller.
 
-程序介绍：初始化设定视觉模块在串口3（P9口)，启用算法交通卡片，底盘校正。
-循环程序中视觉模块检测交通卡片，5种交通卡片对应5种小车运动状态，如果检测到相应的卡片则对应运动。
+Code introduction: In initial part, vision module is connected to serial 3(P9 port), algorithm is set to traffic card and chassis is calibrated.
+In loop part, vision module detect traffic card.5 traffic card refer to 5 status, and MoonRover will move as the card shows.
 
-实验现象：烧录程序后打开电池开关，视觉模块初始化完成后闪红灯进入检测状态，将前进卡片放在小车前20厘米左右处即可被识别，小车前进。
-在运动过程中小车可以检测到其他卡片切换运动状态。在小车运动道路上立好不同的卡片让小车自动驾驶吧。
+Phenomenon: After downloading the program, turn on battery. Vision module will shine red after setup.
+Put a Forward card in front of MoonRover for about 20 centimeters and MoonRover will recognize it and go forward.
+Change card to change its status. Put different cards on the road to let MoonRover auto drive.
 
 ![](./images/Mixly_MoonRover_autoDrive.png)

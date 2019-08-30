@@ -1,4 +1,4 @@
-MoonBot Kit Remote Controller Firmware Upgrade Wizard
+MoonBot Kit Remote Control Firmware Upgrade Instruction
 ===============================
 
 Programming with MoonBot Kit APP requires burning the specified firmware in the master control.
