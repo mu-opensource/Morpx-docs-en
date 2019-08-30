@@ -1,64 +1,64 @@
-MoonBot Kit Arduino 开发环境搭建指南
+MoonBot Kit Arduino Guidelines for Building Development Environment
 ============================
 
-MoonBot Kit（以下简称 MoonBot ）提供了 Arduino 库函数，支持在 Arduino(ATmega1280) 上进行开发编程。
+MoonBot Kit（hereinafter referred to as MoonBot ）provide Arduino library functions，Support for development programming on Arduino (ATmega1280)。
 
-本文档旨在指导用户基于 Arduino 官方 IDE 进行 MoonBot 硬件开发环境搭建。
+This document aims to guide users to build MoonBot hardware development environment based on Aduino official IDE.。
 
-## 准备工作
+## Preparation
 
-硬件：
+Hardware：
 
-- MoonBot 开发者套件
-- PC (Windows、Linux 或 Mac OS)
+- MoonBot Developer Suite
+- PC (Windows、Linux or Mac OS)
 
-软件：
+Software：
 
-- [Arduino官方IDE](https://www.arduino.cc/en/Main/Software?setlang=cn)
-- MoonBot Arduino 库
+- [Arduino Official IDE](https://www.arduino.cc/en/Main/Software?setlang=cn)
+- MoonBot Arduino library
 
-## 详细安装步骤
+## Detailed installation steps
 
-### 第一步：MoonBot Arduino外部依赖库导入
+### First step：MoonBot Import Arduino External Dependency Library 
 
-- 1.启动Arduino官方IDE
-- 2.点击`项目->加载库->管理库`，打开`库管理器`
+- 1.Start Arduino official IDE
+- 2.Click on `Project - > Load Library - > Manage Library',open `Library Manager'.`
 
     ![](../MoonBot_Mixly/images/arduino_lib_management_zh.png)
 
-- 3.搜索库`AsyncDelay`，若没有安装则安装相关库，若库有更新，则进行更新
+- 3.Search library `AsyncDelay', install the relevant library if not installed, update if the library is updated
 
     ![](../MoonBot_Mixly/images/arduino_lib_download_zh.png)
 
-- 4.按照第三步的安装方法安装库`SoftwareWire` `Adafruit_NeoPixel` `Servo`，保证相关库安装到最新版
+- 4.Install the library `Software Wire'`Adafruit_NeoPixel' `Servo according to the installation method in step 3`，Ensure that the relevant libraries are installed in the latest version
 
-### 第二步：MoonBot Arduino库导入
+### Step 2: import MoonBot Arduino library
 
-- 1.在github下载最新的 [MuVisionSensor3](https://github.com/mu-opensource/MuVisionSensor3/releases/latest) 的 Arduino 库和 [MoonBot](https://github.com/mu-opensource/MoonBot/releases/latest) Arduino 库（Source code(zip)）
-- 2.点击`项目->加载库->添加.zip库`，选中第一步下载的 MoonBot Arduino 库，完成库的导入
+- 1.Download the latest [MuVisionSensor3](https://github.com/mu-opensource/MuVisionSensor3/releases/latest) Arduino library and[MoonBot](https://github.com/mu-opensource/MoonBot/releases/latest) Arduino library（Source code(zip)）
+- 2.Click on the `Project - > Load Library - > Add. zip Library', select the MounBot Arduino Library downloaded in the first step, complete the import of the library.
 
     ![](./images/arduino_add_zip_library.png)
 
-- 3.重复上一步，导入 MuVisionSensor3 Arduino 库，完成库导入
+- 3.Repeat the previous step and import the MuVisionSensor3 Arduino library to complete the library import
 
-### 第三步：连接设备
+### Step 3: Connecting devices
 
-现在连接您的 MoonBot 连接到 PC，进行设备连接和端口配置
+Now connect your MoonBot to PC ，Device connection and port configuration
 
-- 1.点击`工具->开发板`，选择`Arduino/Genuino Mega or Mega 2569`。
-- 2.点击`工具->处理器`，选择`ATmega1280`
-- 3.点击`工具->端口`，选择对应的 MoonBot 端口
+- 1.Click on Tools > Development Board ， select``Arduino/Genuino Mega or Mega 2569`。
+- 2.Click on Tool - > Processor ， select`ATmega1280`
+- 3.Click on Tool - > Port`，Select the corresponding MoonBot port
 
-    通常，串口在不同操作系统下显示的名称有所不同：
+    Generally, serial ports display different names under different operating systems：
 
-    - **Windows 操作系统：** ``COM1`` 等
-    - **Linux 操作系统：** 以 ``/dev/tty`` 开始
-    - **MacOS 操作系统：** 以 ``/dev/cu.`` 开始
+    - **Windows Operating System: ** `COM1` etc.
+    - **Linux Operating System：** Start with `dev/tty'.
+    - **MacOS Operating System：** Start with `dev/cu‘ .
 
-### 第四步：编译例程
+### Step 4: Compile routines
 
-- 1.点击`文件->示例->MoonBot`，选择其中一个例程
+- 1.Click on `File - > Example - > MoonBot',select one of the routines
 
     ![](./images/arduino_open_examples.png)
 
-- 2.点击上传按钮，如果一切顺利，烧录完成后，开发板将会复位，对应例程会开始运行。
+- 2.Click on the upload button. If everything goes well, the development board will be reset and the corresponding routine will start running after the burning is completed.
