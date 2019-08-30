@@ -1,35 +1,36 @@
-# MoonRover 指南
+# MoonRover Instruction
 
-## 介绍
+## Introduction
+
 MoonRover由钣金车身和硬件模块组成。智能车整体运动由履带底盘驱动，顶部安装主控连接各外设，前面和底部可安装避障、视觉等传感器，后部安装电池。
 
 MoonRover可以用于学习避障、巡线、无人驾驶等车类应用。
 
 ![](./images/render_MoonRover.png)
 
-## 参数
+## Specification
 
-尺寸：177 x 157 x 87 mm
+Size: 177 x 157 x 87 mm
 
-功能
+Functions
 
-动作：头部 底盘
+Motion: head, chassis
 
-传感：视觉 避障 测速
+Sense: vision, infrared, encoder
 
-## 搭建指南
+## Build Manual
 
-下载MoonRover pdf入门指南
+Download get started guide pdf file of MoonRover
 
-[MoonRover入门指南](https://github.com/mu-opensource/Morpx-docs-en/raw/master/MoonBot/MoonBot_Structure/docs/MoonRover_quick_start_guide_en.pdf)
+[MoonRover get started guide](https://github.com/mu-opensource/Morpx-docs-en/raw/master/MoonBot/MoonBot_Structure/docs/MoonRover_quick_start_guide_en.pdf)
 
-## 示例程序
+## Program Examples
 
-下载MoonRover米思奇示例程序
+Download MoonBot Mixly examples
 
-[MoonRover示例程序](https://github.com/mu-opensource/Morpx-docs-en/raw/master/MoonBot/MoonBot_Structure/sources/Mixly_example_MoonRover.zip)
+[MoonRover Examples](https://github.com/mu-opensource/Morpx-docs-en/raw/master/MoonBot/MoonBot_Structure/sources/Mixly_example_MoonRover.zip)
 
-### 避障小车
+### Avoid Obstacles
 
 智能车前面安装了两个红外避障模块后可以成为一台避障小车。
 
@@ -40,7 +41,7 @@ MoonRover可以用于学习避障、巡线、无人驾驶等车类应用。
 
 ![](./images/Mixly_MoonRover_avoidObstacle.png)
 
-### 自动驾驶小车
+### Auto Drive
 
 智能车前面安装了视觉和调节视觉角度的舵机后就成为一台可以用视觉导航的自动驾驶小车。
 

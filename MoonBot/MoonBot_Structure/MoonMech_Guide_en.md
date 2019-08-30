@@ -1,6 +1,6 @@
-# MoonMech 指南
+# MoonMech Instruction
 
-## 介绍
+## Introduction
 
 MoonMech是一台可移动的机械臂。底盘和人型类似，由塑料外壳包裹钣金骨架搭建而成。整体移动依靠底部履带底盘，机械臂的角度和调节则依靠两个舵机。前置机械爪配合视觉反馈可以夹持各种物体。
 
@@ -8,25 +8,25 @@ MoonMech可以用于学习物料搬运、投篮等工程和竞技类应用。
 
 ![](./images/render_MoonMech.png)
 
-## 参数
+## Specification
 
-尺寸：271 x 137 x 244 mm
+Size: 271 x 137 x 244 mm
 
-功能
+Functions
 
-动作：机械臂 机械爪 底盘
+Motion: mech arm, claw, chassis
 
-传感：视觉 测速
+Sense: vision, encoder
 
-## 搭建指南
+## Build Manual
 
-下载MoonMech pdf搭建指南
+Download pdf guide of MoonMech
 
-[MoonMech 搭建指南](https://github.com/mu-opensource/Morpx-docs/raw/master/MoonBot/MoonBot_Structure/docs/MoonMech_manual_en.pdf)
+[MoonMech build guide](https://github.com/mu-opensource/Morpx-docs-en/raw/master/MoonBot/MoonBot_Structure/docs/MoonMech_manual_en.pdf)
 
-## 示例程序
+## Program Examples
 
-### 抓球机器
+### Catch Ball
 
 本示例介绍机械臂通过视觉识别抓取乒乓球。
 
