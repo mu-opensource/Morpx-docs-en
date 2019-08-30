@@ -1,40 +1,42 @@
-MoonBot Mixly 编程搭建指南
+MoonBot Mixly Guidelines for Programming Construction
 =======================
 
-## 完整安装包下载
+## Full Installation Package Download
 
-Windows/Linux/Mac完整版MoonBot Mixly安装包下载地址：[https://pan.baidu.com/s/1h8Cuj8UYm99Mh3O1ppmMfg](https://pan.baidu.com/s/1h8Cuj8UYm99Mh3O1ppmMfg)，提取码：`ksme`
+Windows/Linux/Mac Full Edition MoonBot Mixly Package Download Link：[https://pan.baidu.com/s/1h8Cuj8UYm99Mh3O1ppmMfg](https://pan.baidu.com/s/1h8Cuj8UYm99Mh3O1ppmMfg)，提取码：`ksme`
 
-## 独立库安装
+## Independent Library Installation
 
-### 导入、升级Mixly-Arduino库
+### Import and upgrade Mixly-Arduino Library
 
-- 1.启动Mixly下Arduino
+- 1.Start Mixly-Arduino
     - Windows
 
-        打开Mixly安装路径下`{your_mixly_path}/arduino-1.8.5/arduino.exe`文件，启动Arduino
+        Open {your_mixly_path}/arduino-1.8.5/arduino.exe`file under the Mixly installation path，start Arduino
 
     - Linux
 
-        在终端运行路径Mixly安装路径下Arduino文件，启动Arduino
+        Running Arduino files at the terminal，start Arduino
         ```bash
         $ cd {your_mixly_path}
         $ ./arduino-1.8.2-linux64/arduino
         ```
-- 2.点击`项目->加载库->管理库`，打开`库管理器`
+- 2.Click on `Project - > Load Library - > Manage Library', open `Library Manager'.`
 
     ![](./images/arduino_lib_management_zh.png)
 
-- 3.搜索库`AsyncDelay`，若没有安装则安装相关库，若库有更新，则进行更新
+- 3.Search library `AsyncDelay', install the relevant library if not installed and update if the library is updated
 
     ![](./images/arduino_lib_download_zh.png)
 
-- 4.按照第三步的安装方法安装库`SoftwareWire` `Adafruit_NeoPixel` `Servo`，保证相关库安装到最新版
-- 5.关闭Arduino，完成基础库安装
+- 4.Install the library `Software Wire ``Adafruit_NeoPixel `Servo'according to the installation method of the third step ，
+    ensure that the relevant library is installed to the latest version.
+	
+- 5.Close Arduino，Complete the installation of the base library.
 
-### 导入Mixly库
+### Import Mixly Library
 
-- 1.点击下载[MoonBot](https://github.com/mu-opensource/MoonBot-Mixly/releases/latest)/[MuVisionSensor3](https://github.com/mu-opensource/MuVisionSensor3-Mixly/releases/latest)最新版Mixly库压缩包
-- 2.解压已下载的`MoonBot`/`MuVisionSensor3`压缩包
-- 3.打开Mixly界面，点击导入按钮，分别在刚解压出的`MoonBot`/`MuVisionSensor3`文件夹路径下找到`.xml`结尾的文件
-- 4.至此，库安装完成
+- 1.Click Download [MoonBot](https://github.com/mu-opensource/MoonBot-Mixly/releases/latest)/[MuVisionSensor3](https://github.com/mu-opensource/MuVisionSensor3-Mixly/releases/latest) The latest version of Mixly Library Compression Pack
+- 2.Upzip the downloaded `MoonBot`/`MuVisionSensor3`compression package
+- 3.Open the Mixly interface, click the import button,find the files at the end of `xml'under the `MoonBot'/`MuVision Sensor 3' folder path.
+- 4.Library installation completed
