@@ -27,6 +27,10 @@ Download pdf guide of MoonMech
 
 ## Program Examples
 
+Download MoonMech Mixly examples
+
+[MoonMech Examples](https://github.com/mu-opensource/Morpx-docs-en/raw/master/MoonBot/MoonBot_Structure/sources/Mixly_example_MoonMech.zip)
+
 ### Catch Ball
 
 This example shows how to catch ping-pong ball recognized by vision module.
