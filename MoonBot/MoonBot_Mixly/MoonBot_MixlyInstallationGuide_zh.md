@@ -1,5 +1,8 @@
-MoonBot Mixly Guidelines for Programming Construction
-=======================
+# MoonBot Mixly Guidelines for Programming Construction
+
+There are two ways to install MoonBot Mixly. Download the full package and unzip, or install independent library if you already installed Mixly.
+
+Instructions are shown below.
 
 ## Full Installation Package Download
 

@@ -12,5 +12,5 @@ Except for official structures, makers can use MoonBot Kit hardware modules and 
     :maxdepth: 1
     :glob: 
 	
-    MoonBot_Extension_Guide_cn.md
+    MoonBot_Extension_Guide_en.md
 	

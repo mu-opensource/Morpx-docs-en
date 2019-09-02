@@ -20,14 +20,14 @@ If the connection fails, press the visual module reset key to re-select the conn
 
 Choose the corresponding form among the three construction forms.
 
-3.Setting function Button
+3.Setting Function Button
 
 Click on the Setup Function Key, the circle box below the Function Key is dotted. 
 
 Click on the dotted circle box to add, delete and replace each function into the circle box. Click on the Setup Function Key to complete the setup.
 
+[Setting Function Button.gif](https://github.com/mu-opensource/Morpx-docs-en/raw/master/MoonBot/MoonBot_App/images/GIF/GIF_APP_Control0.gif)
 
- 
 4.Wheel control
 
 When WiFi is connected, the motion of the robot can be controlled by the wheel disk.
@@ -54,4 +54,4 @@ There will be lights/sounds when you click on the button.
 
 ## Example
 
-
+[Remote Control.gif](https://github.com/mu-opensource/Morpx-docs-en/raw/master/MoonBot/MoonBot_App/images/GIF/GIF_APP_Control1.gif)
