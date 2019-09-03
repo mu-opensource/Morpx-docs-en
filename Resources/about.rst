@@ -5,6 +5,9 @@
 
 关于本站/About
 ===============================
+
+本网站为摩图科技出品的产品相关资料站，在电脑端和移动端均可打开。
+
 This website is document of products produced by Morpx Inc. The website can be opened in computer and mobile devices.
 
 页面使用说明/Page Usage Notes
@@ -34,6 +37,6 @@ The newest document is in latest branch.Other stable branch will be shown when p
 
 * 指南下载/Download the Docs
 
-There are pdf, html and Epub files available for downloading.
-
 目前有pdf、html和Epub文件可供下载，方便离线阅读。
+
+There are pdf, html and Epub files available for downloading.
