@@ -26,13 +26,13 @@ Return: Show expression
 
 ![](./images/EMoonBot_APP_Light2.jpg)
 
-LED light：1-12 and all lights
+LED light:1-12 and all lights
 
-Red：0~255
+Red:0~255
 
-Green：0~255
+Green:0~255
 
-Blue：0~255
+Blue:0~255
 
 ### Show eye preset
 

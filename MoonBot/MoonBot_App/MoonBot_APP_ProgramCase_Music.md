@@ -8,7 +8,7 @@
 
 ![](./images/EMoonBot_APP_Music0.jpg)
 
-Play the specified sound：Animal Voice, Greetings, Piano, City, Drum, Custom Voice
+Play the specified sound:Animal Voice, Greetings, Piano, City, Drum, Custom Voice
 
 ### Volume Selection Block
 

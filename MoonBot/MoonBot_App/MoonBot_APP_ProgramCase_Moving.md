@@ -8,9 +8,9 @@
 
 ![](./images/EMoonBot_APP_Moving0.jpg)
 
-Steering port：steering1~steering4
+Steering port:steering1~steering4
 
-Angle：0~180°
+Angle:0~180°
 
 ### Read steering angle block
 
@@ -26,7 +26,7 @@ Parameters: steering gear 1-4
 
 Distance set to advance at specified gear speed
 
-Execution distance：0~999cm
+Execution distance:0~999cm
 
 Speed parameters: very fast, fast, medium, slow, very slow
 
@@ -36,7 +36,7 @@ Speed parameters: very fast, fast, medium, slow, very slow
 
 Back-set distance at specified gear speed
 
-Execution distance：0~999cm
+Execution distance:0~999cm
 
 Speed parameters: very fast, fast, medium, slow, very slow
 
@@ -46,7 +46,7 @@ Speed parameters: very fast, fast, medium, slow, very slow
 
 Turn left at the specified gear speed and set the angle
 
-Execution angle：0~999°
+Execution angle:0~999°
 
 Speed parameters: very fast, fast, medium, slow, very slow
 
@@ -68,7 +68,7 @@ Speed parameters: very fast, fast, medium, slow, very slow
 
 ![](./images/EMoonBot_APP_Moving7.jpg)
 
-Write a certain speed to the motor（-100~+100R／min）
+Write a certain speed to the motor(-100~+100R/min)
 
 Parameters: Motor 1, Motor 2
 
@@ -110,4 +110,4 @@ Calibration of angle error in production and installation by rudder calibration 
 
 Parameters: steering gear 1-4
 
-Increase/decrease（-90~+90°）
+Increase/decrease(-90~+90°)

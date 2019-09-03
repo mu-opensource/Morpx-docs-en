@@ -8,7 +8,7 @@
 
 ![](./images/EMoonBot_APP_Input0.jpg)
 
-Parameter：A、B、A+B
+Parameter：A,B,A+B
 
 Return: button pressed / not pressed
 
@@ -16,15 +16,15 @@ Return: button pressed / not pressed
 
 ![](./images/EMoonBot_APP_Input1.jpg)
 
-Parameter：Port3、Port5、Port7、Port8
+Parameter：Port3,Port5,Port7,Port8
 
 ### Initialize the infrared sensor port and read infrared sensors
 
 ![](./images/EMoonBot_APP_Input2.jpg)
 
-Port Parameter:Port3、Port5、Port7、Port8
+Port Parameter:Port3,Port5,Port7,Port8
 
-infrared sensor IR1:IR2 Parameter：0:0、0:1、1:0、1:1
+infrared sensor IR1:IR2 Parameter：0:0,0:1,1:0,1:1
 
 0 means undetected , 1 means detected
 
@@ -34,21 +34,21 @@ infrared sensor IR1:IR2 Parameter：0:0、0:1、1:0、1:1
 
 Return: The compass faces the angle
 
-### Read acceleration value（1024/g）
+### Read acceleration value(1024/g)
 
 ![](./images/EMoonBot_APP_Input4.jpg)
 
-Parameter：X direction, y direction, Z direction, strength value
+Parameter:X direction, y direction, Z direction, strength value
 
 Return: Acceleration value
 
-### Reading rotation angle（°）
+### Reading rotation angle(°)
 
 ![](./images/EMoonBot_APP_Input5.jpg)
 
 Parameters: pitch (x), roll (y), read the main control tilt angle
 
-Return: Angle value（-180°~+180°）
+Return: Angle value(-180°~+180°)
 
 ### Read thermometer values
 

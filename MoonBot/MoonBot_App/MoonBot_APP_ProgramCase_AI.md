@@ -48,11 +48,11 @@ Algorithm: ball,body, shape card, traffic card, number card, color block detecti
 
 Setting parameters: is detected, X , Y , width, height, label
 
-is detected：True when detected and False when not detected
+Is detected:True when detected and False when not detected
 
 X coordinate, Y , width, height:Quantify to (0-100)
 
-Classification number：Label
+Classification number:Label
 
 ![](./images/EMoonBot_APP_AI2_0.png)
 
@@ -88,9 +88,9 @@ Setting parameters: big, normal, small
 
 Algorithm: ball,body, shape card, traffic card, number card, color block detection
 
-x：1/2/3/4/5
+x:1/2/3/4/5
 
-y：1/2/3/4/5
+y:1/2/3/4/5
 
 ### Shape card block
 
@@ -108,7 +108,7 @@ Parameters: forward, left, right, turn around, park.
 
 ![](./images/EMoonBot_APP_AI9.jpg)
 
-Parameters：0~9
+Parameters:0~9
 
 ### Ball Recognition block
 
@@ -144,7 +144,7 @@ Parameters: darkest, dark, good, bright, brightest
 
 ![](./images/EMoonBot_APP_AI14.jpg)
 
-Parameters：1/2/3/4/5
+Parameters:1/2/3/4/5
 
 **Instructions**
 

@@ -36,15 +36,15 @@ When WiFi is connected, the motion of the robot can be controlled by the wheel d
 
 Click on the set function key to make the robot act accordingly. Some functions can be turned on/off.
 
-MoonBotCar：Visual Angle Up/Down、Tracking Ball、Obstacle Avoidance、Card Identification
+MoonBotCar:Visual Angle Up/Down,Tracking Ball,Obstacle Avoidance,Card Identification
 
 ![](./images/EMoonBot_App_C6.jpg)
 
-MoonBotMech：Arm up/Down、Visual Angle Up/Down、Open/Close Claw、Catch Ball、Shoot
+MoonBotMech:Arm up/Down,Visual Angle Up/Down,Open/Close Claw,Catch Ball,Shoot
 
 ![](./images/EMoonBot_App_C7.jpg)
 
-MoonBot：Left Arm Up/Down、Right Arm Up/Down、Head Angel Up/Down、Dancer1/2、Be cute
+MoonBot:Left Arm Up/Down,Right Arm Up/Down,Head Angel Up/Down,Dancer1/2,Be cute
 
 ![](./images/EMoonBot_App_C8.jpg)
 

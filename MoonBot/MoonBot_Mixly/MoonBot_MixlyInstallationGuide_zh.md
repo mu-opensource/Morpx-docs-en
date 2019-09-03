@@ -6,7 +6,7 @@ Instructions are shown below.
 
 ## Full Installation Package Download
 
-Windows/Linux/Mac Full Edition MoonBot Mixly Package Download Link：[https://pan.baidu.com/s/1h8Cuj8UYm99Mh3O1ppmMfg](https://pan.baidu.com/s/1h8Cuj8UYm99Mh3O1ppmMfg)，Extraction Code：`ksme`
+Windows/Linux/Mac Full Edition MoonBot Mixly Package Download Link:[https://pan.baidu.com/s/1h8Cuj8UYm99Mh3O1ppmMfg](https://pan.baidu.com/s/1h8Cuj8UYm99Mh3O1ppmMfg),Extraction Code:`ksme`
 
 ## Independent Library Installation
 
@@ -19,23 +19,23 @@ Windows/Linux/Mac Full Edition MoonBot Mixly Package Download Link：[https://pa
 
     - Linux
 
-        Running Arduino files at the terminal，start Arduino
+        Running Arduino files at the terminal,start Arduino
         ```bash
         $ cd {your_mixly_path}
         $ ./arduino-1.8.2-linux64/arduino
         ```
-- 2.Click on `Project - > Load Library - > Manage Library', open `Library Manager'.`
+- 2.Click on `Project - > Load Library - > Manage Library', open  `Library Manager'.`
 
-    ![](./images/arduino_lib_management_zh.png)
+    ![](./images/Earduino_lib_management_zh.png)
 
 - 3.Search library `AsyncDelay', install the relevant library if not installed and update if the library is not the latest edition
 
-    ![](./images/arduino_lib_download_zh.png)
+    ![](./images/Earduino_lib_download_zh.png)
 
-- 4.Install the library `Software Wire ``Adafruit_NeoPixel `Servo'according to the installation method of the third step ，
+- 4.Install the library `Software Wire ``Adafruit_NeoPixel `Servo'according to the installation method of the third step,
     ensure that the relevant library is installed to the latest version.
 	
-- 5.Close Arduino，Complete the installation of the base library.
+- 5.Close Arduino,Complete the installation of the base library.
 
 ### Import Mixly Library
 
