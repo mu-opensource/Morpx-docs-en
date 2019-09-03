@@ -16,7 +16,7 @@ Detailed software instructions at:
 
 Download all hardware programs here:
 
-`MoonBot Kit hardware examples <https://github.com/mu-opensource/Morpx-docs/raw/master/MoonBot/MoonBot_Hardware/sources/MoonBot_Hardware_examples.zip>`_
+`MoonBot Kit hardware examples <https://github.com/mu-opensource/Morpx-docs-en/raw/master/MoonBot/MoonBot_Hardware/sources/MoonBot_Hardware_examples.zip>`_
 
 .. toctree::
     :maxdepth: 1
