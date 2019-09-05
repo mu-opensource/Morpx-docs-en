@@ -12,7 +12,7 @@ This article introduces how to connect MoonBot Kit with MU Bot App on mobile pho
     :maxdepth: 1
     :glob: 
 	
-    MoonBot_ControllerRemoteUpdateGuide_zh.md
+    MoonBot_ControllerRemoteUpdateGuide.md
     MoonBot_APP_Control.md
     MoonBot_APP_Program.md
     MoonBot_APP_ProgramCase_AI.md

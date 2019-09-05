@@ -14,6 +14,6 @@ Programme through Mixly, Arduino and MU Bot App, or directly remote control, or 
     :maxdepth: 1
     :glob: 
 
-    MoonRover_Guide_en.md
-    MoonMech_Guide_en.md
-    MoonBot_Guide_en.md
+    MoonRover_Guide.md
+    MoonMech_Guide.md
+    MoonBot_Guide.md
