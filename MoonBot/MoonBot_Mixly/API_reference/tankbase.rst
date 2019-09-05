@@ -1,255 +1,255 @@
-底盘控制
+Chassis Control
 =========
 
-**底盘控制** 包含了驱动 MoonBot Kit :doc:`../../MoonBot_Hardware/MoonBot_Hardware_motor` 以及电机内编码器的驱动。
+**Chassis Control** include drives MoonBot Kit :doc:`../../MoonBot_Hardware/MoonBot_Hardware_motor` and driving of Encoder in Motor.
 
-通过调用这些模块，可以让电机底盘运动起来。
+By calling these modules, the motor chassis can move.
 
 .. image:: images/input.png
 
-翻转方向
+Reversal direction
 ---------
 
 .. image:: images/tankbase_reverse.png
 
-:描述:
+:Introduction:
 
-    翻转电机的运动方向。
+    The direction of motion of the flip motor.
 
-:参数:
+:Parameters:
 
-    :翻转方向:
+    :Reversal direction:
 
-        - ``true`` ：翻转方向
-        - ``false`` ：默认方向
+        - ``true`` :Reversal direction
+        - ``false`` :Default direction
 
-直行偏移校正
+Straight-line offset correction
 -------------
 
 .. image:: images/tankbase_straight_correction.png
 
-:描述:
+:Introduction:
 
-    因为摩擦、安装偏差等扰动存在，底盘直行时会存在往某一方向偏移的情况。
+    Because of friction, installation deviation and other disturbances, the chassis will be offset in a certain direction when it goes straight.
     
-    通过 ``直行偏移校正`` 模块，可以校正外部扰动引起的直行偏移。
+    Direct migration caused by external disturbance can be corrected by `direct migration correction `module.
 
-:参数:
+:Introduction:
 
-    :直行偏移校正（%）:
+    :Straight-line offset correction(%):
 
-        - ``0~200`` ：>100向右侧校正，<100向左侧校正
+        - ``0~200`` :>100 Correction to the right,<100 Correction to the left
 
-直行距离校正
+Straight Distance Correction
 -------------
 
 .. image:: images/tankbase_distance_correction.png
 
-:描述:
+:Introduction:
 
-    因为摩擦、安装偏差等扰动存在，底盘直行一定距离时会存在直行路程不到位的情况。
+    Because of friction, installation deviation and other disturbances, chassis traveling a certain distance will have the situation of inadequate direct travel.
     
-    通过 ``直行距离校正`` 模块，可以校正外部扰动引起的直行距离不到位的情况。
+    Through the `direct distance correction `module, the situation of the out-of-place direct distance caused by external disturbance can be corrected.
 
-    校正直行距离前，建议先进行 ``直行偏移校正`` 。
+    Before correcting the straight-line distance, it is suggested that `straight-line migration correction'be carried out first.`` 
 
-:参数:
+:Introduction:
 
-    :直行距离校正（%）:
+    :Straight Distance Correction(%):
 
-        - ``0~+∞`` ：>100直行距离增大，<100直行距离减小
-
-转弯角度校正
+        - ``0~+∞`` :>100 Increased direct distance,<100 Straight distance decreases
+		
+Turning Angle Correction
 -------------
 
 .. image:: images/tankbase_angle_correction.png
 
-:描述:
+:Introduction:
 
-    因为摩擦、安装偏差等扰动存在，底盘转动一定角度时会存在转弯角度不到位的情况。
+    Because of friction, installation deviation and other disturbances, chassis rotating at a certain angle will have the situation that the turning angle is not in place.
     
-    通过 ``转弯角度校正`` 模块，可以校正外部扰动引起的转弯角度不到位的情况。
+    Through the `turning angle correction'module, the situation that the turning angle caused by external disturbance is not in place can be corrected.
 
-    校正转弯角度前，建议先进行 ``直行偏移校正`` 和 ``直行距离校正``。
+    Before correcting the turning angle, it is suggested that `straight-line offset correction' and `straight-line distance correction' should be carried out first.
 
-:参数:
+:Introduction:
 
-    :转弯角度校正（%）:
+    :Turning Angle Correction(%):
 
-        - ``0~+∞`` ：>100转弯角度增大，<100转弯角度减小
+        - ``0~+∞`` :>100 Increased turning angle,<100 Reduced turning angle
 
-前进
+Forward
 ---------
 
 .. image:: images/tankebase_forward.png
 
-:描述:
+:Introduction:
 
-    控制底盘以给定速度向前直行至给定距离后停止。
+    Control the chassis to move forward at a given speed until it stops at a given distance.
 
-    该模块 **会调用编码器模块**，务必保证对应的编码器已连接至对应的端口。
+    The module ** calls the encoder module ** to ensure that the corresponding encoder has been connected to the corresponding port
 
-:参数:
+:Parameters:
 
-    :前进距离（cm）:
+    :Forward Distance(cm):
 
-        - ``距离值`` ：给定直行距离，单位：厘米（cm）
+        - ``Distance value`` :Given straight distance,Unit: cm
     
-    :转速:
+    :speed:
 
-        - ``转速值`` ：给定直行电机转速，单位：转/分（RPM）
+        - ``Speed Value`` :Given Speed of Direct Motor,Unit: RPM
 
-后退
+Backward
 ---------
 
 .. image:: images/tankebase_backward.png
 
-:描述:
+:Introduction:
 
-    控制底盘以给定速度向后直行至给定距离后停止。
+    The control chassis runs backwards at a given speed until it stops at a given distance.
 
-    该模块 **会调用编码器模块**，务必保证对应的编码器已连接至对应的端口。
+    The module ** calls the encoder module ** to ensure that the corresponding encoder has been connected to the corresponding port.
 
-:参数:
+:Parameters:
 
-    :后退距离（cm）:
+    :Backward distance(cm):
 
-        - ``距离值`` ：给定直行距离，单位：厘米（cm）
+        - ``Distance value`` :Given straight distance,Unit: cm
     
-    :转速:
+    :speed:
 
-        - ``转速值`` ：给定直行电机转速，单位：转/分（RPM）
+        - ``Speed Value`` :Given Speed of Direct Motor,Unit: RPM
 
-左转
+Left turn
 ---------
 
 .. image:: images/tankebase_left.png
 
-:描述:
+:Introduction:
 
-    控制底盘以给定速度左转至给定角度后停止。
+    Control the chassis to turn left at a given speed to a given angle and stop.
 
-    该模块 **会调用编码器模块**，务必保证对应的编码器已连接至对应的端口。
+    The module ** calls the encoder module ** to ensure that the corresponding encoder has been connected to the corresponding port.
 
-:参数:
+:Parameters:
 
-    :左转角度（°）:
+    :Left turn angle(°):
 
-        - ``角度值`` ：给定直行距离，单位：度（°）
+        - ``Angle value`` :Given a straight angle,Unit: °
     
-    :转速:
+    :speed:
 
-        - ``转速值`` ：给定直行电机转速，单位：转/分（RPM）
+        - ``Speed Value``:Given Speed of Direct Motor,Unit: RPM
 
-右转
+Right turn
 ---------
 
 .. image:: images/tankebase_right.png
 
-:描述:
+:Introduction:
 
-    控制底盘以给定速度右转至给定角度后停止。
+    Control the chassis to turn right at a given speed to a given angle and stop.
 
-    该模块 **会调用编码器模块**，务必保证对应的编码器已连接至对应的端口。
+    The module ** calls the encoder module ** to ensure that the corresponding encoder has been connected to the corresponding port.
 
-:参数:
+:Parameters:
 
-    :右转角度（°）:
+    :Right turn angle(°):
 
-        - ``角度值`` ：给定直行距离，单位：度（°）
+        - ``Angle value`` :Given a straight angle,Unit: °
     
-    :转速:
+    :speed:
 
-        - ``转速值`` ：给定直行电机转速，单位：转/分（RPM）
+        - ``Speed Value`` :Given Speed of Direct Motor,Unit: RPM
 
-停止
+Stop
 ---------
 
 .. image:: images/tankebase_stop.png
 
-:描述:
+:Introduction:
 
-    底盘停止转动。
+    The chassis stops turning.
 
-电机写入值
+Motor write-in value
 -----------
 
 .. image:: images/tankebase_write.png
 
-:描述:
+:Introduction:
 
-    向对应端口的电机写入模拟量。
+    Write the analog to the motor at the corresponding port.
 
-:参数:
+:Parameters:
 
-    :电机端口:
+    :Motor port:
 
-        - ``1`` ：电机端口1
-        - ``2`` ：电机端口2
+        - ``1`` :Motor port 1
+        - ``2`` :Motor port 2
     
-    :值:
+    :value:
 
-        - ``±255`` ：写入模拟量的值，>0向前转，<0向后转，=0停止转动
+        - ``±255`` :Write the value of the analog,>0 Turn Forward,<0 Turn back,=0 Stop turning
 
-电机读取值
+Reading motor value
 -----------
 
 .. image:: images/tankebase_read.png
 
-:描述:
+:Introduction:
 
-    读取对应电机端口模拟量的值。
+    Read the analog value of the corresponding motor port.
 
-:参数:
+:Parameters:
 
-    :电机端口:
+    :Motor port:
 
-        - ``1`` ：电机端口1
-        - ``2`` ：电机端口2
+        - ``1`` :Motor port 1
+        - ``2`` :Motor port 2
     
-:返回:
+:Return:
 
-    - ``值`` ：电机模拟量的值
+    - ``value`` :Value of motor analogue
 
-电机写入转速
+Writing Speed of Motor
 -------------
 
 .. image:: images/tankebase_write_rpm.png
 
-:描述:
+:Introduction:
 
-    向对应端口的电机写入转速。
+    Write the speed to the motor at the corresponding port.
 
-    该模块 **会调用编码器模块**，务必保证对应的编码器已连接至对应的端口。
+    The module ** calls the encoder module ** to ensure that the corresponding encoder has been connected to the corresponding port.
 
-:参数:
+:Parameters:
 
-    :电机端口:
+    :Motor port:
 
-        - ``1`` ：电机端口1
-        - ``2`` ：电机端口2
+        - ``1`` :Motor port 1
+        - ``2`` :Motor port 2
     
-    :值:
+    :value:
 
-        - ``±60`` ：写入模拟量的值，>0向前转，<0向后转，=0停止转动，单位：转/分（RPM）
+        - ``±60`` :Write the value of the analog,>0 Turn Forward,<0 Turn back,=0 Stop turning,unit:RPM
 
-电机读取转速
+Reading motor speed
 -------------
 
 .. image:: images/tankebase_read_rpm.png
 
-:描述:
+:Introduction:
 
-    读取对应电机端口的转速。
+    Read the speed of the corresponding motor port.
 
-:参数:
+:Parameters:
 
-    :电机端口:
+    :Motor port:
 
-        - ``1`` ：电机端口1
-        - ``2`` ：电机端口2
+        - ``1`` :Motor port 1
+        - ``2`` :Motor port 2
     
-:返回:
+:Return:
 
-    - ``转速`` ：电机的转速，单位：转/分（RPM）
+    - ``speed`` :motor speed ,unit:RPM
 

@@ -3,15 +3,15 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-API 参考
+API Reference resources
 ========
 
-MoonBot Mixly 中定制了 MoonBot Kit 和MU Vision Sensor 3 的编程块，本文将对程序块逐一说明，以及一些复杂的程序示例。
-可结合之前的硬件模块示例进行学习。
+The programming blocks of MoonBot Kit and MUVision Sensor 3 are customized in MoonBot Mixly. This article will explain the program blocks one by one, as well as some complex program examples.
+It can be combined with previous hardware module examples for learning.
 
-Mixly 基础教程见 `Mixly 帮助文档 <http://mixly.readthedocs.io/>`_，此处不再赘述。
+Mixly Basic Tutorial in `Mixly Help Document <http://mixly.readthedocs.io/>`_,will not repeat it here.
 
-MU Vision Sensor 3 教程见 :doc:`MU Vision Sensor 3 教程 <../../../MUVS3/MUVS3_Mixly/MUVS3_Mixly_Guide_cn_0_8>`
+MU Vision Sensor 3 Course in :doc:`MU Vision Sensor 3 Course <../../../MUVS3/MUVS3_Mixly/MUVS3_Mixly_Guide_cn_0_8>`
 
 .. toctree::
     :maxdepth: 2

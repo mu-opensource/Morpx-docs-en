@@ -1,186 +1,186 @@
-灯光
+Light
 ========
 
-**灯光** 模块包含了 MoonBot Kit :doc:`../../MoonBot_Hardware/MoonBot_Hardware_controller` 板载的两颗 LED 和外接12颗 LED :doc:`../../MoonBot_Hardware/MoonBot_Hardware_eyes` 的驱动。
+**Light** include MoonBot Kit :doc:`../../MoonBot_Hardware/MoonBot_Hardware_controller` Two on-board LEDs and 12 external LEDs :doc:`../../MoonBot_Hardware/MoonBot_Hardware_eyes` drivers.
 
-通过这些模块，您可以轻松地设置LED颜色和亮度。
+With these modules, you can easily set the color and brightness of the LED.
 
 .. image:: images/LED.png
 
-眼睛初始化
+Eye Initialization
 ------------
 
 .. image:: images/eyes_init.png
 
-:描述:
+:Introduction:
 
-    初始化眼睛模块至指定端口。
+    Initialize the eye module to the specified port.
 
-:参数:
+:Parameters:
 
-    :端口:
+    :port:
 
         - ``1~9``
 
-眼睛显示
+Eye display
 ------------
 
 .. image:: images/eyes_show.png
 
-:描述:
+:Introduction:
 
-    将眼睛 LED 颜色数值写入缓存，并显示。
+    Write the color value of the eye LED into the buffer and display it.
 
-:参数:
+:Introduction:
 
-    :颜色:
+    :colour:
 
         - .. image:: images/LED_color.png
 
-眼睛显示表情
+Eyes show expression
 ------------
 
 .. image:: images/eyes_show_emotion.png
 
-:描述:
+:Introduction:
 
-    眼睛 LED 显示表情动作。
+    Eye LED displays facial movements.
 
-:参数:
+:Parameters:
 
-    :表情:
+    :Expression:
 
-        - ``见模块下拉菜单``
+        - `` Module Dropdown Menu``
 
-主控LED显示
+Master control LED display
 --------------
 
 .. image:: images/controller_LED_show.png
 
-:描述:
+:Introduction:
 
-    将主控 LED 颜色数值写入缓存，并显示。
+    Write the color value of the master LED into the buffer and display it.
 
-:参数:
+:Parameters:
 
-    :颜色:
+    :colour:
 
         - .. image:: images/LED_color.png
 
-LED设置RGB值
+LED Setting RGB Value
 ---------------
 
 .. image:: images/LED_set_RGB.png
 
-:描述:
+:Introduction:
 
-    将 LED 给定灯号的RGB颜色数值写入缓存。
+    Write the RGB color value of a given LED lamp into the buffer.
 
-:参数:
+:Parameters:
 
-    :LED类型:
+    :LED Type:
 
-        - ``眼睛`` ：眼睛 LED
-        - ``主控LED`` ：主控 LED
+        - ``Eye`` :eye LED
+        - ``master control LED`` :master control LED
 
-    :灯号:
+    :Lamp number:
 
-        - 眼睛： ``0~11``， 主控 LED ： ``0~1``
+        - Eye: ``0~11``, master control LED : ``0~1``
 
-    :R 值:
+    :R value:
 
-        - ``0~255`` ：红色通道模拟量
+        - ``0~255`` :Red Channel Analog
 
-    :G 值:
+    :G value:
 
-        - ``0~255`` ：绿色通道模拟量
+        - ``0~255`` :Green Channel Analog
 
-    :B 值:
+    :B value:
 
-        - ``0~255`` ：蓝色通道模拟量
+        - ``0~255`` :Blue Channel Analog
 
-LED设置HSV值
+LED Setting HSV Value
 ----------------
 
 .. image:: images/LED_set_HSV.png
 
-:描述:
+:Introduction:
 
-    将 LED 给定灯号的HSV颜色数值写入缓存。
+    Write the HSV color value of a given LED lamp into the cache.
 
-:参数:
+:Parameters:
 
-    :LED类型:
+    :LED Type:
 
-        - ``眼睛`` ：眼睛 LED
-        - ``主控LED`` ：主控 LED
+        - ``Eye`` :Eye LED
+        - ``master control LED`` :master control LED
 
-    :灯号:
+    :Lamp number:
 
-        - 眼睛： ``0~11``， 主控 LED ： ``0~1``
+        - Eye: ``0~11``, master control LED : ``0~1``
 
-    :H 值:
+    :H value:
 
-        - ``0~360°`` ：色调值
+        - ``0~360°``: Tone Value
 
         .. image:: images/hue_color.jpeg
 
-    :S 值:
+    :S value:
 
-        - ``0~255`` ：饱和度值模拟量
+        - ``0~255`` :Saturation value analogue
 
-    :V 值:
+    :V value:
 
-        - ``0~255`` ：亮度值模拟量
+        - ``0~255`` :Luminance value analogue
 
-LED显示
+LED show
 -----------------
 
 .. image:: images/LED_show.png
 
-:描述:
+:Introduction:
 
-    将给定 LED 缓存内的颜色值显示出来。
+    Show the color values in a given LED buffer
 
-:参数:
+:Parameters:
 
-    :LED类型:
+    :LED Type:
 
-        - ``眼睛`` ：眼睛 LED
-        - ``主控LED`` ：主控 LED
+        - ``Eye`` :Eye LED
+        - ``master control LED`` :master control LED
 
-LED清除
+LED clear
 ----------------
 
 .. image:: images/LED_clear.png
 
-:描述:
+:Introduction:
 
-    清除指定 LED 的缓存。
+    Clear the cache of the specified LED.
 
-:参数:
+:Parameters:
 
-    :LED类型:
+    :LED Type:
 
-        - ``眼睛`` ：眼睛 LED
-        - ``主控LED`` ：主控 LED
+        - ``Eye`` :Eye LED
+        - ``master control LED`` :master control LED
 
-LED亮度
+LED brightness
 -------------
 
 .. image:: images/LED_brightness.png
 
-:描述:
+:Introduction:
 
-    设置给定 LED 的亮度。
+    Set the brightness of the given LED.
 
-:参数:
+:Parameters:
 
-    :LED类型:
+    :LED Type:
 
-        - ``眼睛`` ：眼睛 LED
-        - ``主控LED`` ：主控 LED
+        - ``Eye`` :Eye LED
+        - ``master control LED`` :master control LED
 
-    :亮度:
+    :brightness:
 
-        - ``0~255`` ： ``0`` 为最暗，``255`` 为最亮
+        - ``0~255`` : ``0`` darkest,``255`` brightest

@@ -1,103 +1,103 @@
-舵机
+Steering engine
 =========
 
-**舵机** 包含了 MoonBot Kit :doc:`../../MoonBot_Hardware/MoonBot_Hardware_servo` 驱动，可以用来驱动 MoonBot Kit 中4个舵机端口上所连接的舵机，来实现单个或多个口的舵机同时运动。
+**Steering engine** include MoonBot Kit :doc:`../../MoonBot_Hardware/MoonBot_Hardware_servo` drives,It can be used to drive the steering gear connected to the four rudder ports in MoonBot Kit.So the actuator with one or more ports can move simultaneously.
 
 .. image:: images/servo.png
 
-设置角度
+Setting Angles
 -----------
 
 .. image:: images/servo_write.png
 
-:描述:
+:Introduction:
 
-    向给定舵机端口连接的舵机写入角度。
+    Write the angle to the steering gear connected to the specified steering port.
 
-:参数:
+:Parameters:
 
-    :舵机端口:
+    :steering gear port:
 
         - ``1~4``
 
-    :角度:
+    :angel:
 
         - ``0~180°``
 
-读取角度
+Reading angel
 -----------
 
 .. image:: images/servo_read.png
 
-:描述:
+:Introduction:
 
-    读取给定舵机端口的当前角度值。
+    Reads the current angle value of the specified steering port.
 
-:参数:
+:Parameters:
 
-    :舵机端口:
+    :steering gear port:
 
         - ``1~4``
 
-预设角度
+Presupposition angle
 ----------
 
 .. image:: images/servo_set_angle.png
 
-:描述:
+:Introduction:
 
-    预设给定舵机端口的舵机角度和舵机运行速度。
+    Preset the steering angle and speed of the specified steering gear port.
 
-    该模块需和 ``同步移动所有舵机至预设角度`` 模块搭配使用。
+    The module should be used in conjunction with the `synchronous movement of all steering gear to the preset angle `module.
 
-:参数:
+:Parameters:
 
-    :舵机端口:
+    :steering gear port:
 
         - ``1~4``
 
-    :速度:
+    :speed:
 
-        - ``快`` ：设定舵机运行速度为快速（约150°/s）
-        - ``中`` ：设定舵机运行速度为中速（约100°/s）
-        - ``慢`` ：设定舵机运行速度为慢速（约50°/s）
+        - ``fast`` :Set the speed of steering gear to be fast（about150°/s）
+        - ``mid`` :Set the steering gear running at medium speed（about 100°/s）
+        - ``slow`` :Set the speed of steering gear to slow（about 50°/s）
 
-同步移动所有舵机至预设角度
+Synchronize all steering gear to preset angle
 ---------------------------------
 
 .. image:: images/servo_move_all.png
 
-:描述:
+:Introduction:
 
-    移动所有舵机至预设角度。
+    Move all steering gear to the preset angle.
 
-    该模块需和 ``预设角度`` 模块搭配使用。
+    The module needs to be used in conjunction with the `preset angle' module.
 
-翻转方向
+Reversal direction
 ------------
 
 .. image:: images/servo_reverse.png
 
-:描述:
+:Introduction:
 
-    以90°为中间值，翻转舵机角度。
+    The steering angle is reversed with 90 degree as the median value.
 
-:参数:
+:Parameters:
 
-    - ``false`` ：默认运动方向
-    - ``true`` ：翻转舵机运动方向
+    - ``false`` :Default Motion Direction
+    - ``true`` :Turn the steering gear in the direction of motion
 
-校正
+Correcting
 ----------
 
 .. image:: images/servo_correction.png
 
-:描述:
+:Introduction:
 
-    因齿轮、舵机盘等生产、安装上会产生误差而导致舵机转不到给定角度。
+    Errors in production and installation of gears and steering gear disks may cause steering gear to fail to turn at specified angles.
 
-    通过舵机校准模块可以校正因以上原因而引起的角度误差。
+    The angle error caused by the above reasons can be corrected by the steering gear calibration module.
 
-:参数:
+:Parameters:
 
     - ``±90°``

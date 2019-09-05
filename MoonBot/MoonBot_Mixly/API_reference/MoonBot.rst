@@ -1,146 +1,146 @@
-机器人
+MoonBot
 ==========
 
-**机器人** 包含了 :doc:`MoonBot 机器人 <../../MoonBot_Structure/MoonBot_Guide_cn>` 中集成的动作。
+**MoonBot** include :doc:`MoonBot robot <../../MoonBot_Structure/MoonBot_Guide_cn>` Integrative Action in Morphology.
 
-通过调用这些模块，您可以控制机器人执行点头、招手等动作。
+By calling these modules, you can control the robot to perform nodding, waving and other actions.
 
 .. image:: images/MoonBot.png
 
-初始化
+Initialization
 ----------
 
 .. image:: images/MoonBot_init.png
 
-:描述:
+:Introduction:
 
-    初始化 MoonBot 机器人各个端口。
+    Initialize the ports of the MoonBot robot.
 
-:参数:
+:Parameters:
 
-    :头部舵机:
-
-        - ``1~4``
-
-    :左手舵机:
+    :Head steering gear:
 
         - ``1~4``
 
-    :右手舵机:
+    :Left-handed steering gear:
 
         - ``1~4``
 
-招手
+    :Right-handed steering gear:
+
+        - ``1~4``
+
+Wave
 ----------
 
 .. image:: images/MoonBot_shake_arm.png
 
-:描述:
+:Introduction:
 
-    驱动机器人的手臂进行招手。
+    The arm that drives the robot waves.
 
-:参数:
+:Parameters:
 
-    :手臂:
+    :Arm:
 
-        - ``左手``
-        - ``右手``
-        - ``双手``
+        - ``Left hand``
+        - ``Right hand``
+        - ``Both hands``
     
-    :偏移:
+    :deviation:
 
-        - ``0~90`` ：机器人上下招手偏移角度
+        - ``0~90`` :Deviation Angle of Up and Down Waves of Robot
 
-    :速度:
+    :Speed:
 
-        - ``快``
-        - ``中``
-        - ``慢``
+        - ``fast``
+        - ``mid``
+        - ``slow``
 
-摆动
+Swing
 ----------
 
 .. image:: images/MoonBot_swing.png
 
-:描述:
+:Introduction:
 
-    同时摆动机器人的头和脚。
+    The head and foot of the robot are swing at the same time.
 
-:参数:
+:Parameters:
 
-    :电机:
+    :Motor:
 
-        - ``左电机``
-        - ``右电机``
-        - ``双电机``
+        - ``Left motor``
+        - ``Right motor``
+        - ``Dual motor``
 
-    :速度:
+    :Speed:
 
-        - ``快``
-        - ``中``
-        - ``慢``
+        - ``fast``
+        - ``mid``
+        - ``slow``
 
-左右晃动身体
+Shake your body from side to side
 -----------------
 
 .. image:: images/MoonBot_sway_body.png
 
-:描述:
+:Introduction:
 
-    控制机器人电机左右晃动。
+    Control the robot motor to sway left and right.
 
-:参数:
+:Parameters:
 
-    :速度:
+    :Speed:
 
-        - ``快``
-        - ``中``
-        - ``慢``
+        - ``fast``
+        - ``mid``
+        - ``slow``
 
-    :时间:
+    :Time:
 
-        - ``0～+∞`` ：电机单次晃动时间
+        - ``0～+∞`` :Single shaking time of motor
 
-前进迈步
+Step Forward
 -----------
 
 .. image:: images/MoonBot_take_step.png
 
-:描述:
+:Introduction:
 
-    控制机器人向前迈出一步。
+    Controlling the robot takes a step forward.
 
-:参数:
+:Parameters:
 
 
-    :速度:
+    :Speed:
 
-        - ``快``
-        - ``中``
-        - ``慢``
+        - ``fast``
+        - ``mid``
+        - ``slow``
 
-    :时间:
+    :Time:
 
-        - ``0～+∞`` ：电机向前迈一步的时间，时间越长，步子越大
+        - ``0～+∞`` :The longer the motor takes a step forward, the bigger the step is.
 
-点头
+Nod
 ---------
 
 .. image:: images/MoonBot_nod.png
 
-:描述:
+:Introduction:
 
-    控制机器人点一次头。
+    The control robot nodded once.
 
-:参数:
+:Parameters:
 
-    :偏移:
+    :deviation:
 
-        - ``0~90°`` ：点头幅度
+        - ``0~90°`` :Nodding range
     
-    :速度:
+    :Speed:
 
-        - ``快``
-        - ``中``
-        - ``慢``
+        - ``fast``
+        - ``mid``
+        - ``slow``
 

@@ -1,167 +1,167 @@
-机械臂
+Mech
 =========
 
-**机械臂** 包含了 :doc:`机械臂 <../../MoonBot_Structure/MoonMech_Guide_cn>` 形态下的集成动作。
+**Mech** include :doc:`mech <../../MoonBot_Structure/MoonMech_Guide_cn>` Integrative Action in Morphology
 
-通过调用这些模块，您可以轻松控制机械臂去抓球等。
+By calling these modules, you can easily control the manipulator to catch the ball and so on.
 
 .. image:: images/MECH.png
 
-初始化
+Initialization
 --------------
 
 .. image:: images/MECH_init.png
 
-:描述:
+:Introduction:
 
-    初始化 MoonMech 机械臂端口。
+    Initialize the MoonMech manipulator port.
 
-:参数:
+:Parameters:
 
-    :MU 地址:
+    :MU adress:
 
-        - ``MU00`` ：MU 地址0x60
-        - ``MU01`` ：MU 地址0x61
-        - ``MU10`` ：MU 地址0x62
-        - ``MU11`` ：MU 地址0x63
+        - ``MU00`` ：MU address 0x60
+        - ``MU01`` ：MU address 0x61
+        - ``MU10`` ：MU address 0x62
+        - ``MU11`` ：MU address 0x63
 
-    :MU 端口:
+    :MU Port:
 
         - ``2,7,9``
 
-    :机械爪舵机端口:
+    :Mech claw Steering engine port:
 
         - ``1~4``
 
-    :上臂舵机端口:
+    :Upper arm Steering engine port:
 
         - ``1~4``
 
-    :下臂舵机端口:
+    :Lower arm Steering engine port:
 
         - ``1~4``
 
-设置抓球位置
+Setting the position of catch ball
 ---------------
 
 .. image:: images/MECH_set_grab_ball_position.png
 
-:描述:
+:Introduction:
 
-    设置 MoonMech 机械臂抓球位置，可以通过调整识别球的 X Y 值来让机械爪抓到球。
+    Setting up the position of the MoonMech manipulator to grasp the ball,The mechanical gripper can catch the ball by adjusting the X-Y value of the recognition ball.
 
-    当球处于给定的 X Y 值范围内时，机械爪会闭合抓取球。
+    When the ball is within the given X-Y value range, the mechanical claw closes to grasp the ball.
 
-:参数:
+:Parameters:
 
     :X:
 
-        - ``0~100`` ：机械爪抓球时的水平位置，可通过修改此值调整机械爪抓球时相对于球的水平位置
+        - ``0~100`` :Horizontal position of mechanical claw grip ball，The horizontal position of the mechanical claw relative to the ball can be adjusted by modifying this value.
 
     :Y:
 
-        - ``0~100`` ：机械爪抓球时的垂直位置，可通过修改此值调整机械爪抓球时的垂直高度
+        - ``0~100`` :Vertical position of mechanical claw catching ball,The vertical height of the gripper can be adjusted by modifying this value.
 
-设置投篮条件
+Setting Shooting Conditions
 ---------------
 
 .. image:: images/MECH_shoot_condition.png
 
-:描述:
+:Introduction:
 
-    设置 MoonMech 机械爪投篮的条件，可以通过调整识别到卡片的水平位置 X 和宽度来让机械臂准确的投进篮筐。
+    Setting up the conditions of MoonMech mechanical claw shooting，The horizontal position X and width of the card can be adjusted to allow the manipulator to shoot accurately into the basket.
 
-    当卡片处于给定的 X 宽度值范围内时，机械臂会触发投篮动作进行投篮。
+    When the card  within the given X-width range, the arm triggers the shooting action to shoot.
 
-:参数:
+:Parameters:
 
     :X:
 
-        - ``0~100`` ：机械爪投篮时，相对于卡片横向坐标 X 的水平位置，可通过修改此值调整机械爪相对于卡片的水平位置
+        - ``0~100`` ：Horizontal position relative to transverse coordinate X of card when shooting with mechanical claw，The horizontal position of the gripper relative to the card can be adjusted by modifying this value.
 
-    :宽度:
+    :Width:
 
-        - ``0~100`` ：机械爪投篮时卡片的大小，可通过修改此值调 MoonMECH 机械臂投篮时与篮筐（卡片）的距离。
+        - ``0~100`` ：The size of the card when the mechanical claw shoots,The distance between MoonMECH mechanical arm and basket (card) can be adjusted by modifying this value.
 
-爪子动作
+Claw movement
 ---------------
 
 .. image:: images/MECH_claw_set.png
 
-:描述:
+:Introduction:
 
-    设置机械爪动作。可通过此模块控制机械爪水平平移或上下平移。
+    Set up mechanical claw action. This module can be used to control the horizontal or up-down translation of the mechanical claw.
 
-:参数:
+:Parameters:
 
-    :动作:
+    :action:
 
-        - ``张开`` ：将机械爪张开（110°）
-        - ``关闭`` ：将机械爪关闭（90°）
-        - ``前进`` ：机械爪水平前进一个单位
-        - ``后退`` ：机械爪水平后退一个单位
-        - ``向上`` ：机械爪垂直向上一个单位
-        - ``向下`` ：机械爪垂直向下一个单位
+        - ``open`` ：Open the mechanical claw（110°）
+        - ``close`` ：Close the mechanical claw（90°）
+        - ``forward`` ：The mechanical claw advances horizontally in a unit.
+        - ``back`` ：The mechanical claw retreats one unit horizontally
+        - ``up`` The mechanical claw is vertically upward in a unit.
+        - ``down`` ：A vertical downward unit of a mechanical claw.
 
-找到球
+Find the ball
 -------------
 
 .. image:: images/MECH_search_ball.png
 
-:描述:
+:Introduction:
 
-    控制 MoonMech 机械臂执行找球动作。
+    Control MoonMech manipulator to perform ball searching.
 
-:返回:
+:Return:
 
-    - ``true`` ：找到球
-    - ``false`` ：没有找打球
+    - ``true`` :Find the ball
+    - ``false``:No ball was found.
 
-抓到球
+Catch the ball
 -------------
 
 .. image:: images/MECH_grab_ball.png
 
-:描述:
+:Introduction:
 
-    控制 MoonMech 机械臂执行抓球动作。
+    Control MoonMech manipulator to perform catch action.
     
-    诺执行此块时没有找到球机械臂会原地不动，且返回 ``false``。
+    If the ball manipulator is not found during execution of this block, MoonMech will remain in place and return ``false``。
 
-:返回:
+:Return:
 
-    - ``true`` ：抓到球
-    - ``false`` ：没有找打球
+    - ``true`` :Catch the ball
+    - ``false``:No ball was found.
 
-找到卡片
+Find the card
 -------------
 
 .. image:: images/MECH_search_card.png
 
-:描述:
+:Introduction:
 
-    控制 MoonMech 机械臂执行搜索篮筐（卡片）动作。
+    The MoonMech manipulator is controlled to perform the search basket (card) action.
 
-:参数:
+:Parameters:
 
-    :卡片类型:
+    :card type:
 
-        - ``形状卡片``
-        - ``交通卡片``
-        - ``数字卡片``
+        - ``shape card``
+        - ``traffic card``
+        - ``number card``
 
-:返回:
+:Return:
 
-    - ``true`` ：找到给定卡片
-    - ``false`` ：没有找给定卡片
+    - ``true`` :Find the given card
+    - ``false``:No given card was found
 
-投篮
+Shoot
 -------------
 
 .. image:: images/MECH_shoot_ball.png
 
-:描述:
+:Introduction:
 
-    控制 MoonMech 机械臂执行投篮动作。
+    Control MoonMech manipulator to execute shooting action.
     
-    诺执行此块时没有找到卡片机械臂会原地不动。
+    If the ball manipulator is not found during execution of this block, MoonMech will remain in place.

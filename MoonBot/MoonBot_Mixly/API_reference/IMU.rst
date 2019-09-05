@@ -1,113 +1,110 @@
 IMU
 =====
 
-**IMU** 包含了 MoonBot Kit :doc:`../../MoonBot_Hardware/MoonBot_Hardware_controller` 板载的三轴加速度，三轴磁力计和温度传感器的驱动。
+**IMU** include MoonBot Kit :doc:`../../MoonBot_Hardware/MoonBot_Hardware_controller`  three-axis acceleration , drive of three-axis magnetometer and temperature sensor on board.
 
-通过调用这些模块，您可以获取 MoonBot Kit 主控当前方向、倾斜角度和状态等。
+By calling these modules, you can get MoonBot Kit master control of current direction, tilt angle and state, etc.
 
 .. image:: images/IMU.png
 
-指南针校正
+Compass calibration
 --------------
 
 .. image:: images/IMU_correction.png
 
-:描述:
+:Introduction:
+    When calibrating the compass, the master control needs to flip in the shape of ”∞“
 
-    校准指南针，校准时主控需以”∞“字形翻转。
-    
-    具体可参考手机指南针校准方法。
-
-获取指南针角度
+Acquisition of compass angle
 ---------------
 
 .. image:: images/IMU_read_compass.png
 
-:描述:
+:Introduction:
 
-    读取指南针 Y 轴当前方向与正北方向的夹角。
+    Read the angle between the current direction and the northward direction of the compass Y axis.
 
-:返回:
+:Return:
 
     - ``0~360°``
 
-获取加速度值
+Acquisition of acceleration value
 ---------------
 
 .. image:: images/IMU_read_acc_value.png
 
-:描述:
+:Introduction:
 
-    读取给定轴的加速度模拟量。
+    Read the acceleration simulation of a given axis.
 
-:参数:
+:Parameters:
 
-    :方向轴:
+    :Directional axis:
 
         - ``X,Y,Z``
 
-:返回:
+:Return:
 
-    - ``加速度模拟量``
+    - ``Acceleration analogue``
 
-获取加速度角度
+Acquisition of acceleration angle
 ---------------
 
 .. image:: images/IMU_read_acc_angle.png
 
-:描述:
+:Introduction:
 
-    获取当前主控的倾斜角度
+    Acquisition the tilt angle of the master control
 
-:参数:
+:Introduction:
 
-    :夹角类型:
+    :Angle type:
 
-        - ``俯仰角`` ：主控坐标系 Y 轴与水平面的夹角，当主控向上倾斜时，俯仰角为正，反之为负
-        - ``横滚角`` ：主控坐标系 X 轴与水平面的夹角，当主控向右倾斜时，横滚角为正，反之为负
+        - ``Elevation angle`` :The angle between Y axis and horizontal plane in the master control coordinates. When the main control tilts upward, the pitch angle is positive and vice versa.
+        - ``Roll angle`` :The angle between  X axis and  horizontal plane in the master control coordinates. When the main control tilts to the right, the roll angle is positive and vice versa.
 
-:返回:
+:Return:
 
     - ``±180°``
 
-读取温度
+Read Temperature
 --------------
 
 .. image:: images/IMU_read_temperature.png
 
-:描述:
+:Introduction:
 
-    读取当前温度值
+    Read the current temperature
 
-:参数:
+:Parameters:
 
-    :温度单位:
+    :Unit of temperature:
 
-        - ``℃`` ：返回值以摄氏度为单位
-        - ``℉`` ：返回值以华氏度为单位
+        - ``℃`` :Celsius degree
+        - ``℉`` :Fahrenheit degree
 
-:返回:
+:Return:
 
-    - ``温度值``
+    - ``Temperature value``
 
-读取当前状态
+Read the current status
 --------------
 
 .. image:: images/IMU_read_state.png
 
-:描述:
+:Introduction:
 
-    读取当前主控状态。
+    Read the current master control state.
 
-:参数:
+:Parameters:
 
-    :状态:
+    :state:
 
-        - ``震动`` ：主控是否处于震动状态
-        - ``自由落体`` ：主控是否处于自由落体状态
+        - ``shock`` :Whether the master control is in vibration state or not
+        - ``Free fall`` :Whether the master control is in free falling state
 
-:返回:
+:Return:
 
-    - ``true`` ：主控当前处于该状态
-    - ``false`` ：触控当前不处于该状态
+    - ``true`` :The master control is currently in this state
+    - ``false`` :The master control is not currently in this state
 

@@ -1,125 +1,125 @@
-输入
+Input
 ====
 
-**输入** 包含了 MoonBot Kit :doc:`../../MoonBot_Hardware/MoonBot_Hardware_touch` :doc:`../../MoonBot_Hardware/MoonBot_Hardware_infrared` :doc:`../../MoonBot_Hardware/MoonBot_Hardware_controller` 的按键及引脚映射模块
+**Input** include MoonBot Kit :doc:`../../MoonBot_Hardware/MoonBot_Hardware_touch` :doc:`../../MoonBot_Hardware/MoonBot_Hardware_infrared` :doc:`../../MoonBot_Hardware/MoonBot_Hardware_controller` keys and pin mapping module
 
 .. image:: images/input.png
 
-触摸传感器初始化
+Initialization of Touch Sensor
 ----------------
 
 .. image:: images/touch_sensor_init.png
 
-:描述:
+:Introduction:
 
-    初始化触摸传感器至对应端口。
+    Initialize the touch sensor to the corresponding port.
 
-:参数:
+:Introduction:
 
-    :端口:
+    :port:
 
         - ``1~9``
 
-读取触摸传感器
+Reading Touch Sensor
 ---------------
 
 .. image:: images/touch_sensor_read.png
 
-:描述:
+:Introduction:
 
-    读取触摸传感器对应端口的值
+    Read the value of the corresponding port of the touch sensor
 
-:参数:
+:Parameters:
 
-    :端口: 
+    :port: 
 
         - ``1~9``
 
-:返回:
+:Return:
 
-    - ``HIGH`` ：有物体触摸到触摸传感器
-    - ``LOW`` ：无物体触摸到触摸传感器
+    - ``HIGH`` :Object Touch Sensor
+    - ``LOW`` :Objectless Touch Sensor
 
-红外传感器初始化
+Initialization of Infrared Sensors
 -----------------
 
 .. image:: images/ir_sensor_init.png
 
-:描述:
+:Introduction:
 
-    初始化触摸传感器至对应端口
+    Initialize touch sensor to corresponding port
 
-:参数:
+:Parameters:
 
-    :端口: 
+    :port: 
 
         - ``1~9``
 
-读取红外传感器
+Reading Infrared Sensor
 ---------------
 
 .. image:: images/read_ir_sensor.png
 
-:描述:
+:Introduction:
 
-    读取红外传感器端口对应引脚的值
+    Read the corresponding pin value of infrared sensor port
 
-:参数:
+:Parameters:
 
-    :端口:
+    :Port:
 
         - ``1~9``
         
-    :引脚:
+    :Pin:
 
         - ``1~2``
 
-:返回:
+:Return:
 
-    - ``HIGH`` ：红外传感器被触发
-    - ``LOW`` ： 红外传感器没有被触发
+    - ``HIGH`` :Infrared Sensor Triggered
+    - ``LOW`` : Infrared sensor not triggered
 
-读取按键
+Reading Button
 ---------
 
 .. image:: images/read_button.png
 
-:描述:
+:Introduction:
 
-    读取按键状态
+    Read button status
 
-:参数:
+:Parameters:
 
-    :按键: 
+    :button: 
 
-        - ``A`` ：按键A
-        - ``B`` ：按键B
-        - ``A&B`` ：按键A和B
+        - ``A`` :Button A
+        - ``B`` :Button B
+        - ``A&B``:Button A and B
 
-:返回:
+:Return:
 
-    - ``HIGH`` ：按键被按下
-    - ``LOW`` ：按键没被按下
+    - ``HIGH``:The Button is pressed
+    - ``LOW``:The Button is not pressed
 
-端口引脚映射
+Port pin mapping
 -------------
 
 .. image:: images/moonbot_port2pin.png
 
-:描述:
+:Introduction:
 
-    读取 MoonBot 端口对应的 Arduino 引脚号
+    Reading the Arduino pin number corresponding to the MoonBot port
 
-:参数:
+:Parameters:
 
-    :端口: 
+    :Port: 
 
         - ``1~9``
 
-    :引脚:
+    :Pin:
     
         - ``1~2``
 
-:返回:
+:Return:
 
-    - ``对应的Arduino引脚``
+    - ``Corresponding Arduino pin``

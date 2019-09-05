@@ -1,185 +1,186 @@
-音乐
+Music
 ======
 
-**音乐** 包含了 MoonBot Kit :doc:`../../MoonBot_Hardware/MoonBot_Hardware_controller` 板载蜂鸣器的驱动和外部 :doc:`../../MoonBot_Hardware/MoonBot_Hardware_speaker` 的驱动。
+**Music** include MoonBot Kit :doc:`../../MoonBot_Hardware/MoonBot_Hardware_controller` buzzer drive and external Drive :doc:`../../MoonBot_Hardware/MoonBot_Hardware_speaker`.
 
-通过调用这些模块可以让您控制 MoonBot Kit 播放动人的音乐。
+By calling these modules, you can control MoonBot Kit to play music.
 
 .. image:: images/music.png
 
-扬声器初始化
+Speaker initialization
 ----------------
 
 .. image:: images/speaker_init.png
 
-:描述:
+:Introduction:
 
-    初始化给定端口上连接的扬声器。
+    Initializes the speaker connected to the specified port.
 
-:参数:
+:Parameters:
 
-    :端口:
+    :port:
 
         - ``2,7,9``
 
-扬声器设置播放模式
+Speaker Setting Play Mode
 -------------------
 
 .. image:: images/speaker_set_play_mode.png
 
-:描述:
+:Introduction:
 
-    设置扬声器的播放模式。
+    Set up the playback mode of the speaker.
 
-:参数:
+:Parameters:
 
-    :播放模式:
+    :Play mode:
 
-        - ``单曲播放`` ：播放指定音乐后停止播放
-        - ``单曲魂环`` ：循环播放指定音乐
-        - ``播放所有`` ：播放完指定音乐后自动播放音乐列表中下一首音乐
-        - ``随机播放`` ：播放完指定音乐后随机播放音乐列表中的一首音乐
+        - ``Single Play`` :Stop playing after playing specified music
+        - ``Single tune circulation`` :Play specified music in a loop
+        - ``Play all`` :Play the next music in the music list automatically after playing the specified music
+        - ``Random Play`` :Play one of the music lists randomly after playing the specified music
 
-扬声器播放音乐
+Speakers Play Music
 ------------------
 
 .. image:: images/speaker_play.png
 
-:描述:
+:Introduction:
 
-    播放给定名称的音乐。
+    Play music with a given name.
 
-:参数:
+:Parameters:
 
-    :音乐名:
+    :Music Name:
 
-        - ：见模块对应的下拉菜单
+        - :the drop-down menu for the module
 
-扬声器播放自定义音乐
+Speaker Plays Custom Music
 ----------------------
 
 .. image:: images/speaker_play_name.png
 
-:描述:
+:Introduction:
 
-    播放给定音乐名称的音乐。
+    Play music with the specified music name.
 
-    该操作前用户需往扬声器内存入对应的自定义音乐（ :doc:`如何存入音乐？ <../../MoonBot_Hardware/MoonBot_Hardware_speaker>`），音乐名前四字需为字母或数字。
+    Users need to put corresponding custom music into loudspeakers before this operation.(:doc:`How to save music? <../../MoonBot_Hardware/MoonBot_Hardware_speaker>`),The first four words of a musical name should be letters or numbers.
 
-:参数:
+:Parameters:
 
-    :音乐名:
+    :Music Name:
 
-        - ：自定义音乐名称的前4个字符，只支持 **英文** 或 **数字**
+        - :Customize the first four characters of the music name,Support only ** English ** or ** Numbers **
 
-扬声器播放设置
+Speaker Play Setting
 ----------------
 
 .. image:: images/speaker_play_type.png
 
-:描述:
+:Introduction:
 
-    设置当前扬声器播放状态。
+    Set the current speaker playback status.
 
-:参数:
+:Parameters:
 
-    :播放设置:
+    :Play settings:
 
-        - ``播放/暂停`` ：播放或暂停当前音乐
-        - ``下一首`` ：播放音乐列表中下一首音乐
-        - ``上一首`` ：播放音乐列表中上一首音乐
-        - ``停止`` ：停止播放音乐
+        - ``Play/pause`` :Play or pause current music
+        - ``Next song`` :Play the next music in the music list
+        - ``Last song`` :Play the last music in the music list
+        - ``Stop`` :Stop playing music
 
 
-扬声器设置音量
+Loudspeaker set volume
 -----------------
 
 .. image:: images/speaker_volume.png
 
-:描述:
+:Introduction:
 
-    设置扬声器音量。
+    Set the loudspeaker volume.
 
-:参数:
+:Parameters:
 
-    :音量:
+    :volume:
 
         - ``0~32``
 
-蜂鸣器播放音阶
+Buzzer Plays Scales
 -----------------
 
 .. image:: images/buzzer_play.png
 
-:描述:
+:Introduction:
 
-    蜂鸣器以给定音阶播放给定节拍的时间。
+    Buzzer to play scales in a set beat
 
-:参数:
+:Parameters:
 
-    :音阶:
+    :Scale:
 
-        - ``高中低三阶``
+        - ``High, middle and low levels``
 
-    :节拍:
+    :Rhythm:
 
-        - ``1/16~4拍`` ：单节拍时间可通过 ``蜂鸣器设置播放节拍`` 设置
+        - ``1/16~4 beat`` :Single beat time can be set by buzzer.
 
-蜂鸣器暂停播放
+
+Buzzer pauses play
 ------------------
 
 .. image:: images/buzzer_pause.png
 
-:描述:
+:Introduction:
 
-    蜂鸣器暂停播放给定节拍的时间。
+    The time when the buzzer pauses to play a given beat.
 
-:参数:
+:Parameters:
 
-    :节拍:
+    :Rhythm:
 
-        - ``1/16~4拍`` ：单节拍时间可通过 ``蜂鸣器设置播放节拍`` 设置
+        - ``1/16~4 beat`` :Single beat time can be set by buzzer.
 
-蜂鸣器设置播放节拍
+Buzzer Sets Play Rhythm
 --------------------
 
 .. image:: images/buzzer_set_bpm.png
 
-:描述:
+:Introduction:
 
-    设置蜂鸣器每分钟节拍数（BPM）。
+    Set the number of beats per minute (BPM) of buzzer.
 
-:参数:
+:Parameters:
 
-    :每分钟节拍数:
+    :beats per minute:
 
 
-蜂鸣器播放频率
+Buzzer Play Frequency
 ----------------
 
 .. image:: images/buzzer_tone.png
 
-:描述:
+:Introduction:
 
-    设置蜂鸣器以给定频率播放给定时间的音乐。
+    Set up a buzzer to play music at a specified frequency at a given time.
 
-:参数:
+:Parameters:
 
-    :频率:
+    :frequency:
 
-        - ``0~65535`` ：频率推荐设置在人耳所能接受的频率范围（20～20000Hz）
+        - ``0~65535`` :Frequency Recommendation Setting in the Frequency Range acceptable to the Human Ear（20～20000Hz）
 
-    :时间:
+    :time:
 
-        - ``0`` ：持续播放
-        - ``其他`` ：播放指定长度的时间后停止
+        - ``0`` :Continuous broadcasting
+        - ``other`` :Stop playing for a specified length of time
 
-蜂鸣器停止播放
+Buzzer stop playing
 -----------------
 
 .. image:: images/buzzer_notone.png
 
-:描述:
+:Introduction:
 
-    蜂鸣器停止播放声音。
+    The buzzer stopped playing sound.
 
