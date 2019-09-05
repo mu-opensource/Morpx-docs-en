@@ -12,7 +12,7 @@ This artical introduces developing MoonBot Kit with Arduino IDE.
     :maxdepth: 1
     :glob: 
 	
-    MoonBot_arduino_development_construction_guide_cn.md
+    MoonBot_arduino_development_construction_guide.md
 	
 .. toctree::
     :maxdepth: 2

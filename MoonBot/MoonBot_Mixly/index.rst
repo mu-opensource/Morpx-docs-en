@@ -14,7 +14,7 @@ Visit Mixly official docs for basic tutorials: `Mixly wiki <http://mixly.readthe
     :maxdepth: 1
     :name: moonbot_mixly_get_start
 
-    MoonBot_MixlyInstallationGuide_zh.md
+    MoonBot_MixlyInstallationGuide.md
 
 .. toctree::
     :maxdepth: 2
