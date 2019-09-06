@@ -3,12 +3,12 @@ Steering engine
 
 **Steering engine** include MoonBot Kit :doc:`../../MoonBot_Hardware/MoonBot_Hardware_servo` drives,It can be used to drive the steering gear connected to the four rudder ports in MoonBot Kit.So the actuator with one or more ports can move simultaneously.
 
-.. image:: images/servo.png
+.. image:: images/21.png
 
 Setting Angles
 -----------
 
-.. image:: images/servo_write.png
+.. image:: images/22.png
 
 :Introduction:
 
@@ -27,7 +27,7 @@ Setting Angles
 Reading angel
 -----------
 
-.. image:: images/servo_read.png
+.. image:: images/23.png
 
 :Introduction:
 
@@ -42,7 +42,7 @@ Reading angel
 Presupposition angle
 ----------
 
-.. image:: images/servo_set_angle.png
+.. image:: images/24.png
 
 :Introduction:
 
@@ -65,7 +65,7 @@ Presupposition angle
 Synchronize all steering gear to preset angle
 ---------------------------------
 
-.. image:: images/servo_move_all.png
+.. image:: images/25.png
 
 :Introduction:
 
@@ -76,7 +76,7 @@ Synchronize all steering gear to preset angle
 Reversal direction
 ------------
 
-.. image:: images/servo_reverse.png
+.. image:: images/26.png
 
 :Introduction:
 
@@ -90,7 +90,7 @@ Reversal direction
 Correcting
 ----------
 
-.. image:: images/servo_correction.png
+.. image:: images/27.png
 
 :Introduction:
 

@@ -5,12 +5,12 @@ Music
 
 By calling these modules, you can control MoonBot Kit to play music.
 
-.. image:: images/music.png
+.. image:: images/31.png
 
 Speaker initialization
 ----------------
 
-.. image:: images/speaker_init.png
+.. image:: images/32.png
 
 :Introduction:
 
@@ -25,7 +25,7 @@ Speaker initialization
 Speaker Setting Play Mode
 -------------------
 
-.. image:: images/speaker_set_play_mode.png
+.. image:: images/33.png
 
 :Introduction:
 
@@ -43,7 +43,7 @@ Speaker Setting Play Mode
 Speakers Play Music
 ------------------
 
-.. image:: images/speaker_play.png
+.. image:: images/34.png
 
 :Introduction:
 
@@ -58,7 +58,7 @@ Speakers Play Music
 Speaker Plays Custom Music
 ----------------------
 
-.. image:: images/speaker_play_name.png
+.. image:: images/35.png
 
 :Introduction:
 
@@ -75,7 +75,7 @@ Speaker Plays Custom Music
 Speaker Play Setting
 ----------------
 
-.. image:: images/speaker_play_type.png
+.. image:: images/36.png
 
 :Introduction:
 
@@ -94,7 +94,7 @@ Speaker Play Setting
 Loudspeaker set volume
 -----------------
 
-.. image:: images/speaker_volume.png
+.. image:: images/37.png
 
 :Introduction:
 
@@ -109,7 +109,7 @@ Loudspeaker set volume
 Buzzer Plays Scales
 -----------------
 
-.. image:: images/buzzer_play.png
+.. image:: images/38.png
 
 :Introduction:
 
@@ -129,7 +129,7 @@ Buzzer Plays Scales
 Buzzer pauses play
 ------------------
 
-.. image:: images/buzzer_pause.png
+.. image:: images/39.png
 
 :Introduction:
 
@@ -144,7 +144,7 @@ Buzzer pauses play
 Buzzer Sets Play Rhythm
 --------------------
 
-.. image:: images/buzzer_set_bpm.png
+.. image:: images/310.png
 
 :Introduction:
 
@@ -158,7 +158,7 @@ Buzzer Sets Play Rhythm
 Buzzer Play Frequency
 ----------------
 
-.. image:: images/buzzer_tone.png
+.. image:: images/311.png
 
 :Introduction:
 
@@ -178,7 +178,7 @@ Buzzer Play Frequency
 Buzzer stop playing
 -----------------
 
-.. image:: images/buzzer_notone.png
+.. image:: images/312.png
 
 :Introduction:
 

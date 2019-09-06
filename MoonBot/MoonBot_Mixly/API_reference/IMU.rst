@@ -5,12 +5,12 @@ IMU
 
 By calling these modules, you can get MoonBot Kit master control of current direction, tilt angle and state, etc.
 
-.. image:: images/IMU.png
+.. image:: images/41.png
 
 Compass calibration
 --------------
 
-.. image:: images/IMU_correction.png
+.. image:: images/42.png
 
 :Introduction:
     When calibrating the compass, the master control needs to flip in the shape of ”∞“
@@ -18,7 +18,7 @@ Compass calibration
 Acquisition of compass angle
 ---------------
 
-.. image:: images/IMU_read_compass.png
+.. image:: images/43.png
 
 :Introduction:
 
@@ -31,7 +31,7 @@ Acquisition of compass angle
 Acquisition of acceleration value
 ---------------
 
-.. image:: images/IMU_read_acc_value.png
+.. image:: images/44.png
 
 :Introduction:
 
@@ -50,7 +50,7 @@ Acquisition of acceleration value
 Acquisition of acceleration angle
 ---------------
 
-.. image:: images/IMU_read_acc_angle.png
+.. image:: images/45.png
 
 :Introduction:
 
@@ -70,7 +70,7 @@ Acquisition of acceleration angle
 Read Temperature
 --------------
 
-.. image:: images/IMU_read_temperature.png
+.. image:: images/46.png
 
 :Introduction:
 
@@ -90,7 +90,7 @@ Read Temperature
 Read the current status
 --------------
 
-.. image:: images/IMU_read_state.png
+.. image:: images/47.png
 
 :Introduction:
 

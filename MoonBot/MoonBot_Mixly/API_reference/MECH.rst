@@ -5,12 +5,12 @@ Mech
 
 By calling these modules, you can easily control the manipulator to catch the ball and so on.
 
-.. image:: images/MECH.png
+.. image:: images/61.png
 
 Initialization
 --------------
 
-.. image:: images/MECH_init.png
+.. image:: images/62.png
 
 :Introduction:
 
@@ -44,7 +44,7 @@ Initialization
 Setting the position of catch ball
 ---------------
 
-.. image:: images/MECH_set_grab_ball_position.png
+.. image:: images/63.png
 
 :Introduction:
 
@@ -65,7 +65,7 @@ Setting the position of catch ball
 Setting Shooting Conditions
 ---------------
 
-.. image:: images/MECH_shoot_condition.png
+.. image:: images/64.png
 
 :Introduction:
 
@@ -86,7 +86,7 @@ Setting Shooting Conditions
 Claw movement
 ---------------
 
-.. image:: images/MECH_claw_set.png
+.. image:: images/65.png
 
 :Introduction:
 
@@ -106,7 +106,7 @@ Claw movement
 Find the ball
 -------------
 
-.. image:: images/MECH_search_ball.png
+.. image:: images/66.png
 
 :Introduction:
 
@@ -120,7 +120,7 @@ Find the ball
 Catch the ball
 -------------
 
-.. image:: images/MECH_grab_ball.png
+.. image:: images/67.png
 
 :Introduction:
 
@@ -136,7 +136,7 @@ Catch the ball
 Find the card
 -------------
 
-.. image:: images/MECH_search_card.png
+.. image:: images/68.png
 
 :Introduction:
 
@@ -158,7 +158,7 @@ Find the card
 Shoot
 -------------
 
-.. image:: images/MECH_shoot_ball.png
+.. image:: images/69.png
 
 :Introduction:
 

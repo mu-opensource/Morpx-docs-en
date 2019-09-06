@@ -5,12 +5,12 @@ MoonBot
 
 By calling these modules, you can control the robot to perform nodding, waving and other actions.
 
-.. image:: images/MoonBot.png
+.. image:: images/71.png
 
 Initialization
 ----------
 
-.. image:: images/MoonBot_init.png
+.. image:: images/72.png
 
 :Introduction:
 
@@ -33,7 +33,7 @@ Initialization
 Wave
 ----------
 
-.. image:: images/MoonBot_shake_arm.png
+.. image:: images/73.png
 
 :Introduction:
 
@@ -60,7 +60,7 @@ Wave
 Swing
 ----------
 
-.. image:: images/MoonBot_swing.png
+.. image:: images/74.png
 
 :Introduction:
 
@@ -83,7 +83,7 @@ Swing
 Shake your body from side to side
 -----------------
 
-.. image:: images/MoonBot_sway_body.png
+.. image:: images/75.png
 
 :Introduction:
 
@@ -104,7 +104,7 @@ Shake your body from side to side
 Step Forward
 -----------
 
-.. image:: images/MoonBot_take_step.png
+.. image:: images/76.png
 
 :Introduction:
 
@@ -126,7 +126,7 @@ Step Forward
 Nod
 ---------
 
-.. image:: images/MoonBot_nod.png
+.. image:: images/77.png
 
 :Introduction:
 

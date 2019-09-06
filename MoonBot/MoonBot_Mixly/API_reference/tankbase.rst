@@ -5,12 +5,12 @@ Chassis Control
 
 By calling these modules, the motor chassis can move.
 
-.. image:: images/input.png
+.. image:: images/11.png
 
 Reversal direction
 ---------
 
-.. image:: images/tankbase_reverse.png
+.. image:: images/12.png
 
 :Introduction:
 
@@ -26,7 +26,7 @@ Reversal direction
 Straight-line offset correction
 -------------
 
-.. image:: images/tankbase_straight_correction.png
+.. image:: images/13.png
 
 :Introduction:
 
@@ -43,7 +43,7 @@ Straight-line offset correction
 Straight Distance Correction
 -------------
 
-.. image:: images/tankbase_distance_correction.png
+.. image:: images/14.png
 
 :Introduction:
 
@@ -62,7 +62,7 @@ Straight Distance Correction
 Turning Angle Correction
 -------------
 
-.. image:: images/tankbase_angle_correction.png
+.. image:: images/15.png
 
 :Introduction:
 
@@ -81,7 +81,7 @@ Turning Angle Correction
 Forward
 ---------
 
-.. image:: images/tankebase_forward.png
+.. image:: images/16.png
 
 :Introduction:
 
@@ -102,7 +102,7 @@ Forward
 Backward
 ---------
 
-.. image:: images/tankebase_backward.png
+.. image:: images/17.png
 
 :Introduction:
 
@@ -123,7 +123,7 @@ Backward
 Left turn
 ---------
 
-.. image:: images/tankebase_left.png
+.. image:: images/18.png
 
 :Introduction:
 
@@ -144,7 +144,7 @@ Left turn
 Right turn
 ---------
 
-.. image:: images/tankebase_right.png
+.. image:: images/19.png
 
 :Introduction:
 
@@ -165,7 +165,7 @@ Right turn
 Stop
 ---------
 
-.. image:: images/tankebase_stop.png
+.. image:: images/110.png
 
 :Introduction:
 
@@ -174,7 +174,7 @@ Stop
 Motor write-in value
 -----------
 
-.. image:: images/tankebase_write.png
+.. image:: images/111.png
 
 :Introduction:
 
@@ -194,7 +194,7 @@ Motor write-in value
 Reading motor value
 -----------
 
-.. image:: images/tankebase_read.png
+.. image:: images/112.png
 
 :Introduction:
 
@@ -214,7 +214,7 @@ Reading motor value
 Writing Speed of Motor
 -------------
 
-.. image:: images/tankebase_write_rpm.png
+.. image:: images/113.png
 
 :Introduction:
 
@@ -236,7 +236,7 @@ Writing Speed of Motor
 Reading motor speed
 -------------
 
-.. image:: images/tankebase_read_rpm.png
+.. image:: images/115.png
 
 :Introduction:
 

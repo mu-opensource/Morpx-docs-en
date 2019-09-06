@@ -5,12 +5,12 @@ Light
 
 With these modules, you can easily set the color and brightness of the LED.
 
-.. image:: images/LED.png
+.. image:: images/51.png
 
 Eye Initialization
 ------------
 
-.. image:: images/eyes_init.png
+.. image:: images/52.png
 
 :Introduction:
 
@@ -25,7 +25,7 @@ Eye Initialization
 Eye display
 ------------
 
-.. image:: images/eyes_show.png
+.. image:: images/53.png
 
 :Introduction:
 
@@ -40,7 +40,7 @@ Eye display
 Eyes show expression
 ------------
 
-.. image:: images/eyes_show_emotion.png
+.. image:: images/54.png
 
 :Introduction:
 
@@ -55,7 +55,7 @@ Eyes show expression
 Master control LED display
 --------------
 
-.. image:: images/controller_LED_show.png
+.. image:: images/55.png
 
 :Introduction:
 
@@ -70,7 +70,7 @@ Master control LED display
 LED Setting RGB Value
 ---------------
 
-.. image:: images/LED_set_RGB.png
+.. image:: images/56.png
 
 :Introduction:
 
@@ -81,28 +81,28 @@ LED Setting RGB Value
     :LED Type:
 
         - ``Eye`` :eye LED
-        - ``master control LED`` :master control LED
+        - ``master control LED`` ：master control LED
 
     :Lamp number:
 
-        - Eye: ``0~11``, master control LED : ``0~1``
+        - Eye: ``0~11``， master control LED ： ``0~1``
 
     :R value:
 
-        - ``0~255`` :Red Channel Analog
+        - ``0~255`` ：Red Channel Analog
 
     :G value:
 
-        - ``0~255`` :Green Channel Analog
+        - ``0~255`` ：Green Channel Analog
 
     :B value:
 
-        - ``0~255`` :Blue Channel Analog
+        - ``0~255`` ：Blue Channel Analog
 
 LED Setting HSV Value
 ----------------
 
-.. image:: images/LED_set_HSV.png
+.. image:: images/57.png
 
 :Introduction:
 
@@ -112,12 +112,12 @@ LED Setting HSV Value
 
     :LED Type:
 
-        - ``Eye`` :Eye LED
+        - ``Eye`` ：Eye LED
         - ``master control LED`` :master control LED
 
     :Lamp number:
 
-        - Eye: ``0~11``, master control LED : ``0~1``
+        - Eye: ``0~11``， master control LED : ``0~1``
 
     :H value:
 
@@ -136,7 +136,7 @@ LED Setting HSV Value
 LED show
 -----------------
 
-.. image:: images/LED_show.png
+.. image:: images/58.png
 
 :Introduction:
 
@@ -152,7 +152,7 @@ LED show
 LED clear
 ----------------
 
-.. image:: images/LED_clear.png
+.. image:: images/59.png
 
 :Introduction:
 
@@ -168,7 +168,7 @@ LED clear
 LED brightness
 -------------
 
-.. image:: images/LED_brightness.png
+.. image:: images/510.png
 
 :Introduction:
 

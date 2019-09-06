@@ -3,12 +3,12 @@ Input
 
 **Input** include MoonBot Kit :doc:`../../MoonBot_Hardware/MoonBot_Hardware_touch` :doc:`../../MoonBot_Hardware/MoonBot_Hardware_infrared` :doc:`../../MoonBot_Hardware/MoonBot_Hardware_controller` keys and pin mapping module
 
-.. image:: images/input.png
+.. image:: images/1.png
 
 Initialization of Touch Sensor
 ----------------
 
-.. image:: images/touch_sensor_init.png
+.. image:: images/2.png
 
 :Introduction:
 
@@ -23,7 +23,7 @@ Initialization of Touch Sensor
 Reading Touch Sensor
 ---------------
 
-.. image:: images/touch_sensor_read.png
+.. image:: images/3.png
 
 :Introduction:
 
@@ -43,7 +43,7 @@ Reading Touch Sensor
 Initialization of Infrared Sensors
 -----------------
 
-.. image:: images/ir_sensor_init.png
+.. image:: images/4.png
 
 :Introduction:
 
@@ -58,7 +58,7 @@ Initialization of Infrared Sensors
 Reading Infrared Sensor
 ---------------
 
-.. image:: images/read_ir_sensor.png
+.. image:: images/5.png
 
 :Introduction:
 
@@ -82,7 +82,7 @@ Reading Infrared Sensor
 Reading Button
 ---------
 
-.. image:: images/read_button.png
+.. image:: images/6.png
 
 :Introduction:
 
@@ -104,7 +104,7 @@ Reading Button
 Port pin mapping
 -------------
 
-.. image:: images/moonbot_port2pin.png
+.. image:: images/7.png
 
 :Introduction:
 
