@@ -1,4 +1,4 @@
-# APP Remote Contorl
+# APP Remote Control
 
 First entry into APP controller, chooses the corresponding configuration.
 
