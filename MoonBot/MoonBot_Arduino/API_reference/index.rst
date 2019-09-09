@@ -3,13 +3,13 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-API 参考
+API Reference
 ========
 
 There are customized programming blocks in MoonBot Arduino used for MoonBot Kit and MU Vision Sensor 3. 
 This article introduces every block, and shows some complicated program examples. Users can learn programming combining hardware modules.
 
-Check MU Vision Sensor 3 documents here :doc:: `MU Vision Sensor 3 Guide <../../../MUVS3/MUVS3_Mixly/MUVS3_Mixly_Guide_cn_0_8>`
+Check MU Vision Sensor 3 documents here: .. doc:: `MU Vision Sensor 3 Guide <../../../MUVS3/MUVS3_Mixly/MUVS3_Mixly_Guide_en>`
 
 .. toctree::
     :maxdepth: 2
