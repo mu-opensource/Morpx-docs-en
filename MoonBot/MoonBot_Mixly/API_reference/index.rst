@@ -11,7 +11,7 @@ It can be combined with previous hardware module examples for learning.
 
 Mixly Basic Tutorial in `Mixly Help Document <http://mixly.readthedocs.io/>`_,will not repeat it here.
 
-MU Vision Sensor 3 Course in :doc:`MU Vision Sensor 3 Course <../../../MUVS3/MUVS3_Mixly/MUVS3_Mixly_Guide_cn_0_8>`
+MU Vision Sensor 3 Course in : `MU Vision Sensor 3 Mixly Guide <https://morpx-docs.readthedocs.io/en/latest/MUVS3/MUVS3_Mixly/index.html>`_
 
 .. toctree::
     :maxdepth: 2
