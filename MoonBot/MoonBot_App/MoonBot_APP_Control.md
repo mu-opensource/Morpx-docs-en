@@ -1,12 +1,12 @@
 # APP Remote Control
 
-First entry into APP controller, chooses the corresponding configuration.
+First select the remote controller, and then chooses the corresponding robot form.
 
 ## Introduction to Controller Use
 
 ![](./images/MoonBot_App_C.jpg)
 
-1.WiFi Conncet
+1.WiFi Connection
 
 Click on the combination of color blocks that match the color of the LED light of the VisionSensor to start the connection.
 
@@ -16,9 +16,9 @@ If the connection fails, press the visual module reset key to re-select the conn
 
 ![](./images/EMoonBot_App_C2.jpg)
 
-2.Morphological selection
+2.Robot form selection
 
-Choose the corresponding form among the three construction forms.
+Choose the corresponding form among the three.
 
 3.Setting Function Button
 
