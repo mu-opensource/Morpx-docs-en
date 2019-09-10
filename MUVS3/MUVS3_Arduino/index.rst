@@ -12,4 +12,4 @@ This passage introduces how to use MU Vision Sensor 3 with Arduino board and Ard
     :maxdepth: 1
     :glob: 
 	
-    MUVS3_Arduino_Guide_en.md
+    MUVS3_Arduino_Guide.md

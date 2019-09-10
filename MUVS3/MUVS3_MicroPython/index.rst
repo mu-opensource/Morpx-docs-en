@@ -12,5 +12,5 @@ This passage introduces how to use MU Vision Sensor 3 with Micro:bit board and M
     :maxdepth: 1
     :glob: 
 	
-    MUVS3_MicroPython_Guide_en.md
+    MUVS3_MicroPython_Guide.md
 	

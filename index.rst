@@ -13,7 +13,7 @@ Welcome to MU Documents
     MUVS3/introduction
     MUVS3/MUVS3_Mixly/index
     MUVS3/MUVS3_Arduino/index
-    MUVS3/MUVS3_Makecode/index
+    MUVS3/MUVS3_MakeCode/index
     MUVS3/MUVS3_MicroPython/index
 	
 .. toctree::

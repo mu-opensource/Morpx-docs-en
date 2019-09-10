@@ -12,5 +12,5 @@ This passage introduces how to use MU Vision Sensor 3 with Arduino board and Mix
     :maxdepth: 1
     :glob: 
 	
-    MUVS3_Mixly_Guide_en.md
+    MUVS3_Mixly_Guide.md
 	
