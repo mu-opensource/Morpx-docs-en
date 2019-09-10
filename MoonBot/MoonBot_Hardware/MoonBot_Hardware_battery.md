@@ -28,7 +28,7 @@ Charging Port: USB type-C
 
 ## Usage
 
-- Short press power button to turn on battery and long press 3 seconds to turn off. Automaticly turn off when unconnected.
+- Short press power button to turn on battery and long press 3 seconds to turn off. Automaticly turn off when unconnected for 30 seconds.
 
 - Orange light on the top is charge indicator,while white light is power indicator and red light indicates USB connected.4 blue lights indicates remaining capacity.
 
