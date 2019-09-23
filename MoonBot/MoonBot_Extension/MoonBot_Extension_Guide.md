@@ -8,8 +8,9 @@ Traditional parts needs to be transfered to a 2X2 lego block, and technic parts 
 
 ![](./images/MoonBot_extension_lego_compatible.png)
 
-将电机模块主动轮的螺丝卸下，移除主动轮，换上一个TT马达转乐高的十字转接头，就可以使用乐高轮制作一个传统的两轮小车了。
-在前面安装一个万向轮以支撑小车，维持水平，如图所示。换成两轮小车后速度可以达到原本履带小车的两倍以上。
+Demount the screw of active wheel, remove the active wheel and mount an adapter of TT motor to Lego. 
+Then MoonRover can use Lego wheels to become a traditional two wheel car.
+And a universal wheel is needed to make the car horizontal, as is shown below.A big wheel will make the car drive twice faster than before.
 
 ![](./images/MoonBot_extension_lego_wheel.png)
 

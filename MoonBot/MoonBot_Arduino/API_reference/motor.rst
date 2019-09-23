@@ -1,7 +1,7 @@
-电机
+Motor
 ==========
 
-概览
+Overview
 ----------
 
 MoonBot Kit :doc:`../../MoonBot_Hardware/MoonBot_Hardware_motor` 包含了基础的电机及编码器。在对应的 Arduino 库中提供了 :ref:`电机 <api-ref-motor>` 库以用来驱动单电机，以及 :ref:`底盘控制 <api-ref-tankbase>` 库以用来驱动双电机。

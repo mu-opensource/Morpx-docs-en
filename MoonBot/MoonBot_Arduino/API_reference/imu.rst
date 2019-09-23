@@ -1,18 +1,18 @@
 IMU
 =============
 
-概览
+Introduction
 ----------
 
-MoonBot Kit :doc:`../../MoonBot_Hardware/MoonBot_Hardware_controller` 集成了及三轴磁力计、三轴加速度、温度传感器三种功能于一体的 IMU 模组。
-对应的，在 Arduino 库中我们也提供了 :ref:`IMU <api-ref-imu>` 库来方便用户获取主控当前姿态、方向、温度等状态。
+MoonBot Kit :doc:`../../MoonBot_Hardware/MoonBot_Hardware_controller` integrates three functions of triaxial magnetometer, triaxial acceleration and temperature sensor into IMU module.
+In the Arduino library, we also provide ref:`IMU < api-ref-imu >` library to facilitate users to access the master control of the current attitude, direction, temperature and other states.
 
-通过调用 ``IMU`` 我们可以快速的获取当前的指南针角度、俯仰角、横滚角、重力加速度、温度等状态值。
+By calling `IMU', we can quickly obtain the current compass angle, pitch angle, roll angle, gravity acceleration, temperature and other state values.
 
-读取主控当前方向
+Read master control current direction
 +++++++++++++++++++++
 
-通过读取指南针的角度，我们可以知道当前主控所处方向：
+By reading the angle of the compass, we can know the direction of the current master control:
 
 .. code-block:: cpp
 
@@ -20,44 +20,45 @@ MoonBot Kit :doc:`../../MoonBot_Hardware/MoonBot_Hardware_controller` 集成了�
 
     void setup()
     {
-      IMU.enable();         // IMU使能
-      IMU.calibrateMag();   // IMU磁力计校准，校准时以"∞"字形晃动主控
+      IMU.enable();         // IMU Enable
+      IMU.calibrateMag();   // IMU magnetometer calibration,the master control needs to flip in the shape of ”∞“
     }
 
     void loop()
     {
       Serial.print("compass:");
-      // 获取指南针角度（0~360°）,指向正北时值为0或360
+      // Obtain the compass angle(0~360°).When pointing north, the value is 0 or 360
       Serial.println(IMU.getMagAngle());
     }
 
 .. note::
 
-    主控平放时，返回数值为 Y 轴（见主控正面丝印标识）与正北方向夹角；主控竖放时，返回数值为 Z 轴与正北方向夹角。
+    When the main control is flat, the return value is Y axis (see the master control front silk mark) and the northward clip.
+	When the main control is erected, the return value is the angle between Z axis and North direction.
 
-获取取俯仰角、横滚角
+Obtain Pitch angle or Rolling angle
 +++++++++++++++++++++++
 
 .. code-block:: cpp
 
-    // 获取俯仰角（±180°），主控向上角度为正，向下角度为负 
+    // Obtain Pitch angle（±180°），When the main control is up, the angle is positive and the downward angle is negative.
     int pitch = IMU.getAccAngle(kAccPitch);
-    // 获取横滚角（±180°），主控右倾为正，左倾为正
+    // Obtain Rolling angle（±180°），The main control right deviation is positive and the left deviation is negative.
     int roll = IMU.getAccAngle(kAccRoll);
 
 .. note::
 
-    MoonBot Kit 主控正方向为 Y 轴（见主控正面丝印标识），姿态角度都是以此为前提进行计算的。
+    MoonBot Kit The main control direction is Y axis (see the main control front silk mark)，Angles are calculated on this premise.。
 
-获取当前加速度
+Acquisition of current acceleration
 +++++++++++++++++++++++
 
 .. code-block:: cpp
 
-    // 获取加速度，单位：g，静止时数值为1.0左右
+    // Acquisition of acceleration，unit：g，The value at rest is 1.0.
     float acceleration = IMU.getAcceleration();
 
-获取当前运动状态
+Obtain the current motion state
 ++++++++++++++++++
 
 .. code-block:: cpp
@@ -65,20 +66,20 @@ MoonBot Kit :doc:`../../MoonBot_Hardware/MoonBot_Hardware_controller` 集成了�
     void loop() 
     {
         if (IMU.on(kIMUShake)) {
-            // 如果当前主控在晃动
-            // 亮红灯
+            // If the current master is shaking
+            // bright red LED
             LED.setPixelColor(0, 0xff0000);
             LED.setPixelColor(1, 0xff0000);
             LED.show();
         } else if (IMU.on(kIMUFreeFall)) {
-            // 如果当前主控在自由落体
-            // 亮绿灯
+            // If the current master is in free fall
+            // bright green LED
             LED.setPixelColor(0, 0x00ff00);
             LED.setPixelColor(1, 0x00ff00);
             LED.show();
         } else {
-            // 如果主控静置
-            // 关闭LED
+            // If the main control is stationary
+            // close LED
             LED.setPixelColor(0, 0x000000);
             LED.setPixelColor(1, 0x000000);
             LED.show();
@@ -87,24 +88,24 @@ MoonBot Kit :doc:`../../MoonBot_Hardware/MoonBot_Hardware_controller` 集成了�
 
 .. _api-ref-imu:
 
-API 参考 - IMU
+API Reference - IMU
 ----------------------
 
-头文件
+Header file
 +++++++++++
 
     - `src/LSM303AGR_IMU_Sensor.h <https://github.com/mu-opensource/MoonBot/blob/master/src/LSM303AGR_IMU_Sensor.h>`_
 
-枚举
+enumeration
 ++++++++++
 
 .. glossary::
 
     enum lsm303_axes_t
 
-        - IMU 方向轴类型。
+        - IMU Directional axis type
 
-        *值:*
+        *value:*
 
         :kDirX:
         :kDirY:
@@ -112,139 +113,140 @@ API 参考 - IMU
 
     enum lsm303_acc_angle_t
 
-        - IMU 姿态角度类型。
+        - IMU Attitude Angle Type。
 
-        *值:*
+        *value:*
 
         :kAccRoll:
         :kAccPitch:
 
     enum imu_state_t
 
-        - IMU 特殊状态类型。
+        - IMU Special state type.
 
-        *值:*
+        *value:*
 
         :kIMUShake:
 
-            - IMU 是否处于晃动状态
+            - IMU Is it in a sloshing state
 
         :kIMUFreeFall:
 
-            - IMU 是否处于自由落体状态
+            - IMU Is it in a free falling state
 
-类
+Class
 ++++++++++
 
 .. glossary::
 
     class LSM303AGR_IMU_Sensor
 
-        - IMU 驱动。
+        - IMU Drive.
 
-        :成员函数:
+        :group function:
 
             :int enable(void);:
 
-                - 使能 IMU 单元。
+                - enable IMU 
 
-                :返回:
+                :Return:
 
-                    - ``0`` 使能成功，否则失败
+                    - ``0`` enable success, unable failure
 
             :int advGetMagAngle(lsm303_axes_t main_axes, lsm303_axes_t sub_axes);:
 
-                - 获取给定主轴与副轴所在平面，主轴与正北方夹角
+                - Get the plane where the specified spindle and vice-spindle are located, and the angle between the spindle and the North side.
 
-                :参数:
+                :parameters:
 
-                    - ``main_axes`` ：主轴
-                    - ``sub_axes`` ：副轴
+                    - ``main_axes`` ：Spindle
+                    - ``sub_axes`` ：Countershaft
 
-                :返回:
+                :Return:
 
-                    - 主轴与正北方夹角
+                    - Angle between the spindle and the North
 
             :int getMagAngle(void);:
 
-                - 获取指南针角度，主控平放时，返回 Y 轴正方向与正北方夹角；主控竖放时，返回 Z 轴正方向与正北方夹角。
+                - Obtain the compass angle，When the main control is placed horizontally, the angle between the positive direction of Y axis and the north is returned; 
+				when the main control is placed vertically, the angle between the positive direction of Z axis and the north is returned.
 
-                :返回:
+                :Return:
 
-                    - 主轴与正北方夹角
+                    - Angle between the spindle and the North
 
             :int getAccAngle(lsm303_acc_angle_t angle_type);:
 
-                - 获取主控姿态角度。
+                - Obtain the main control angle.
 
-                :参数:
+                :parameters:
 
-                    - ``angle_type`` ：姿态角度类型
+                    - ``angle_type`` ：angle type
 
-                :返回:
+                :Return:
 
-                    - 姿态角度
+                    - angle
 
             :float getAcceleration(void);:
 
-                - 获取加速度值。
+                - Acquisition of acceleration value。
 
-                :返回:
+                :Return:
 
-                    - 加速度值，单位：g
+                    - Acceleration value，unit：g
 
             :bool on(imu_state_t imu_state);:
 
-                - 获取主控知否处于某些状态。
+                - Get whether the master control is in some state。
 
-                :参数:
+                :parameters:
 
-                    - ``imu_state`` ：IMU状态
+                    - ``imu_state`` ：IMU state
 
-                :返回:
+                :Return:
 
-                    - ``true`` IMU 处于该状态，否则不处于该状态
+                    - ``true`` IMU In this state,Otherwise, it is not in this state.
 
             :bool calibrateMag(void);:
 
-                - 磁力计校准
+                - Calibration of Magnetometer
 
-                :返回:
+                :Return:
 
-                    - 是否校准完成
+                    - Whether the calibration is completed or not
 
             :int16_t temperature(void);:
 
-                - 获取温度原始数值
+                - Obtain the original temperature value
 
-                :返回:
+                :Return:
 
-                    - 温度原始数值
+                    - Primitive value of temperature
 
             :float temperatureC(void);:
 
-                - 获取当前温度，单位：摄氏度（℃）
+                - Get the current temperature，unit：Celsius degree
 
-                :返回:
+                :Return:
 
-                    - 当前温度，单位：摄氏度（℃）
+                    - Current temperature，unit：Celsius degree
 
             :float temperatureF(void);:
 
-                - 获取当前温度，单位：华氏度（℉）
+                - Current temperature，unit：Fahrenheit degree
 
-                :返回:
+                :Return:
 
-                    - 当前温度，单位：华氏度（℉）
+                    - Current temperature，unit：Fahrenheit degree
 
-        :成员变量:
+        :group variable:
 
             :LSM303AGR_ACC_Sensor Acc;:
 
-                - 加速度驱动
+                - Acceleration drive
 
             :LSM303AGR_MAG_Sensor Mag;:
 
-                - 磁力计驱动
+                - Magnetometer drive
 
 

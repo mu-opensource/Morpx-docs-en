@@ -1,15 +1,15 @@
-灯光
+Light
 =============
 
-概览
+Overview
 ----------
 
-MoonBot Kit 中包含了两组灯光模块，分别位于  :doc:`../../MoonBot_Hardware/MoonBot_Hardware_controller` 和 :doc:`../../MoonBot_Hardware/MoonBot_Hardware_eyes` 。
-我们可以使用 `Adafruit_NeoPixel <https://learn.adafruit.com/adafruit-neopixel-uberguide/arduino-library-use>`_ 库去驱动这两组灯光模块。
+MoonBot Kit contains two sets of light modules，Respectively located  :doc:`../../MoonBot_Hardware/MoonBot_Hardware_controller` and :doc:`../../MoonBot_Hardware/MoonBot_Hardware_eyes` 。
+We can use `Adafruit_NeoPixel <https://learn.adafruit.com/adafruit-neopixel-uberguide/arduino-library-use>`_ library to drive these two sets of light modules.
 
-我们可以通过调用 ``LED`` 来驱动板载的两颗 LED 灯，通过调用 ``moonbot_eyes`` 来驱动12颗 LED 眼睛。同时通过调用 :ref:`LED 眼睛动作 <api-ref-led-action>` 让眼睛做出丰富的表情。
+We can drive two on-board LED lights by calling `LED'.Drive 12 LED eyes by calling `moonbot_eyes'.At the same time, through the call: ref: `LED eye movement < api-ref-led-action > ` let the eyes make a rich expression.
 
-LED 基础驱动
+LED Foundation driven
 +++++++++++++++++
 
 .. code-block:: cpp
@@ -17,7 +17,7 @@ LED 基础驱动
     #include <MoonBot.h>
 
     void setup() {
-        // 使能主控LED
+        // enable main control LED
         LED.begin();
         moonbot_eyes.begin();
         //  clear LED color
@@ -30,15 +30,15 @@ LED 基础驱动
     void loop() {
         if (digitalRead(MOONBOT_PIN_BUTTON_A) == LOW
             && digitalRead(MOONBOT_PIN_BUTTON_B) == LOW) {
-            // 如果A&B同时被按下
-            // LED和眼睛灯光显示青色
+            // If A&B is pressed at the same time
+            // LED and eye lights display cyan
             LED.fill(0x003030);
             LED.show();
             moonbot_eyes.fill(0x003030);
             moonbot_eyes.show();
         } else if (digitalRead(MOONBOT_PIN_BUTTON_A) == LOW) {
-            // 如果按键A被按下
-            // LED0，眼睛右眼显示绿色
+            // If key A is pressed
+            // LED0，The right eye display green.
             LED.setPixelColor(0, 0x003000);
             LED.setPixelColor(1, 0);
             LED.show();
@@ -46,8 +46,8 @@ LED 基础驱动
             moonbot_eyes.fill(0x003000, 0, 6);
             moonbot_eyes.show();
         } else if (digitalRead(MOONBOT_PIN_BUTTON_B) == LOW) {
-            // 如果按键B被按下
-            // LED1，眼睛左眼显示蓝色
+            // If key B is pressed
+            // LED1，The left eye display green.
             LED.setPixelColor(0, 0);
             LED.setPixelColor(1, 0x000030);
             LED.show();
@@ -55,7 +55,7 @@ LED 基础驱动
             moonbot_eyes.fill(0x000030, 6, 6);
             moonbot_eyes.show();
         } else {
-            // LED 眼睛灯光关闭
+            // LED Eye lights off
             LED.clear();
             LED.show();
             moonbot_eyes.clear();
@@ -63,7 +63,7 @@ LED 基础驱动
         }
     }
 
-LED 眼睛灯光动作
+LED Eye Lighting Action
 +++++++++++++++++++++
 
 MoonBot Kit 提供了丰富的眼睛动作库以供调用：

@@ -1,78 +1,78 @@
-引脚映射
+Pin Map
 =============
 
-概览
+Overview
 ----------
 
-MoonBot Kit :doc:`../../MoonBot_Hardware/MoonBot_Hardware_controller` 包含了9个通用端口、4个舵机端口、2个电机端口、2个按键、1个蜂鸣器，
-对应的，在 Arduino 库中我们也提供了 :ref:`引脚映射 <api-ref-pins>` 库和相关引脚的宏定义来方便用户获取对应引脚号。
+MoonBot Kit :doc:`../../MoonBot_Hardware/MoonBot_Hardware_controller` contains 9 GPIO ports, 4 servo ports, two motor ports and other on board resources.
+And in Arduino library we provide :ref:`pin map<api-ref-pins>` livrary and relevant defined pin to guide users requiring corresponding pin number.
 
-通过这些函数和宏，我们可以方便的获取 MoonBot Kit 主控上的端口、舵机等对应引脚号。
+Through these functions and macros, we can easily get pin numbers of MoonBot Kit controller.
 
-按键状态获取
+Get Keys Status
 +++++++++++++++++++++
 
-比如，通过获取板载按键的状态来点亮板载的 LED：
+For example, turn on the on-board LEDs by getting button status.
 
 .. code-block:: cpp
 
     #include <MoonBot.h>
 
-    int button_a = MOONBOT_PIN_BUTTON_A;        // 获取板载按键A的引脚号
-    int button_b = MOONBOT_PIN_BUTTON_B;        // 获取板载按键B的引脚号
+    int button_a = MOONBOT_PIN_BUTTON_A;        // Get button A pin number
+    int button_b = MOONBOT_PIN_BUTTON_B;        // Get button B pin number
 
     void setup()
     {
-        LED.begin();        // 板载LED初始化
+        LED.begin();        // On board LEDs begin
     }
 
     void loop()
     {
         if ((!digitalRead(button_a) && !digitalRead(button_b))) {
-            // 如果按键A和B同时被按下，板载LED 0 1同时亮青色灯光
+            // If button A and B is pressed at mean time, LED 0 and 1 show cyan.
             LED.setPixelColor(0, 0x00ffff);
             LED.setPixelColor(1, 0x00ffff);
             LED.show();
         } else if ((!digitalRead(button_a))) {
-            // 如果按键A和B同时被按下，板载LED 0亮绿色灯光
+            // If only button B is pressed, LED 0 show green
             LED.setPixelColor(0, 0x00ff00);
             LED.setPixelColor(1, 0x000000);
             LED.show();
         } else if ((!digitalRead(button_b))) {
-            // 如果按键A和B同时被按下，板载LED 1亮蓝色灯光
+            // If only button A is pressed, LED 1 show blue.
             LED.setPixelColor(0, 0x000000);
             LED.setPixelColor(1, 0x0000ff);
             LED.show();
         } else {
-            // 如果按键A和B同都没被按下，板载LED关闭
+            // If buttons are not pressed, LEDs turn off.
             LED.setPixelColor(0, 0x000000);
             LED.setPixelColor(1, 0x000000);
             LED.show();
         }
     }
 
-获取LED眼睛引脚
+Get LED Eyes Pin Number
 +++++++++++++++++++++
 
-再或者，我们希望获取连接在端口3上的 :doc:`../../MoonBot_Hardware/MoonBot_Hardware_eyes` 引脚来初始化 LED：
+Initialize LED by getting the status of :doc:`../../MoonBot_Hardware/MoonBot_Hardware_eyes` on port 3.
 
 .. code-block:: cpp
 
-  moonbot_eyes.setPin(moonbotPortToPin(kPort3, kPortPin1));     // 设置LED眼睛模块的引脚为端口3的第一个引脚
-  moonbot_eyes.begin();         // LED眼睛初始化
+  moonbot_eyes.setPin(moonbotPortToPin(kPort3, kPortPin1));     // Set port 3 as the first pin of LED eyes.
+  moonbot_eyes.begin();         // Initialize LED eyes
 
-触摸模块状态获取
+Get Touch Module status
 +++++++++++++++++++++
 
-以及，读取连接在各个通用端口上 :doc:`../../MoonBot_Hardware/MoonBot_Hardware_touch` 的状态：
+Read status of :doc:`../../MoonBot_Hardware/MoonBot_Hardware_touch` on the GPIO ports.
 
 .. literalinclude:: examples/read_touch_state.ino
    :language: cpp
 
-红外模块状态获取
+Get Infrared Module Status
 +++++++++++++++++++++
 
-同样的，我们可以用相同的方法读取 :doc:`../../MoonBot_Hardware/MoonBot_Hardware_infrared` 的状态：
+We can use the same way to read the status of :doc:`../../MoonBot_Hardware/MoonBot_Hardware_infrared`.
 
 .. literalinclude:: examples/read_ir_state.ino
    :language: cpp
@@ -80,28 +80,28 @@ MoonBot Kit :doc:`../../MoonBot_Hardware/MoonBot_Hardware_controller` 包含了9
 
 .. Attention::
 
-    红外传感器为低电平触发，当对应引脚电平为 ``LOW`` 时，红外传感器被触发；反之，读取引脚电平为 ``HIGH`` 时，红外传感器不被触发。
+    Infrared module is in low level when touched, and pin mode is ``LOW``; And it is not touched when level is ``HIGH``.
 
 .. _api-ref-pins:
 
-API 参考 - 引脚映射
+API Reference - Pin Map
 ----------------------
 
-头文件
+Header File
 +++++++++++
 
     - `src/pins_moonbot.h <https://github.com/mu-opensource/MoonBot/blob/master/src/pins_moonbot.h>`_
 
-枚举
+Enum
 +++++++++
 
 .. glossary::
 
     enum moonbot_servo_t
 
-        - MoonBot Kit 舵机端口
+        - MoonBot Kit servo port
 
-        *值:*
+        *value:*
 
         :kServo1=0:
         :kServo2:
@@ -109,58 +109,58 @@ API 参考 - 引脚映射
         :kServo4:
         :kServoNum:
 
-            - 舵机端口数量
+            - servo port number
 
     enum servo_pin_t
 
-        - 舵机端口引脚类型
+        - servo port type
 
-        *值:*
+        *value:*
 
         :kSignal:
 
-            - 舵机信号引脚
+            - servo signal pin
 
         :kShutDown:
 
-            - 舵机供电引脚
+            - servo power pin
 
         :kState:
 
-            - 舵机状态引脚
+            - servo status pin
 
     enum moonbot_motor_t 
 
-        - MoonBot Kit 电机端口
+        - MoonBot Kit motor port
 
-        *值:*
+        *value:*
 
         :kMotor1=0:
         :kMotor2:
         :kMotorNum:
 
-            - 电机端口数量
+            - motor port number
 
 
     enum motor_pin_t
 
-        - 电机端口引脚类型
+        - motor port type
 
-        *值:*
+        *value:*
 
         :kDirection:
 
-            - 电机方向引脚
+            - motor direction pin
 
         :kSpeed:
 
-            - 电机速度引脚
+            - motor speed pin
 
     enum moonbot_port_t
 
-        - MoonBot Kit 通用端口
+        - MoonBot Kit GPIO port
 
-        *值:*
+        *value:*
 
         :kPort1=0:
         :kPort2:
@@ -173,88 +173,88 @@ API 参考 - 引脚映射
         :kPort9:
         :kPortNum:
 
-            - 通用端口数量
+            - GPIO port number
 
     enum port_pin_t
 
-        - 通用端口引脚类型
+        - GPIO port type
 
-        *值:*
+        *value:*
 
         :kPortPin1=0:
         :kPortPin2:
         :kPortPinNum:
 
-            - 端口引脚数量
+            - port pin number
 
-宏
+Macro Definition
 +++++++++
 
 .. glossary::
 
     MOONBOT_PIN_LED
 
-        - MoonBot Kit 主控板载 LED 引脚
+        - MoonBot Kit contrller on-board LED pin
 
     MOONBOT_PIN_BUZZER_SIG 
 
-        - MoonBot Kit 主控板载蜂鸣器信号引脚
+        - MoonBot Kit controller buzzer signal pin
 
     MOONBOT_PIN_BUZZER_SHDW
 
-        - MoonBot Kit 主控板载蜂鸣器供电引脚
+        - MoonBot Kit controller buzzer power pin
 
     MOONBOT_PIN_BUTTON_A
 
-        - MoonBot Kit 主控板载按钮 A 引脚
+        - MoonBot Kit controller button A pin
 
     MOONBOT_PIN_BUTTON_B
 
-        - MoonBot Kit 主控板载按钮 B 引脚
+        - MoonBot Kit controller button B pin
 
-函数
+Functions
 +++++++++
 
 .. glossary::
 
     uint8_t moonbotPortToPin(moonbot_port_t port_num, port_pin_t pin_num);
 
-        - 获取 MoonBot Kit 给定端口的引脚对应的 Arduino 引脚
+        - Get MoonBot Kit controller Arduino pin number of the GPIO port.
 
-        :参数:
+        :value:
 
-            - ``port_num`` ：通用端口号
-            - ``pin_num`` ：端口引脚号
+            - ``port_num``: GPIO port
+            - ``pin_num``: port pin number
 
-        :返回:
+        :return:
 
-            - 对应的 Arduino 引脚
+            - Arduino pin number of the port pin
 
     uint8_t moonbotMotorToPin(moonbot_motor_t motor_num, motor_pin_t pin_type);
 
-        - 获取 MoonBot Kit 给定电机端口的引脚类型对应的 Arduino 引脚
+        - Get MoonBot Kit controller Arduino pin number of the motor port.
 
-        :参数:
+        :value:
 
-            - ``motor_num`` ：电机端口号
-            - ``pin_type`` ：电机端口引脚类型
+            - ``motor_num`` : motor port number
+            - ``pin_type`` : motor pin type
 
-        :返回:
+        :return:
 
-            - 对应的 Arduino 引脚
+            - motor port Arduino pin
 
     uint8_t moonbotServoToPin(moonbot_servo_t servo_num, servo_pin_t pin_type);
 
-        - 获取 MoonBot Kit 给定舵机端口的引脚类型对应的 Arduino 引脚
+        - Get MoonBot Kit controller Arduino pin number of the servo port.
 
-        :参数:
+        :value:
 
-            - ``servo_num`` ：舵机端口号
-            - ``pin_type`` ：舵机端口引脚类型
+            - ``servo_num`` : servo port number
+            - ``pin_type`` : servo pin type
 
-        :返回:
+        :return:
 
-            - 对应的 Arduino 引脚
+            - servo port Arduino pin
 
 
 

@@ -1,7 +1,7 @@
-音乐
+Music
 ==========
 
-概览
+Overview
 ----------
 
 MoonBot Kit 提供了两类发声设备，分别是 :doc:`../../MoonBot_Hardware/MoonBot_Hardware_controller` 板载的蜂鸣器模块和外接的 :doc:`../../MoonBot_Hardware/MoonBot_Hardware_speaker` 。相对应的，
