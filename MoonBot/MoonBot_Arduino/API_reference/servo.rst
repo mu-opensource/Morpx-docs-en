@@ -1,47 +1,50 @@
-舵机
+Servo
 =============
 
-概览
+Overview
 ----------
 
-MoonBot Kit :doc:`../../MoonBot_Hardware/MoonBot_Hardware_controller` 最多可连接四个 :doc:`../../MoonBot_Hardware/MoonBot_Hardware_servo` 。
-在 Arduino 库中，我们也提供了 :ref:`舵机 <api-ref-servo>` 库，通过这个库，您可以控制一个或多个舵机同时运动。
+MoonBot Kit :doc:`../../MoonBot_Hardware/MoonBot_Hardware_controller` can be connected up to four :doc:`../../MoonBot_Hardware/MoonBot_Hardware_servo` 。
+In Arduino library, we provide :ref:`Servo <api-ref-servo>` library. Through this library, you can control one or more servos to move.
 
-:ref:`舵机库 <api-ref-servo>` 继承了 Arduino 基础的舵机驱动 ``class Servo`` 类，除了基础的 ``Servo`` 类成员函数外，我们还提供了舵机校准、多个舵机同时运行等功能的函数。
-在 ``MoonBot.h`` 头文件中，我们提供了四个变量 ``m_servo[kServo1]`` ``m_servo[kServo2]`` ``m_servo[kServo3]`` ``m_servo[kServo4]`` ，以分别驱动主控上对应的四个舵机接口。
+:ref:`Servo library <api-ref-servo>` inherit Arduino basic servo driver ``class Servo``. 
+Except for basic ``Servo`` class function, we also provide functions like servo calibration, several servos move together.
+In ``MoonBot.h`` header file, we provide four variables ``m_servo[kServo1]`` ``m_servo[kServo2]`` ``m_servo[kServo3]`` ``m_servo[kServo4]`` 
+to drive corresponding servo ports in controller module.
 
-基础应用
+Basic Application
 ++++++++++++++++
 
-先来看一个舵机的基础应用：
+There is a basic application of servos.
 
 .. literalinclude:: examples/ServoSweep.ino
    :language: cpp
 
 .. note::
 
-    舵机的初始化函数已改为 ``attach(moonbot_servo_t servo_port, bool reverse)`` ，基础的舵机初始化函数 ``uint8_t attach(int pin)`` 已不受支持。
+    Initial function of servos is changed to ``attach(moonbot_servo_t servo_port, bool reverse)``, and original function ``uint8_t attach(int pin)`` is not supported anymore.
 
-多个舵机同时运动
+Servos move together
 +++++++++++++++++++++++
 
-我们提供了 ``void MoonBotServo::setTargetAngle()`` 和 ``MoonBotServo::moveAllServoToTarget()`` 函数来让多个舵机同时运动。
+We provide ``void MoonBotServo::setTargetAngle()`` and ``MoonBotServo::moveAllServoToTarget()`` functions to make servos move togehther.
 
 .. literalinclude:: examples/MoveAllServoTogether.ino
    :language: cpp
 
 .. note::
 
-    当使用 ``MoonBotServo::moveAllServoToTarget();`` 函数的默认参数时，该函数会等待所有舵机动作运行完成后退出;
-    当参数不为0时，会在参数指定时间内退出，并返回动作是否完成。我们可以通过调用 ``bool isMoving(void);`` 来每隔一段时间检查一次当前的运行状态：
+    When using ``MoonBotServo::moveAllServoToTarget();`` default parameter, the function will wait for all servos finish moving and stopping.
+    When parameter is not 0, it will stop when time is over, and feed back whether moving is finished.
+	Function``bool isMoving(void);`` can be used every certain time to check the status.
 
     .. code-block:: cpp
 
         while (!MoonBotServo::moveAllServoToTarget(0)) {
-            // 当检测到当前有舵机在进行运动时
+            // Check whether servos are moving.
             for (int i = 0; i < kServoNum; ++i) {
                 if (!m_servo[i].isMoving()) {
-                    // 如果检查到当前端口舵机停止运行，打印舵机状态
+                    // when servos stop, print the status.
                     Serial.print("Servo");
                     Serial.print(i);
                     Serial.println(" Stopped.");
@@ -50,7 +53,7 @@ MoonBot Kit :doc:`../../MoonBot_Hardware/MoonBot_Hardware_controller` 最多可�
         }
         Serial.println("All Servo Stopped.");
 
-    改为以上形式后，使用串口调试软件即会接收到类似以下的信息
+    When using COM monitor, information will be received as below.
 
     .. code-block::
 
@@ -65,169 +68,169 @@ MoonBot Kit :doc:`../../MoonBot_Hardware/MoonBot_Hardware_controller` 最多可�
         Servo3 Stopped.
         All Servo Stopped.
 
-舵机校准
+Servo Calibration
 ++++++++++++++++
 
-MoonBot Kit :ref:`舵机库 <api-ref-servo>` 中提供了舵机校准函数，可在初始化过程中校准舵机的偏差。
+MoonBot Kit :ref:`Servo library <api-ref-servo>` provide servo calibration function that can correct the offset of servos.
 
 .. code-block:: cpp
 
-    m_servo[kServo1].correction(-2);        //将舵机1向下校准2°
+    m_servo[kServo1].correction(-2);        //Calibrate servo 1 downwards for 2°
 
 .. _api-ref-servo:
 
-API 参考 - 舵机
+API Reference - Servo
 ----------------------
 
-头文件
+Header File
 +++++++++++
 
     - `src/MoonBot_Servo.h <https://github.com/mu-opensource/MoonBot/blob/master/src/MoonBot_Servo.h>`_
 
-枚举
+Enum
 ++++++++++
 
 .. glossary::
 
     enum moonbot_servo_t
 
-        - 舵机端口类型
+        - servo port type
 
-        *值:*
+        *value:*
 
         :kServo1:
         :kServo2:
         :kServo3:
         :kServo4:
         :kServoNum:
-            - 舵机端口数量
+            - servo port number
 
-类
+Class
 ++++++++++
 
 .. glossary::
 
     class MoonBotServo
 
-        - MoonBot Kit 舵机驱动库
+        - MoonBot Kit servo driver library
 
-        :成员函数:
+        :Member function:
 
             :uint8_t attach(moonbot_servo_t servo_port, bool reverse = MOONBOT_SERVO_REVERSE);:
 
-                - 初始化舵机至对应的舵机端口
+                - Initialise servo to servo ports.
 
-                :参数:
+                :Parameter:
 
-                    - ``servo_port`` ：舵机端口
-                    - ``reverse`` ：翻转舵机角度
+                    - ``servo_port`` 
+                    - ``reverse`` 
 
-                :返回:
+                :Return:
 
-                    - ``NOT_A_PORT`` 舵机端口无效，其他初始化正确
+                    - ``NOT_A_PORT`` Servo port is invalid, and other initialization is right.
 
             :uint8_t attach(moonbot_servo_t servo_port, int min, int max, bool reverse = MOONBOT_SERVO_REVERSE);:
 
-                - 初始化舵机至对应的舵机端口，并指定舵机的运行范围
+                - Initialise servo to servo ports, and set its moving range.
 
-                :参数:
+                :Parameter:
 
-                    - ``servo_port`` ：舵机端口
-                    - ``min`` ：舵机最小运行角度
-                    - ``max`` ：舵机最大运行角度
-                    - ``reverse`` ：翻转舵机角度
+                    - ``servo_port`` ：servo port
+                    - ``min`` ：minimum degree of servo  
+                    - ``max`` ：max degree of servo
+                    - ``reverse`` ：reverse servo direction
 
-                :返回:
+                :Return:
 
-                    - ``NOT_A_PORT`` 舵机端口无效，其他初始化正确
+                    - ``NOT_A_PORT`` Servo port is invalid, and other initialization is right.
 
             :void detach(void);:
 
-                - 断开舵机与对应端口的连接
+                - Detach servo and port
 
             :void write(int value);:
 
-                - 向舵机写入角度
+                - Write servo angle
 
-                :参数:
+                :parameter:
 
-                    - ``value`` ：角度值，取值范围 ``0~180°``
+                    - ``value`` ：angle value range ``0~180°``
 
             :int read(void);:
 
-                - 读取舵机当前角度
+                - Read current servo degree
 
-                :返回:
+                :Return:
 
-                    - 当前角度值
+                    - current degree
 
             :void reverse(bool state);:
 
-                - 以90°为中心点，翻转舵机角度。
+                - Reverse servo direction
 
-                :参数:
+                :parameter:
 
-                    - ``state`` :状态， ``true`` 为翻转角度，否则为默认方向
+                    - ``state``: Status ``true`` Direction is reversed
 
             :void setTargetAngle(int angle, unsigned int speed = 1);:
 
-                - 预设舵机角度，需与函数 ``static bool moveAllServoToTarget()`` 配合使用。
+                - Initialise servos.It should be used together with``static bool moveAllServoToTarget()`` .
 
-                :参数:
+                :parameter:
 
-                    - ``angle`` ：预设角度
-                    - ``speed`` ：每个脉冲角度的变化量
+                    - ``angle`` : Initialised angle
+                    - ``speed`` : degree of every pulse
 
             :void stop(void);:
 
-                - 停止舵机动作
+                - stop servos
 
             :void power(bool state);:
 
-                - 开启或断开舵机供电。
+                - open or close servo power.
 
-                :参数:
+                :parameter:
 
-                    - ``state`` ：舵机供电状态， ``true`` 为开启供电
+                    - ``state`` ：status of servo power, ``true`` means open
 
             :void correction(int angle_offset);:
 
-                - 舵机校准
+                - Servo calibration
 
-                :参数:
+                :parameter:
 
-                    - ``angle_offset`` ：舵机校准角度值，取值范围： ``±90°``
+                    - ``angle_offset`` ：Calibrate the angle. Range: ``±90°``
 
             :bool isMoving(void);:
 
-                - 读取舵机当前运动状态。
+                - Read moving status.
 
-                :返回:
+                :Return:
 
-                    - ``true`` 为当前正在运动，反之为当前没有运动
+                    - ``true`` Servo is moving
 
             :bool isPowerOverload(void);:
 
-                - 检测当前是否电流过载。
+                - Detect whether current is overload.
 
-                :返回:
+                :Return:
 
-                    - ``true`` 为当前电流过载，反之为正常
+                    - ``true`` Power is overload
 
-        :静态成员函数:
+        :Static member function:
 
             :static bool moveAllServoToTarget(unsigned long timeToWait_ms = 0xFFFFFFFF);:
 
-                - 移动所有舵机值预设角度。
+                - Move all servo to set angle
 
-                :参数:
+                :Parameter:
 
-                    - ``timeToWait_ms`` ：等待时间，默认为直至舵机移动到预设角度（无限长）
+                    - ``timeToWait_ms`` : Default time is infinite, until servo move to target angle.
                 
-                :返回:
+                :Return:
 
-                    - ``true`` 完成移动到预设角度动作，反之未完成动作
+                    - ``true`` Finish all movement.
 
             :static void stopAllServo(void);:
 
-                - 停止所有舵机的动作。
+                - Stop all servo movements.
