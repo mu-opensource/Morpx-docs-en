@@ -66,164 +66,164 @@ LED Foundation driven
 LED Eye Lighting Action
 +++++++++++++++++++++
 
-MoonBot Kit 提供了丰富的眼睛动作库以供调用：
+MoonBot Kit provides abundant Eye action to be used: 
 
 .. code-block:: cpp
 
-    colorWipe(moonbot_eyes, 0x40, 200);         // 眼睛灯珠逐个变成绿色
-    theaterChase(moonbot_eyes, 0xFF00, 50);     // 眼睛转圈
-    MoonBotEyesCircle(moonbot_eyes, 50);        // 眼睛渐变转圈
-    rainbow(moonbot_eyes, 5);                   // 眼睛彩虹色渐变
-    rainbowCycle(moonbot_eyes, 5);              // 眼睛灯珠逐个以不同颜色开始彩虹色转圈渐变
+    colorWipe(moonbot_eyes, 0x40, 200);         // LEDs turn green one by one
+    theaterChase(moonbot_eyes, 0xFF00, 50);     // Eyes turn around
+    MoonBotEyesCircle(moonbot_eyes, 50);        // Eyes turn around gradually
+    rainbow(moonbot_eyes, 5);                   // Eyes show rainbow color
+    rainbowCycle(moonbot_eyes, 5);              // Eyes show rainbow color one by one
 
 .. _api-ref-motor:
 
-API 参考 - Adafruit_NeoPixel
+API Reference - Adafruit_NeoPixel
 ----------------------------------------------
 
-详情见 Adafruit 官网介绍：`https://learn.adafruit.com/adafruit-neopixel-uberguide/arduino-library-use <https://learn.adafruit.com/adafruit-neopixel-uberguide/arduino-library-use>`_
+Check Adafruit official website for detailed information: `https://learn.adafruit.com/adafruit-neopixel-uberguide/arduino-library-use <https://learn.adafruit.com/adafruit-neopixel-uberguide/arduino-library-use>`_
 
 .. _api-ref-led-action:
 
-API 参考 - LED 眼睛动作
+API Reference - LED Eyes Action
 ----------------------------------------------
 
-头文件
+Header File
 +++++++++++
 
     - `src/MoonBot_Eyes.h <https://github.com/mu-opensource/MoonBot/blob/master/src/MoonBot_Eyes.h>`_
 
-枚举类型
+Enum
 +++++++++++
 
 .. glossary::
 
     enum moonbot_eyes_t
 
-        - 眼睛类型
+        - eyes type
 
-        *值:*
+        *value:*
 
         :kEyesLeft:
-            - 左眼
+            - left eye
         :kEyesRight:
-            - 右眼
+            - right eye
         :kEyesBoth:
-            - 双眼
+            - both eyes
 
     enum moonbot_look_t
 
-        - 眼睛方向类型
+        - direction that eyes look at
 
-        *值:*
+        *value:*
 
         :kEyesLookUp:
-            - 眼睛向上看
+            - Eyes look up
         :kEyesLookDown:
-            - 眼睛向下看
+            - Eyes look down
         :kEyesLookLeft:
-            - 眼睛向左看
+            - Eyes look left
         :kEyesLookRight:
-            - 眼睛向右看
+            - Eyes look right
 
     enum moonbot_eyes_scroll_t
 
-        - 眼睛滚动方向类型
+        - eyes scroll type
 
-        *值:*
+        *value:*
 
         :kEyesScrollUp:
-            - 眼睛向上滚动
+            - eyes scroll up
         :kEyesScrollDown:
-            - 眼睛向下滚动
+            - eyes scroll down
         :kEyesScrollLeft:
-            - 眼睛向左滚动
+            - eyes scroll left
         :kEyesScrollRight:
-            - 眼睛向右滚动
+            - eyes scroll right
 
-函数
+Functions
 ++++++++++
 
 .. glossary::
 
     void colorFade(Adafruit_NeoPixel& led, uint8_t r, uint8_t g, uint8_t b, uint8_t wait);
 
-        - LED 颜色从当前颜色渐变到指定颜色。
+        - LED eyes turn to target color gradually
 
-        :参数:
+        :parameter:
 
-            - ``led`` ：LED 类型
-            - ``r`` ：红色通道值
-            - ``g`` ：绿色通道值
-            - ``b`` ：蓝色通道值
-            - ``wait`` ：变化时间
+            - ``led`` : LED type
+            - ``r`` : value of red channel
+            - ``g`` : value of green channel
+            - ``b`` : value of blue channel
+            - ``wait`` : time to wait
 
     void colorWipe(Adafruit_NeoPixel& led, uint32_t c, uint8_t wait);
 
-        - LED 灯光颜色逐个变化。
+        - LED change color one by one
 
-        :参数:
+        :parameter:
 
-            - ``led`` ：LED 类型
-            - ``c`` ：LED 灯光 RGB 颜色
-            - ``wait`` ：灯光动作等待时间
+            - ``led``: LED type
+            - ``c``: REG color of the LED
+            - ``wait``: time to wait for action
 
     void rainbow(Adafruit_NeoPixel& led, uint8_t wait);
 
-        - LED 灯光从彩虹色依次渐变。
+        - LED light shine rainbow color
 
-        :参数:
+        :parameter:
 
-            - ``led`` ：LED 类型
-            - ``wait`` ：渐变时间
+            - ``led`` : LED type
+            - ``wait`` : time to wait
 
     void rainbowCycle(Adafruit_NeoPixel& led, uint8_t wait) ;
 
-        - LED 每颗灯珠以不同颜色灯光从彩虹色依次渐变。
+        - LED change light of rainbow color gradually
 
-        :参数:
+        :parameter:
 
-            - ``led`` ：LED 类型
-            - ``wait`` ：渐变时间
+            - ``led`` : LED type
+            - ``wait`` : time to wait for changing
 
     void theaterChase(Adafruit_NeoPixel& led, uint32_t c, uint8_t wait);
 
-        - LED 以指定颜色转圈。
+        - LED turn around with target color
 
-        :参数:
+        :parameter:
 
-            - ``led`` ：LED 类型
-            - ``c`` ：LED 灯光 RGB 颜色
-            - ``wait`` ：灯光动作等待时间
+            - ``led`` : LED type
+            - ``c`` : RGB color of LED light
+            - ``wait`` : time to wait for action
 
     void MoonBotEyesLook(Adafruit_NeoPixel& led, moonbot_look_t look_tpye, uint32_t color);
 
-        - LED 眼睛向某个方向看。
+        - LED eyes look to the direction
 
-        :参数:
+        :parameter:
 
-            - ``led`` ：LED 类型
-            - ``look_tpye`` ：眼睛方向类型
-            - ``color`` ：眼睛颜色
+            - ``led`` : LED type
+            - ``look_tpye`` : the direction that eyes looks to
+            - ``color`` : eyes color
 
     void MoonBotEyesScroll(Adafruit_NeoPixel& led, moonbot_eyes_scroll_t scroll_tpye, uint32_t color, uint8_t wait = 50);
 
-        - LED 眼睛向某个方向滚动。
+        - LED eyes scroll to the direction
 
-        :参数:
+        :parameter:
 
-            - ``led`` ：LED 类型
-            - ``scroll_tpye`` ：眼睛滚动方向类型
-            - ``color`` ：眼睛颜色
-            - ``wait`` ：滚动时间，默认为50ms
+            - ``led`` : LED type
+            - ``scroll_tpye`` : direction that eyes scroll to
+            - ``color`` : LED color type
+            - ``wait`` : time to wait, 50ms by default
 
     void MoonBotEyesCircle(Adafruit_NeoPixel& led, uint32_t color, moonbot_eyes_t eyes_type = kEyesBoth, uint8_t wait = 50);
 
-        - LED 眼睛渐变转圈滚动。
+        - LED eyes turn around gradually
 
-        :参数:
+        :parameter:
 
-            - ``led`` ：LED 类型
-            - ``color`` ：眼睛颜色
-            - ``eyes_type`` ：眼睛类型
-            - ``wait`` ：滚动时间，默认为50ms
+            - ``led`` : LED type
+            - ``color`` : eyes color
+            - ``eyes_type`` : eyes type
+            - ``wait`` : circle time, 50ms by default
