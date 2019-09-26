@@ -4,16 +4,17 @@ Music
 Overview
 ----------
 
-MoonBot Kit 提供了两类发声设备，分别是 :doc:`../../MoonBot_Hardware/MoonBot_Hardware_controller` 板载的蜂鸣器模块和外接的 :doc:`../../MoonBot_Hardware/MoonBot_Hardware_speaker` 。相对应的，
-我们可以通过调用 Arduino 的基础函数 `tone() <https://www.arduino.cc/reference/en/language/functions/advanced-io/tone/>`_ `noTone() <https://www.arduino.cc/reference/en/language/functions/advanced-io/notone/>`_ 函数来控制蜂鸣器发声，
-通过 :ref:`扬声器 <api-ref-speaker>` 库来控制扬声器发声。
+MoonBot Kit provide two sound devices, buzzer on :doc:`../../MoonBot_Hardware/MoonBot_Hardware_controller` and :doc:`../../MoonBot_Hardware/MoonBot_Hardware_speaker` .
+We can use Arduino basic functions `tone() <https://www.arduino.cc/reference/en/language/functions/advanced-io/tone/>`_ 
+and `noTone() <https://www.arduino.cc/reference/en/language/functions/advanced-io/notone/>`_ to control the buzzer. 
+Use :ref:`Speaker <api-ref-speaker>` library to control the speaker.
 
-我们可以通过在程序中包含 ``MoonBot.h`` 头文件来调用 ``speaker`` 来驱动外部扬声器。
+By including ``MoonBot.h`` header file in program, we can call ``speaker`` driver to drive the speaker module.
 
-板载蜂鸣器驱动
+On-board Buzzer Driver
 ++++++++++++++++++++
 
-我们可以通过调用宏定义 ``MOONBOT_PIN_BUZZER_SIG`` 来获取对应的 Arduino 引脚，通过控制引脚 ``MOONBOT_PIN_BUZZER_SHDW`` 电平的高低来开启或关闭板载的蜂鸣器功能。
+We can use macro definition ``MOONBOT_PIN_BUZZER_SIG`` to get Arduino pin of the buzzer, and control the voltage of ``MOONBOT_PIN_BUZZER_SHDW`` to open or close the buzzer.
 
 .. code-block:: cpp
     :emphasize-lines: 7
@@ -22,29 +23,29 @@ MoonBot Kit 提供了两类发声设备，分别是 :doc:`../../MoonBot_Hardware
 
     void setup()
     {
-        pinMode(MOONBOT_PIN_BUZZER_SIG, OUTPUT);        // 初始化蜂鸣器信号引脚为输出模式
-        pinMode(MOONBOT_PIN_BUZZER_SHDW, OUTPUT);       // 初始化蜂鸣器供电引脚为输出模式
-        digitalWrite(MOONBOT_PIN_BUZZER_SHDW, LOW);     // 将蜂鸣器供电引脚电平拉低以开启蜂鸣器
-        tone(MOONBOT_PIN_BUZZER_SIG, 1000, 2000);       // 让蜂鸣器以1000Hz的频率开始播放声音，播放2000ms后停止
+        pinMode(MOONBOT_PIN_BUZZER_SIG, OUTPUT);        // Initialize buzzer signal pin to output mode
+        pinMode(MOONBOT_PIN_BUZZER_SHDW, OUTPUT);       // Initialize buzzer power pin to output mode
+        digitalWrite(MOONBOT_PIN_BUZZER_SHDW, LOW);     // Pull down buzzer power pin to open buzzer
+        tone(MOONBOT_PIN_BUZZER_SIG, 1000, 2000);       // Let buzzer play with 1000Hz for 2000ms
     }
 
 .. Attention::
 
-    如上述例程的第七行所述：
+    In 7th line of the example: 
 
     .. code-block:: cpp
         :lineno-start: 7
 
-        digitalWrite(MOONBOT_PIN_BUZZER_SHDW, LOW);     // 将蜂鸣器供电引脚拉低以开启蜂鸣器
+        digitalWrite(MOONBOT_PIN_BUZZER_SHDW, LOW);     // Initialize buzzer power pin to output mode
 
-    将蜂鸣器供电引脚 ``MOONBOT_PIN_BUZZER_SHDW`` 电平设为 ``LOW`` 即为开启蜂鸣器，设为 ``HIGH`` 即为关闭蜂鸣器功能。该引脚电平默认为 ``LOW`` 。
+    Pull ``MOONBOT_PIN_BUZZER_SHDW`` voltage ``LOW`` to open it, and ``HIGH`` to close.The default voltage is ``LOW``.
 
-外接扬声器驱动
+Speaker Module Driver
 ++++++++++++++++++++
 
-MoonBot Kit 提供的 :doc:`../../MoonBot_Hardware/MoonBot_Hardware_speaker` 使用了 WT2003S MP3 解码芯片，通过调用 ``speaker`` 你可以轻松自制一台 MP3 播放器！
+MoonBot Kit :doc:`../../MoonBot_Hardware/MoonBot_Hardware_speaker` use a WT2003S MP3 decoder chip. Call ``speaker`` library to control it as a MP3 player.
 
-先来看一个简单的 MP3 播放器的例程：
+There is a simple MP3 player tutorial: 
 
 .. code-block:: cpp
 
@@ -52,178 +53,178 @@ MoonBot Kit 提供的 :doc:`../../MoonBot_Hardware/MoonBot_Hardware_speaker` 使
 
     void setup()
     {
-        speaker.begin(Serial2);     // 初始化speaker至Arduino的串口2（MoonBot对应的端口2）
-        speaker.setPlayMode(0);     // 播放模式设置为单曲播放播放模式，播放完一首曲子后停止播放
-        speaker.setVolume(20);      // 音量设置为20，最大为32
+        speaker.begin(Serial2);     // Initialize speaker module to Arduino serial port 2（MoonBot GPIO port 2）
+        speaker.setPlayMode(0);     // Set play mode to single play, which means stop after playing a music
+        speaker.setVolume(20);      // Set volume to 20. Max volume is 32
     }
 
     void loop()
     {
         if ((!digitalRead(MOONBOT_PIN_BUTTON_A))) {
-            // 若按键A被按下
-            speaker.playNext();     // 播放下一首歌
+            // If button A is pressed
+            speaker.playNext();     // Play the next music
         } else if ((!digitalRead(MOONBOT_PIN_BUTTON_B))) {
-            // 若按键B被按下
-            speaker.playPrevious(); // 播放上一首歌
+            // If button B is pressed
+            speaker.playPrevious(); // Play the last music
         }
     }
 
-也可以查看 `官方串口 MP3 播放器 <https://github.com/mu-opensource/MoonBot/blob/master/examples/Terminal_MP3_Player/Terminal_MP3_Player.ino>`_ 的例程以获取更全面的信息。
+Check `Official terminal MP3 player <https://github.com/mu-opensource/MoonBot/blob/master/examples/Terminal_MP3_Player/Terminal_MP3_Player.ino>`_ examples for more detailed information. 
 
 .. _api-ref-speaker:
 
-API 参考 - 扬声器
+API Reference - Speaker
 ----------------------
 
-头文件
+Header File
 +++++++++++
 
     - `src/MoonBot_WT2003S_MP3_Decoder.h <https://github.com/mu-opensource/MoonBot/blob/master/src/MoonBot_WT2003S_MP3_Decoder.h>`_
 
-类
+Class
 +++++
 
 .. glossary::
 
     class WT2003S
 
-        - WT2003S MP3 播放器驱动。
+        - WT2003S MP3 player driver
 
 
-        :成员函数:
+        :Menber function:
 
             :void begin(SoftwareSerial &serialPort);:
 
-                - 以软串口作为端口初始化扬声器。
+                - Use software serial port to initialize speaker
 
-                :参数:
+                :parameter:
 
-                    - ``serialPort`` ：软串口
+                    - ``serialPort`` : software serial port
 
             :void begin(HardwareSerial &serialPort = Serial);:
 
-                - 以硬件串口作为端口初始化扬声器。
+                - Use hardware serial port to initialize speaker
 
-                :参数:
+                :parameter:
 
-                    - ``serialPort`` ：硬件串口，默认为Serial
+                    - ``serialPort`` : hardware serial port, Serial by default
 
             :uint8_t play(char* fileName);:
 
-                - 播放给定文件名的音乐。
+                - play music with the file name
+				
+                :parameter:
 
-                :参数:
+                    - ``fileName`` : 4 bytes of the file name
 
-                    - ``fileName`` ：音乐文件名前四个字节
+                :return:
 
-                :返回:
-
-                    - ``0`` 命令正常执行，其他命令出错
+                    - ``0`` means the command is right, other return means wrong
 
             :uint8_t setVolume(uint8_t volumeLevel);:
 
-                - 设置扬声器音量
+                - Set volume of the speaker
 
-                :参数:
+                :parameter:
 
-                    - ``volumeLevel`` ：扬声器音量，取值范围 ``0~32``
+                    - ``volumeLevel`` : volume level, with range of ``0~32``
 
-                :返回:
+                :return:
 
-                    - ``0`` 命令正常执行，其他命令出错
+                    - ``0`` means the command is right, other return means wrong
 
             :uint8_t stop(void);:
 
-                - 停止播放当前正在播放的音乐。
+                - Stop playing current music
 
-                :返回:
+                :return:
 
-                    - ``0`` 命令正常执行，其他命令出错
+                    - ``0`` means the command is right, other return means wrong
 
             :void pause(void);:
 
-                - 播放时调用此函数，则暂停当前播放。没有播放时调用此函数，则播放当前音乐。
+                - Pause when playing, play when pausing
 
             :uint8_t playPrevious(void);:
 
-                - 播放上一曲音乐，在播放第一曲音乐时，发送该指令可触发播放最后一曲音乐。
+                - Play the last music. Play the final music when on the first
 
-                :返回:
+                :return:
 
-                    - ``0`` 命令正常执行，其他命令出错
+                    - ``0`` means the command is right, other return means wrong
 
             :uint8_t playNext(void);:
 
-                - 播放下一曲音乐，在播放最后一曲音乐时，发送该指令可触发播放第一曲音乐。
+                - Play the next music. Play the first music when on the final
 
-                :返回:
+                :return:
 
-                    - ``0`` 命令正常执行，其他命令出错
+                    - ``0`` means the command is right, other return means wrong
 
             :uint8_t setPlayMode(uint8_t mode);:
 
-                - 设置扬声器播放模式。
+                - Set play mode
 
-                :参数:
+                :parameter:
 
-                    - ``mode`` ：
+                    - ``mode`` :
 
-                        +-+--------+
-                        |0|单曲播放|
-                        +-+--------+
-                        |1|单曲循环|
-                        +-+--------+
-                        |2|列表循环|
-                        +-+--------+
-                        |3|随机播放|
-                        +-+--------+
+                        +-+------------+
+                        |0|single play |
+                        +-+------------+
+                        |1|single cycle|
+                        +-+------------+
+                        |2|list loop   |
+                        +-+------------+
+                        |3|randomplay  |
+                        +-+------------+
 
-                :返回:
+                :return:
 
-                    - ``0`` 命令正常执行，其他命令出错
+                    - ``0`` means the command is right, other return means wrong
 
             :uint16_t getSongCount(void);:
 
-                - 获取当前音乐在列表中的序号。
+                - Get the music order number in the list
 
-                :返回:
+                :return:
 
-                    - 当前音乐在列表中的序号
+                    - current music order number in the list
 
             :void getSongName();:
 
-                - 获取当前音乐的乐曲名前9个字节。执行此函数后可以通过读取 ``WT2003S::songName[MP3_NUM_NAME_BYTES]`` 来获取乐曲名。
+                - Get first 9 bytes of the song name. Read ``WT2003S::songName[MP3_NUM_NAME_BYTES]`` to get the name
 
             :uint8_t playTrackNumber(uint8_t trackNumber);:
 
-                - 播放给定序号的音乐。
+                - Play music with the given order number
 
-                :参数:
+                :parameter:
 
-                    - ``trackNumber`` ：音乐在列表中的序号
+                    - ``trackNumber`` : music order number in the list
 
-                :返回:
+                :return:
 
-                    - ``0`` 命令正常执行，其他命令出错
+                    - ``0`` means the command is right, other return means wrong
 
             :uint8_t getVolume(void);:
 
-                - 获取当前扬声器的音量值。
+                - Get current volume level of the speaker
 
-                :返回:
+                :return:
 
-                    - ``0~32`` ：扬声器音量值。
+                    - ``0~32`` : volume level of the speaker
 
             :uint8_t getPlayStatus(void);:
 
-                - 获取当前播放状态。
+                - Get the current play status
 
-                :返回:
+                :return:
 
-                    +-+----+
-                    |1|播放|
-                    +-+----+
-                    |2|停止|
-                    +-+----+
-                    |3|暂停|
-                    +-+----+
+                    +-+-----+
+                    |1|play |
+                    +-+-----+
+                    |2|stop |
+                    +-+-----+
+                    |3|pause|
+                    +-+-----+
