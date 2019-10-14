@@ -7,20 +7,23 @@ Official Website: <http://mai.morpx.com/page.php?a=moonbot-kit>
 
 GitHub: <https://github.com/mu-opensource/>
 
-# 3D装配图
+# 3D Assembly Models
 
-在网盘下载MoonBot Kit的三形态3D图：
+MoonBot Kit 3D assembly files can be downloaded here: 
 
-[网盘链接](https://pan.baidu.com/s/1H0bqjfQkbCjdKpvkfHyFAg)  提取码：rans 
+[MoonBot Kit 3D assembly](https://github.com/mu-opensource/Morpx-docs-en/raw/master/MoonBot/MoonBot_Resource/sources/MoonBot_Kit_asm.zip) 
 
 ![](./images/model_3D_MoonBot.png)
 
-STP文件为通用3D格式，可用主流3D软件如solidworks，CREO等打开。模型可用于查看MoonBot Kit的装配细节，测量相应尺寸，Keyshot模型渲染等。
-注意该模型内塑料件和钣金件均针对开模设计，不建议用于FDM 3D打印。
+STP file is a universal 3D file formate, which can be opened by popular CAD software like solidworks and CREO. 
+
+The models can be used to watch the details of each MoonBot Kit structure, measure dimension, render in Keyshot and so on.
+
+Plastic and sheet metal parts in models are optimized for manufacturing, and are not recommended to be used for FDM 3D printing. 
 
 # Platform Links
 
-MoonBot Kit兼容Arduino开源平台，查看其相关网站来学习基础知识。
+MoonBot Kit is compatible with Arduino opensource platform. Check related website to learn basic knowledge.
 
 **Mixly**
 

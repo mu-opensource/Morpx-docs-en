@@ -18,7 +18,7 @@ Please print by yourself if you have a 3D printer.
 
 # Platform Links
 
-MU视觉传感器可以和各类开源软硬件配合使用，查看各类开源平台以学习其基础知识。
+MU Vision Sensor can be connected to several opensource software and hardware platforms. Check the websites for detailed information.
 
 **Mixly**
 
