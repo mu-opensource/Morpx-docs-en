@@ -15,6 +15,7 @@ Welcome to MU Documents
     MUVS3/MUVS3_Arduino/index
     MUVS3/MUVS3_MakeCode/index
     MUVS3/MUVS3_MicroPython/index
+    MUVS3/MUVS3_Resource/index
 	
 .. toctree::
     :maxdepth: 1
@@ -27,6 +28,7 @@ Welcome to MU Documents
     MoonBot/MoonBot_Mixly/index
     MoonBot/MoonBot_Arduino/index
     MoonBot/MoonBot_Extension/index
+    MoonBot/MoonBot_Resource/index
 	
 .. toctree::
     :maxdepth: 1
@@ -39,6 +41,5 @@ Welcome to MU Documents
     :maxdepth: 1
     :caption: Related Resources
 	
-    Resources/index_MUVS3
-    Resources/index_MoonBot
-    Resources/about
+    Support/contact
+    Support/about
