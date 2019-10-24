@@ -10,7 +10,7 @@ And there are on-board keys, LED lights, buzzer and IMU that can be used to fast
 
 ## Specification
 
-size: 53 x 53 x 17.6 mm
+Size: 53 x 53 x 17.6 mm
 
 Processor: ATmega1280
 

@@ -52,6 +52,10 @@ I2C Mode
 
 *Only I2C mode is supported now.*
 
+You may need a shield to connect MU to Micro:bit, as is shown below:
+
+![](./images/MUVS3_microbit_connect.png)
+
 # Usage of APIs
 
 ## Initialize MU Vision Sensor

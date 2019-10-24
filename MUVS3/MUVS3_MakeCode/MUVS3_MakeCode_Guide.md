@@ -1,5 +1,5 @@
 # Import Extensions
-Run MakeCode (open https://MakeCode.microbit.org/  in the web browser or use an offline version of MakeCode, which can be downloaded from Microsoft MakeCode website (https://www.microsoft.com/en-us/makecode)).
+Run MakeCode (open <https://MakeCode.microbit.org/> in the web browser or use an offline version of MakeCode, which can be downloaded from Microsoft MakeCode website <https://www.microsoft.com/en-us/makecode>).
 Start a new project, find Extensions in Advanced menu.
 
 ![](./images/MUVS3_Makecode_extension.png)
@@ -25,6 +25,10 @@ MU Vision Sensor 3 periphrals and ports：
 
 (3) Choose the I2C address of MU sensor by resetting Address Switch.  By default, both switches are downward and the address is set to 0x60. 
 (Changing this setting is not recommended)
+
+You may need a shield to connect MU to Micro:bit, as is shown below:
+
+![](./images/MUVS3_microbit_connect.png)
 
 ## Serial Mode
 

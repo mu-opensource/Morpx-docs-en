@@ -32,6 +32,8 @@ MU Vision Sensor 3 periphrals and ports:
 (3) Choose the I2C address of MU by setting Address Switch. Both switches are downwards and the address is set to 0x60 on default.
  (Changing this setting is not recommended).
 
+![](./images/MUVS3_Arduino_connect.png)
+
 ## Serial Mode*
 
 (1) Output Protocol Switch: set both switchs downward.
