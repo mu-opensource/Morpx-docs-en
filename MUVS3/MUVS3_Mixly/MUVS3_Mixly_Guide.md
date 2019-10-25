@@ -1,4 +1,4 @@
-# Import Mixly Library for MU Vision Sensor
+# Import Mixly Library for MU Vision Sensor 3
 
 Open Mixly and choose controller.For example, choose Arduino Uno. 
 If you use MoonBot controller, choose Arduino Mega(atmega 1280) and choose the available COM port.
