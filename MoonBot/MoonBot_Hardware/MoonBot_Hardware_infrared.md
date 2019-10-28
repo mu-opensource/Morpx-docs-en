@@ -31,3 +31,7 @@ Code introduction: Connect the infrared module to P3 of controller module and de
 When both switchs detect the obstacle, 2 LEDS of controller turn red. When only one switch detect, turn on 1 LED instead.
 
 ![](./images/Mixly_example_infrared.png)
+
+Photo: 
+
+![](./images/photo_infrared.png)

@@ -45,3 +45,7 @@ Code introduction: In initial part, servo is calibrated and direction is set.
 In loop part, control degree and time to move servo for 30 degrees, and then move servos fastly to 150 degree.
 
 ![](./images/Mixly_example_servo_move.png)
+
+Photo: 
+
+![](./images/photo_servo.png)

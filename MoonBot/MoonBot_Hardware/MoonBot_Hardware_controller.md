@@ -34,6 +34,10 @@ When both of the buttons are pressed, both LEDs turns blue.By default, both LEDs
 
 ![](./images/Mixly_example_controller_LEDbutton.png)
 
+Photo: 
+
+![](./images/photo_LEDbutton.png)
+
 ### Buzzer Example
 
 This code shows the way to programme buzzer on controller.Use two methods to make the buzzer beep.

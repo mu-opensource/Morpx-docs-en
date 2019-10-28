@@ -27,3 +27,7 @@ Code Introduction：Let the speaker play music, and use the controller button to
 Connect the speaker to P2 of controller, set play mode to random play and define speaker volume. Detect the state of button A. If it is pressed, play or pause.
 
 ![](./images/Mixly_example_speaker.png)
+
+Photo: 
+
+![](./images/photo_speaker.png)

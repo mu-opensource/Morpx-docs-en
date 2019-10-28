@@ -29,6 +29,10 @@ Let 12 LEDs show appointed color for 5 seconds, show happy for 5 seconds, and tu
 
 ![](./images/Mixly_example_eyes.png)
 
+Photo: 
+
+![](./images/photo_eyes.png)
+
 ### Single Control
 
 Code introduction: Set LEDs one by one and control the RGB value of every light for 1 second.

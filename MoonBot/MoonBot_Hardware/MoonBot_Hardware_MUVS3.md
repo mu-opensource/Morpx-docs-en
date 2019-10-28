@@ -48,14 +48,16 @@ When detect a ball, all LEDs turn blue.
 
 ![](./images/Mixly_example_MUVS3_balldetect.png)
 
+Photo: 
+
+![](./images/photo_MUVS3.png)
+
 Pay attention that the vison module is a little different from MU 3. Due to wifi function, vision module 
 can only be connected to controller through serial port, and be developed by Arduino IDE or Mixly.The initial code is shown above.
 
 In order to show the connect and initial progress, this program is easy. Learn more blocks and examples at
 
 [MU 3 Mixly Programming Guide](https://morpx-docs.readthedocs.io/en/latest/MUVS3/MUVS3_Mixly/index.html)
-
-
 
 ### Connect to App through Wifi
 

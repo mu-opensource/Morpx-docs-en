@@ -46,6 +46,10 @@ In loop part, Chassis goes forward, back, turns left and right.Conrtol the dista
 
 ![](./images/Mixly_example_motor_tankbase.png)
 
+Photo: 
+
+![](./images/photo_motor.png)
+
 ### Single Motor Control
 
 Except for controlling the whole chassis, motor 1 or 2 can be directly controlled.

@@ -15,7 +15,7 @@ MoonBot Kit 3D assembly files can be downloaded here:
 
 ![](./images/model_3D_MoonBot.png)
 
-STP file is a universal 3D file formate, which can be opened by popular CAD software like solidworks and CREO. 
+STP file is a universal 3D file format, which can be opened by popular CAD software like solidworks and CREO. 
 
 The models can be used to watch the details of each MoonBot Kit structure, measure dimension, render in Keyshot and so on.
 
