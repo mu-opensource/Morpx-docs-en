@@ -6,7 +6,7 @@ Instructions are shown below.
 
 ## Full Installation Package Download
 
-Windows/Linux/Mac Full Edition MoonBot Mixly Package Download Link: https://drive.google.com/drive/folders/1L_FKMlQnddgi_rLnRiOYbA9o9q24RGEm?usp=sharing
+Windows/Linux/Mac Full Edition MoonBot Mixly Package Download Link: (https://drive.google.com/drive/folders/1L_FKMlQnddgi_rLnRiOYbA9o9q24RGEm?usp=sharing)
 
 ## Independent Library Installation
 
@@ -15,7 +15,7 @@ Windows/Linux/Mac Full Edition MoonBot Mixly Package Download Link: https://driv
 - 1.Start Mixly-Arduino
     - Windows
 
-        Open {your_mixly_path}/arduino-1.8.5/arduino.exe`file under the Mixly installation path，start Arduino
+        Open `{your_mixly_path}/arduino-1.8.5/arduino.exe`file under the Mixly installation path，start Arduino
 
     - Linux
 
