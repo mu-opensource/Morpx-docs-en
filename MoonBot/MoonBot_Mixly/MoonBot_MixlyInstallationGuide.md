@@ -6,7 +6,7 @@ Instructions are shown below.
 
 ## Full Installation Package Download
 
-Windows/Linux/Mac Full Edition MoonBot Mixly Package Download Link:[https://pan.baidu.com/s/1h8Cuj8UYm99Mh3O1ppmMfg](https://pan.baidu.com/s/1h8Cuj8UYm99Mh3O1ppmMfg),Extraction Code:`ksme`
+Windows/Linux/Mac Full Edition MoonBot Mixly Package Download Link: https://drive.google.com/drive/folders/1L_FKMlQnddgi_rLnRiOYbA9o9q24RGEm?usp=sharing
 
 ## Independent Library Installation
 
