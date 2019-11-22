@@ -130,7 +130,7 @@ html_static_path = ['_static']
 
 html_search_language = 'en'
 
-#html_favicon = 'favicon.png'
+html_favicon = '_static/icon_mu.png'
 
 html_logo = '_static/logo_mu.png'
 
