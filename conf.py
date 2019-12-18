@@ -18,7 +18,7 @@ import sys
 
 # -- Project information -----------------------------------------------------
 
-project = u'Morpx Documents'
+project = u'Morpx Docs'
 copyright = u'2019, Morpx'
 author = u'Morpx'
 
