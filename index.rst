@@ -29,6 +29,7 @@ Welcome to Morpx Documents
     MoonBot/MoonBot_Mixly/index
     MoonBot/MoonBot_Arduino/index
     MoonBot/MoonBot_Extension/index
+    MoonBot/MoonBot_FimwareUpdate/index
     MoonBot/MoonBot_Resource/index
 
 .. toctree::
