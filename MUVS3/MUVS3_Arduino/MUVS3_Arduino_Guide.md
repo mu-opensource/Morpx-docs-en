@@ -46,6 +46,18 @@ MU Vision Sensor 3 periphrals and ports:
 
 *Arduino cannot send messages to PC when MuVisionSensor is running in hardware serial mode, due to a communication conflict.*
 
+## AT Command Mode (For firmware after V1.1.5)
+
+1. Output Protocol Switch: set switch 1 upwards and switch 2 downwards.
+
+2. Connect the output RX pin of MU to TX pin of Arduino and TX pin of MU to RX pin of Arduino.
+
+## Image Transmission Mode (For firmware after V1.1.5)
+
+1. Output Protocol Switch: both switchs are upwards.
+
+2. Connect the output RX pin of MU to TX pin of Arduino and TX pin of MU to RX pin of Arduino.
+
 # Examples
 
 ball
