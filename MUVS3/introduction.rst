@@ -16,13 +16,13 @@ and can be widely used in intelligent toys, AI+STEAM lessons, creators and other
 Hardware Setup
 --------
 
-1. 设置通讯模式
+1. Set Communication Mode
 +++++++++++++++
 
-MU 支持 4 种通讯模式: ``UART,I2C,WIFI,图传`` 模式。根据所需要的通讯方式,拨动 MU 左侧的 ``Output`` 拨码开关。
+MU supports 4 kinds of communication modes: ``UART,I2C,WIFI,image transmission`` . Change mode by switching ``Output`` switch on left side of MU.
 
-选择通讯方式后,程序中的通讯方式应与拨码开关保持一致。编程时应首先配置通讯方式,
-然后才可以进行其他的参数配置,使用过程中不可更改,每次切换通讯方式,需要重启小 MU。
+After choosing mode, communication mode in program should be same as switch to make the codes working. 
+Choose communication mode before coding, and then set other parameters.Every time changing communication mode, MU must be restarted.
 
 .. |FUNC00| image:: images/mu3_func_switch_00.png
    :height: 46
@@ -41,70 +41,70 @@ MU 支持 4 种通讯模式: ``UART,I2C,WIFI,图传`` 模式。根据所需要�
    :width: 30
 
 +----------+----------+------+----------+
-| 输出模式 | 拨码开关 | 编号 | LED 指示 |
+| output mode | switch | number | LED indicate |
 +==========+==========+======+==========+
-|   UART   | |FUNC00| |  00  | 闪烁红色 |
+|   UART   | |FUNC00| |  00  | flash red |
 +----------+----------+------+----------+
-|   I2C    | |FUNC01| |  01  | 闪烁绿色 |
+|   I2C    | |FUNC01| |  01  | flash green |
 +----------+----------+------+----------+
-|   WiFi   | |FUNC10| |  10  | 闪烁黄色 |
+|   WiFi   | |FUNC10| |  10  | flash yellow |
 +----------+----------+------+----------+
-|   图传   | |FUNC11| |  11  | 闪烁紫色 |
+|   image transmission   | |FUNC11| |  11  | flash purple |
 +----------+----------+------+----------+
 
-2. 设置地址
+2. Set Address
 +++++++++++
 
-MU 支持 4 个地址:0x60(默认),0x61,0x62,0x63。当 MU 与其他传感器地址冲突时需要进行更改。
-I2C 模式下支持多个不同地址的 MU 协同工作,可以给 MU 分配不同的地址。
+MU supports 4 address:``0x60``(default),``0x61``,``0x62``,``0x63``. Address should be changed when conflicted with other sensors.
+In I2C modes, several MU sensors can work together with different address.
 
 .. note::
 
-    一般情况下使用默认地址 ``0x60`` 即可。
+    Use default address ``0x60`` normally.
 
 +----------+----------+------+-+----------+----------+------+
-| 设备地址 | 拨码开关 | 编号 | | 设备地址 | 拨码开关 | 编号 |
+| device address | switch | number | | device address | switch | number |
 +==========+==========+======+=+==========+==========+======+
 |   0x60   | |FUNC00| |  00  | |   0x61   | |FUNC01| |  01  |
 +----------+----------+------+-+----------+----------+------+
 |   0x62   | |FUNC10| |  10  | |   0x63   | |FUNC11| |  11  |
 +----------+----------+------+-+----------+----------+------+
 
-3. 线路连接
+3. Wire Connection
 +++++++++++
 
-:UART/WiFi/图传 模式:
+:UART/WiFi/image transmission modes:
 
     +------+----+----+-----+----+
     | MU   | RX | TX | G   | V  |
     +------+----+----+-----+----+
-    | 主控 | TX | RX | GND | 5V |
+    | controller | TX | RX | GND | 5V |
     +------+----+----+-----+----+
 
-:I2C 模式:
+:I2C modes:
 
     +------+-----+-----+-----+----+
     |  MU  | SCL | SDA |  G  | V  |
     +------+-----+-----+-----+----+
-    | 主控 | SCL | SDA | GND | 5V |
+    | controller | SCL | SDA | GND | 5V |
     +------+-----+-----+-----+----+
 
-软件设置
+Software Setup
 --------
 
-详见本目录下各平台对应教程。
+Check detailed instructions among platforms below.
 
-特殊模式介绍
+Special modes introduction
 ------------
 
 .. _wifi-connect:
 
-WiFi/图传模式配网
+WiFi/image transmission mode network distribution
 ++++++++++++++++++++
 
-WiFi/图传模式可通过向 MU 发送 AT 指令的方式进行配网，串口默认波特率为9600。
+In WiFi/iamge transmission mode, distribute network by sending AT command to MU. Default serial baudrate is 9600.
 
-可通过输入以下指令获取所有 AT 指令：
+Send following command to know all AT commands：
 
 .. code-block:: shell
 
@@ -112,31 +112,31 @@ WiFi/图传模式可通过向 MU 发送 AT 指令的方式进行配网，串口�
 
 .. attention::
 
-    所有指令必须以 ``"\r\n"`` 或 ``' '`` 结尾
+    all commands should end with ``"\r\n"`` or ``' '`` .
 
-MU 可支持 ``AP`` 模式联网和 ``STA`` 模式联网，两种联网区别如下：
+MU supports ``AP`` and ``STA`` modes to connect to network. Here is difference between two ways: 
 
-:AP 模式:
+:AP mode:
 
-    ``AP`` 模式为 MU 默认的 WiFi 模式，该模式下 MU 会生成一个 WiFi 热点，用户使用手机或电脑去连接此热点即可。
-    WiFi 成功连接后，MU 的 LED 就会熄灭。
+    ``AP`` mode is default WiFi mode of MU. In this mode, MU will establish a WiFi hotspot for user to connect.
+    When WiFi connect successfully,LED of MU will turn off.
 
-    默认的热点名称为 ``MORPX-MU-AB`` 。
+    Default hotspot name is ``MORPX-MU-AB`` .
 
     .. note::
 
-        WiFi 名称中 ``A`` 为 MU 左侧 LED 颜色的首字母，``B`` 为右侧 LED 颜色的首字母。
+         ``A`` stands for initial word of LED color on the left, and ``B`` stands for initial word of LED color on the right.
 
-        （如：左侧 LED 为红色 **R** ed， 右侧为黄色 **Y** ellow，则默认 WiFi 名称为 ``MORPX-MU-RY``）
+        （For enample: left LED is **R** ed, right LED is **Y**ellow, then default WiFi name is ``MORPX-MU-RY``）
 
-    若需要自定义 WiFi 名称，可通过串口发送以下指令进行配置：
+    Send following AT command to change  WiFi name: 
 
     .. code-block:: shell
 
         AT+WIFISET=<yourSSID>,<yourPassword>,AP
         AT+WIFICON=1
 
-    若设置成功，则返回：
+    If succeed, returns: 
 
     .. code-block:: shell
 
@@ -144,10 +144,10 @@ MU 可支持 ``AP`` 模式联网和 ``STA`` 模式联网，两种联网区别如
         wifi ap mode starting...
         OK
 
-:STA 模式:
+:STA mode:
 
-    ``STA`` 模式需要 MU 和用户的设备去连接一个公共的 WiFi，以实现二者的互联。
-    可通过串口发送以下指令进行配置：
+    ``STA`` mode means MU and another device should connect to the same WiFi to get each connected.
+    Send following commands to configure:
 
     .. code-block:: shell
 
@@ -156,9 +156,9 @@ MU 可支持 ``AP`` 模式联网和 ``STA`` 模式联网，两种联网区别如
 
     .. attention::
 
-        ``<yourSSID>`` 和 ``<yourPassword>`` 必须是一个已存在的 WiFi（区分大小写），否则会连接失败。
+        ``<yourSSID>`` 和 ``<yourPassword>`` should be an available WiFi(case sensitive), or connection failed.
 
-    若设置成功，则返回：
+    If set successfully, return: 
 
     .. code-block:: shell
 
@@ -166,51 +166,51 @@ MU 可支持 ``AP`` 模式联网和 ``STA`` 模式联网，两种联网区别如
         wifi sta mode connecting...
         OK
 
-图传模式图像查看
+Watch image in image transmission mode
 ++++++++++++++++
 
-将 MU 设置成图传模式及完成 :ref:`配网 <wifi-connect>` 后，可通过打开网址 ``192.168.4.1`` 查看图像。
+Set MU to image transmission mode and complete :ref:`WiFi connect <wifi-connect>` , images can be watched through website ``192.168.4.1`` .
 
-无线透传
+Wireless Transmission
 ++++++++
 
-WiFi/图传模式皆可进行无线透传，完成 :ref:`配网 <wifi-connect>` 后，可通过以下方式来进行无线透传：
+MU can transmit data in WiFi/image transmission modes.Complete :ref:`WiFi connect <wifi-connect>` and then take following steps: 
 
     .. note::
 
-        因为手机、电脑不同平台，不同操作系统下 TCP/UDP 调试软件各不相同，软件的设置方式大同小异，这里定义以下几个名词：
+        TCP/UDP software are different in PC or mobile devices, here are some common definition: 
 
-        - ``本地 IP`` : 即 MU 的 IP 地址
-        - ``目标 IP`` : 即 MU 需要发送消息的目标设备的 IP 地址
+        - ``local IP`` :  IP address of MU
+        - ``target IP`` : IP address of target device that MU send to
 
-    1. 打开 TCP/UDP 调试软件，选择 ``UDP``，将模式设置为 ``Unicast``
-    2. 查询本地 IP，通过串口向 MU 发送指令：
+    1. Open TCP/UDP software, choose ``UDP``, and change mode to ``Unicast``
+    2. Search local IP by sending command to MU: 
 
     .. code-block:: shell
 
         AT+WIFISIP
 
-    返回 MU 的本地 IP。
+    Return MU local IP.
 
-    3. 将 TCP/IP IP 栏设置为 MU 的本地 IP， 端口设置为 ``3333``
+    3. Set TCP/IP to MU local IP, and port is ``3333``
 
     .. note::
 
-        STA 模式下路由会为 MU 和目标设备随机分配一个 IP 地址，需要通过以下方式配置：
+        In STA mode router will distribute a random address for MU and target device. Take following steps: 
 
-        1. 查询目标 IP （大多 TCP/IP 软件会显示当前设备的 IP 地址）
-        2. 通过串口向 MU 发送指令：
+        1. Search target IP (Most TCP/IP software will show local IP address)
+        2. Send command to MU: 
 
         .. code-block:: shell
 
             AT+WIFIUDP=<targetIP>,3333
 
-        返回：
+        Return:
 
         .. code-block:: shell
 
             OK
 
-至此，WiFi 配置完毕，TCP/UDP 调试软件发送的所有数据会通过 MU 的串口转发出来，
-通过串口向 MU 发送的所有数据也会在 TCP/UDP 调试软件的监视器上显示出来。
+Now WiFi configuration is finished, and all the data from TCP/UDP software will show on MU serial port, and 
+all data from MU serial port will show on TCP/UDP software.
 

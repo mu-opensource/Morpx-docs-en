@@ -143,7 +143,7 @@ If light sensor enabled, gesture function can not be used with other functions i
 
 ![](./images/Makecode_block_ls_gesture_value.png)
 
-## WiFi Configure Module
+## WiFi Config Blocks
 
 WiFi Configure Module can only be used in `WiFi` and `image transmission` modes.
 
