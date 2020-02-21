@@ -59,7 +59,9 @@ MU Vision Sensor 3 periphrals and ports:
 
 # Block Introduction
 
-**Initialization**
+## Setting Blocks
+
+### Initialization
 
 (1)Hardware Serial Mode: Vision sensor uses serial mode to initialize the main control when connecting the main control hardware serial port. 
 The serial port is the serial communication between the main control and the computer. 
@@ -77,36 +79,37 @@ The speed of soft serial port in real environment may be too fast and unstable. 
 
 ![](./images/Mixly_block_i2c_init.png)
 
-**Enable Vision Algorithms**
+### Enable Vision Algorithms
 
 ![](./images/Mixly_block_enable_algorithm.png)
 
-**Algorithm performance level**
+### Algorithm performance level
 
 ![](./images/Mixly_block_algorithm_performance.png)
 
-**Enable/Disable the High FPS Mode**
+### Enable/Disable the High FPS Mode
 
 In high FPS mode, detect speed and power consumption will increase.
 
 ![](./images/Mixly_block_highFPS.png)
 
-**Set White Balance Mode**
+### Set White Balance Mode
 
 Adjust the image bias caused by the change of external light source.
 
 ![](./images/Mixly_block_setWB.png)
 
-**LED Settings**
+### LED Settings
 
 ![](./images/Mixly_block_setLED.png)
 
-**Restore Default Settings**
+### Restore Default Settings
+
 Disable all algorithms and restore hardware default settings.
 
 ![](./images/Mixly_block_setdefault.png)
 
-**Get Detect Results**
+### Get Result Blocks
 
 (1) Ball/Body Detection
 
@@ -124,19 +127,123 @@ Disable all algorithms and restore hardware default settings.
 
 ![](./images/Mixly_block_color_block.png)
 
+## Light Sensor Blocks
+
+### Enable Light Sensor
+
+Enable light sensor functions. Gesture detect function can not work together with other functions.
+
+![](./images/Mixly_block_ls_begin.png)
+
+### Set Sensitivity
+
+Set light sensor sensitivity, only working in Proximity/Ambient Light Detect.
+
+![](./images/Mixly_block_ls_set_sensitivity.png)
+
+### Get Proximity Value
+
+Read proximity value. Closer the distance, bigger the value.
+
+![](./images/Mixly_block_ls_read_proximity.png)
+
+### Read Ambient Light Value
+
+Lighter the ambient light, bigger the walue.
+
+![](./images/Mixly_block_ls_read_als.png)
+
+### Read Detected Gesture or Not
+
+Read whether detected gesture. If not detected, return 0.
+
+![](./images/Mixly_block_ls_detect_gesture.png)
+
+### Judge Detected Gesture
+
+Judge type of the detected gesture.
+
+![](./images/Mixly_block_ls_read_gesture.png)
+
+## WiFi Module Blocks
+
+### *WiFi AT command Settings*
+
+*Blocks below only works in image transmission or AT command mode*.
+
+### WiFi Initialization
+
+Initial WiFi port and baudrate.
+
+![](./images/Mixly_block_wifi_begin.png)
+
+### Configure WiFi
+
+Set account and password of WiFi.
+
+![](./images/Mixly_block_wifi_config.png)
+
+### Connect/Establish WiFi
+
+Try connect to WiFi or establish WiFi and return conncetion result.
+
+![](./images/Mixly_block_wifi_connect.png)
+
+### Disconnect WiFi
+
+![](./images/Mixly_block_wifi_disconnect.png)
+
+### Set target IP
+
+![](./images/Mixly_block_wifi_set_target_ip.png)
+
+### Read target IP
+
+![](./images/Mixly_block_wifi_read_target_ip.png)
+
+### Read local IP
+
+Get IP of MU.
+
+![](./images/Mixly_block_wifi_read_local_ip.png)
+
+### WiFi Read
+
+Get data that target IP sent to MU.
+
+![](./images/Mixly_block_wifi_read.png)
+
+### WiFi Write
+
+Send data to target IP.
+
+![](./images/Mixly_block_wifi_write.png)
+
 # Examples
 
-**Color Recognition**
+## Color Recognition
 
 ![](./images/Mixly_example_color_recognition.png)
 
-**Ball Detection**
+## Ball Detection
 
 ![](./images/Mixly_example_ball_detect.png)
 
-**Card Detection**
+## Card Detection
 
 ![](./images/Mixly_example_card_detect.png)
+
+## Light Sensor - Gesture Detect
+
+![](./images/Mixly_example_ls_gesture_detect.png)
+
+## Light Sensor - Proximity/Ambient Light Detect
+
+![](./images/Mixly_example_ls_als_proximity_detect.png)
+
+## Connect to WiFi through AT Command
+
+![](./images/Mixly_example_AT_wifi_set.png)
 
 # FAQs
 
