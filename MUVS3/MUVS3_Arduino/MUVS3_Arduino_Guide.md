@@ -44,7 +44,7 @@ MU Vision Sensor 3 periphrals and ports:
 
 (3) Change the UART address of MU sensor by resetting Address Switch. Both switches are downwards and the address is 0x60 on default. (Changing this setting is not recommended)
 
-*Arduino cannot send messages to PC when MuVisionSensor is running in hardware serial mode, due to a communication conflict.*
+*Arduino UNO cannot send messages to PC when MuVisionSensor is running in hardware serial mode, due to a communication conflict.*
 
 ## AT Command Mode (For firmware after V1.1.5)
 

@@ -45,9 +45,19 @@ MU Vision Sensor 3 periphrals and ports:
 
 *Arduino UNO cannot send messages to PC when MuVisionSensor is running in hardware serial mode, due to a communication conflict.*
 
-# Instruction of the Programming Blocks
+## AT Command Mode (For firmware after V1.1.5)
 
-## Block Introduction
+1. Output Protocol Switch: set switch 1 upwards and switch 2 downwards.
+
+2. Connect the output RX pin of MU to TX pin of Arduino and TX pin of MU to RX pin of Arduino.
+
+## Image Transmission Mode (For firmware after V1.1.5)
+
+1. Output Protocol Switch: both switchs are upwards.
+
+2. Connect the output RX pin of MU to TX pin of Arduino and TX pin of MU to RX pin of Arduino.
+
+# Block Introduction
 
 **Initialization**
 
@@ -114,7 +124,7 @@ Disable all algorithms and restore hardware default settings.
 
 ![](./images/Mixly_block_color_block.png)
 
-## Examples
+# Examples
 
 **Color Recognition**
 

@@ -54,11 +54,11 @@ You may need a shield to connect MU to Micro:bit, as is shown below:
 
 2. Connect the output Pin1(RX) to Pin13(TX) of Micro:bit and Pin2(TX) to Pin16(RX) of Micro:bit.
 
-# Instructions of the Programming Blocks
+# Block Introduction
 
-## Block Introduction
+## MUvision
 
-**1.Initialization**
+### Initialization
 
 (1)Serial Mode：In serial mode, two pins are defined as TX & RX respectively, according to the hardware connection to the MU Vision Sensor，P12 and P13 as example。
 
@@ -68,13 +68,13 @@ You may need a shield to connect MU to Micro:bit, as is shown below:
 
 ![](./images/Makecode_block_i2c_init.png)
 
-**2.Enable Vision Algorithms**
+### Enable Vision Algorithms
 
 Seven recognition algorithms are integrated in current firmware(Version A).For detailed information please refer to the datasheet of MU vision sensor.
 
 ![](./images/Makecode_block_enable_algorithm.png)
 
-**3.Set Performance Level**
+### Set Performance Level
 
 Algorithm performance differs in accuarcy and speed. Performance settings can be changed to fit in certain applications.
 
@@ -82,13 +82,13 @@ Default setting: Balance level.
 
 ![](./images/Makecode_block_algorithm_performance.png)
 
-**4.Enable/Disable the High FPS Mode**
+### Enable/Disable the High FPS Mode
 
 The camera is in high FPS mode by default,which has a higher speed than normal mode.High FPS mode can be turned off to save power.
 
 ![](./images/Makecode_block_highFPS.png)
 
-**5.Set White Balance Mode**
+### Set White Balance Mode
 
 Ambient light will influence the detect result of the vision sensor, especially color detection and recognition.
 In complex light environment or in color recongnition mode, it is recommended to lock white balance.
@@ -97,7 +97,7 @@ Reset the vision sensor, and put it in front of a white paper to measure brightn
 
 ![](./images/Makecode_block_setWB.png)
 
-**6.Set Digital Zoom Level**
+### Set Digital Zoom Level
 
 Larger digital zoom level means longer detectable distance, and view sight is narrower meanwhile. 
 
@@ -105,7 +105,7 @@ To get a better detect results, set a proper zoom level for the algorithm and te
 
 ![](./images/Makecode_block_setzoom.png)
 
-**7.On-board LED Settings**
+### On-board LED Settings
 
 Two on-board LED lights can be programmed to shine different colors when The sensor has detected an object or not.
 
@@ -113,79 +113,79 @@ Default setting: When undetected objects , two lights are red and when detected 
 
 ![](./images/Makecode_block_setLED.png)
 
-**8.Restore Default Settings**  
+### Restore Default Settings
 
 ![](./images/Makecode_block_setdefault.png)
 
-**9.Enable light sensor functions**
+### Enable light sensor functions
 
 If light sensor enabled, gesture function can not be used with other functions in the mean time.
 
 ![](./images/Makecode_block_ls_begin.png)
 
-**10.Set Light Sensor Sensitivity**
+### Set Light Sensor Sensitivity
 
 ![](./images/Makecode_block_ls_set_sensitivity.png)
 
-**11.Light sensor read proximity value**
+### Light sensor read proximity value
 
 ![](./images/Makecode_block_ls_read_proximity.png)
 
-**12.Light sensor read brightness value**
+### Light sensor read brightness value
 
 ![](./images/Makecode_block_ls_read_als.png)
 
-**13.Light sensor read gesture value**
+### Light sensor read gesture value
 
 ![](./images/Makecode_block_ls_gesture_status.png)
 
-**13.Light sensor get gesture result**
+### Light sensor get gesture result
 
 ![](./images/Makecode_block_ls_gesture_value.png)
 
-## WiFi Config Blocks
+## MUvisionAT
 
 WiFi Configure Module can only be used in `WiFi` and `image transmission` modes.
 
-**1.Read local IP**
+### Read local IP
 
 Read IP of MU.
 
 ![](./images/Makecode_block_wifi_read_sip.png)
 
-**2.Read target IP**
+### Read target IP
 
 Read IP of target device.
 
 ![](./images/Makecode_block_wifi_read_cip.png)
 
-**3.WiFi Configuration**
+### WiFi Configuration
 
 Configure WiFi account, password and mode.
 
 ![](./images/Makecode_block_wifi_set.png)
 
-**4.WiFi link**
+### WiFi link
 
 Try turn on/off WiFi. Return `true` if succeed.
 
 ![](./images/Makecode_block_wifi_con.png)
 
-**5.Configure target IP through WiFi **
+### Configure target IP through WiFi
 
 Only working when successfully connected to WiFi.
 
 ![](./images/Makecode_block_wifi_udp.png)
 
-**6.WiFi read transmission data**
+### WiFi read transmission data
 
 Read data from target device through WiFi.
 
 ![](./images/Makecode_block_wifi_read.png)
 
-## Get Detection Results
+# Get Result Examples
 
-**(1)Ball/Body Detection**
+### Ball/Body Detection
 
 Setup program: Init I2C connection, and set algorithm to ball detect. Other settings are default.
 
@@ -195,7 +195,7 @@ Actual result: After resetting MU and Micro:bit, LED lights flash red. When MU d
 
 ![](./images/Makecode_example_ball_detect.png)
 
-**(2)Card Detection**
+### Card Detection
 
 Setup program: Init I2C connection, and set algorithm to traffic card. Other settings are default.
 
@@ -205,7 +205,7 @@ Actual result: After resetting MU and Micro:bit, LED lights flash red light. Whe
 
 ![](./images/Makecode_example_card_detect.png)
 
-**(3)Color Recognition**
+### Color Recognition
 
 Setup program: Init I2C connection, and set algorithm to color recognition. Lock the white balance to get a higher accuracy.Other settings are default.
 
@@ -215,7 +215,7 @@ Actual result: After resetting MU and Micro:bit, LED lights are off. Makecode co
 
 ![](./images/Makecode_example_color_recognition.png)
 
-**(4)Color Block Detection**
+### Color Block Detection
 
 Setup program: Init I2C connection, and set algorithm to color block. Lock the white balance to get a higher accuracy. Other settings are default.
 
@@ -225,7 +225,7 @@ Actual result: After resetting MU and Micro:bit, LED lights flash red light. Whe
 
 ![](./images/Makecode_example_color_block.png)
 
-**(5)Serial Mode Example**
+### Serial Mode Example
 
 Change the output protocol switch to serial mode and connect MU to Micro:bit through serial port.In this mode PC cannot communicate with Micro:bit, so the led dot screen of the Micro:bit is used to display the data directly.
 
