@@ -21,6 +21,10 @@ The models can be used to watch the details of each MoonBot Kit structure, measu
 
 Plastic and sheet metal parts in models are optimized for manufacturing, and are not recommended to be used for FDM 3D printing. 
 
+# Projects
+
+There are extended projects of MoonBot Kit. Watch the latest updates at <https://www.hackster.io/tianli>.
+
 # Platform Links
 
 MoonBot Kit is compatible with Arduino opensource platform. Check related website to learn basic knowledge.
