@@ -28,6 +28,10 @@ Download pdf guide of MoonBot
 
 [MoonBot build guide](https://github.com/mu-opensource/Morpx-docs-en/raw/master/MoonBot/MoonBot_Structure/docs/MoonBot_manual_en.pdf)
 
+Or watch video guide on youtube
+
+[MoonBot video guide](https://www.youtube.com/watch?v=me56aYx-8Tc)
+
 ## Program Examples
 
 Download MoonBot Mixly examples

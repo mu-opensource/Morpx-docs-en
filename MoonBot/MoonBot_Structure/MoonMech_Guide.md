@@ -25,6 +25,10 @@ Download pdf guide of MoonMech
 
 [MoonMech build guide](https://github.com/mu-opensource/Morpx-docs-en/raw/master/MoonBot/MoonBot_Structure/docs/MoonMech_manual_en.pdf)
 
+Or watch video guide on youtube
+
+[MoonMech video guide](https://www.youtube.com/watch?v=Ec-LTPimftk)
+
 ## Program Examples
 
 Download MoonMech Mixly examples

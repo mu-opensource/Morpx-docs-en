@@ -22,11 +22,15 @@ Sense: vision, infrared, encoder
 
 ## Build Manual
 
-Download pdf manuals of MoonRover:
+Download pdf manuals of MoonRover
 
 [MoonRover get started guide](https://github.com/mu-opensource/Morpx-docs-en/raw/master/MoonBot/MoonBot_Structure/docs/MoonRover_quick_start_guide_en.pdf)
 
 [MoonRover extended manual](https://github.com/mu-opensource/Morpx-docs-en/raw/master/MoonBot/MoonBot_Structure/docs/MoonRover_extended_manual_en.pdf)
+
+Or watch video guide on youtube
+
+[MoonRover video guide](https://www.youtube.com/watch?v=FRD6WWx4WkE)
 
 ## Program Examples
 
