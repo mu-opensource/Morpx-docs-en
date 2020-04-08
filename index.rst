@@ -34,6 +34,13 @@ Welcome to Morpx Documents
 
 .. toctree::
     :maxdepth: 1
+    :caption: MU Self-driving Educational Kit
+
+    SelfDriving/introduction
+    SelfDriving/SelfDriving_Resource/index
+
+.. toctree::
+    :maxdepth: 1
     :caption: Support
 	
     Support/contact
