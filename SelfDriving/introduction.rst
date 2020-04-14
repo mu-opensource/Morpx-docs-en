@@ -10,7 +10,7 @@ MU 视觉传感器3（MU Vision Sensor 3）是一款用于图像识别的传感�
 例如颜色检测、球体检测、人体检测、卡片识别等。检测结果可以通过 UART 或 I2C 进 行输出，体积小巧，功耗低，
 所有算法本地处理，无须联网，可广泛应用于智能玩具、人工智能 教具、创客等产品或领域。
 
-.. image:: images/MUVS3_main.png
+.. image:: images/SelfDriving_main.png
 
 硬件设置
 --------
