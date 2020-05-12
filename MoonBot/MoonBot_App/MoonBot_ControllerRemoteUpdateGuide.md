@@ -1,4 +1,4 @@
-MoonBot Kit Remote Control Firmware Upgrade Instruction
+MoonBot Kit APP Firmware Upgrade Guide
 ===============================
 
 Programming with MoonBot Kit APP requires burning the specified firmware in the master control.
@@ -20,7 +20,8 @@ Software:
 ## Upgrade by burning HEX files
 
 - 1.Download [MoonBot Firmware of Master Control Remote Controller](https://github.com/mu-opensource/MoonBot_RemoteController/releases/latest)(.hex File)
-- 2.Burn .hex firmware
+- 2.Download [Arduino Hex Upload Tool](https://github.com/mu-opensource/Morpx-docs-en/raw/master/MoonBot/MoonBot_App/sources/Arduloader.zip)
+- 3.Burn .hex firmware
     - Windows
         ```
         1 Download Arduino Hex Burning tool
