@@ -37,6 +37,8 @@ Welcome to Morpx Documents
     :caption: MU Self-driving Educational Kit
 
     SelfDriving/introduction
+    SelfDriving/SelfDriving_Structure/index
+    SelfDriving/SelfDriving_MakeCode/index
     SelfDriving/SelfDriving_Resource/index
 
 .. toctree::
